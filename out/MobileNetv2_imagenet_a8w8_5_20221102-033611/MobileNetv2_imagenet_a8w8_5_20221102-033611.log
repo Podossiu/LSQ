@@ -1,0 +1,323 @@
+2022-11-02 03:36:11,067 - INFO  - Log file for this run: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_20221102-033611.log
+2022-11-02 03:36:11,073 - INFO  - TensorBoard data directory: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/tb_runs
+2022-11-02 03:36:13,146 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (391)
+        Validation Set = 10000 (79)
+              Test Set = 10000 (79)
+2022-11-02 03:36:15,271 - INFO  - Created `MobileNetv2` model for `cifar10` dataset
+          Use pre-trained model = True
+2022-11-02 03:36:17,988 - INFO  - Inserted quantizers into the original model
+2022-11-02 03:36:18,205 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.05
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+2022-11-02 03:36:18,205 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.05
+
+2022-11-02 03:36:18,205 - INFO  - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-02 03:36:18,205 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:36:21,685 - INFO  - Validation [   20/   79]   Loss 18.551335   Top1 0.000000   Top5 0.000000   BatchTime 0.173927   
+2022-11-02 03:36:22,144 - INFO  - Validation [   40/   79]   Loss 18.568195   Top1 0.000000   Top5 0.000000   BatchTime 0.098445   
+2022-11-02 03:36:22,597 - INFO  - Validation [   60/   79]   Loss 18.637665   Top1 0.000000   Top5 0.000000   BatchTime 0.073179   
+2022-11-02 03:36:23,196 - INFO  - ==> Top1: 0.000    Top5: 0.000    Loss: 18.632
+
+2022-11-02 03:36:23,291 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 0.000   Top5: 0.000] Sparsity : 0.060
+2022-11-02 03:36:23,292 - INFO  - >>>>>>>> Epoch   0
+2022-11-02 03:36:23,295 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:36:27,512 - INFO  - Training [0][   20/  391]   Loss 5.029187   Top1 9.492188   Top5 42.695312   BatchTime 0.210823   LR 0.050000   
+2022-11-02 03:36:29,123 - INFO  - Training [0][   40/  391]   Loss 4.291064   Top1 10.625000   Top5 47.890625   BatchTime 0.145684   LR 0.050000   
+2022-11-02 03:36:30,714 - INFO  - Training [0][   60/  391]   Loss 4.245122   Top1 10.729167   Top5 49.140625   BatchTime 0.123642   LR 0.050000   
+2022-11-02 03:36:32,310 - INFO  - Training [0][   80/  391]   Loss 4.208884   Top1 10.771484   Top5 49.707031   BatchTime 0.112681   LR 0.050000   
+2022-11-02 03:36:33,904 - INFO  - Training [0][  100/  391]   Loss 4.087146   Top1 10.804688   Top5 49.968750   BatchTime 0.106084   LR 0.050000   
+2022-11-02 03:36:35,522 - INFO  - Training [0][  120/  391]   Loss 3.888122   Top1 10.755208   Top5 50.156250   BatchTime 0.101886   LR 0.050000   
+2022-11-02 03:36:37,213 - INFO  - Training [0][  140/  391]   Loss 3.707592   Top1 11.021205   Top5 50.636161   BatchTime 0.099409   LR 0.050000   
+2022-11-02 03:36:38,973 - INFO  - Training [0][  160/  391]   Loss 3.589902   Top1 11.220703   Top5 51.220703   BatchTime 0.097982   LR 0.050000   
+2022-11-02 03:36:40,720 - INFO  - Training [0][  180/  391]   Loss 3.461014   Top1 11.701389   Top5 52.126736   BatchTime 0.096799   LR 0.050000   
+2022-11-02 03:36:42,465 - INFO  - Training [0][  200/  391]   Loss 3.364026   Top1 11.964844   Top5 52.894531   BatchTime 0.095847   LR 0.050000   
+2022-11-02 03:36:44,242 - INFO  - Training [0][  220/  391]   Loss 3.275948   Top1 12.212358   Top5 53.785511   BatchTime 0.095210   LR 0.050000   
+2022-11-02 03:36:46,020 - INFO  - Training [0][  240/  391]   Loss 3.199548   Top1 12.460938   Top5 54.498698   BatchTime 0.094681   LR 0.050000   
+2022-11-02 03:36:47,740 - INFO  - Training [0][  260/  391]   Loss 3.130917   Top1 12.803486   Top5 55.306490   BatchTime 0.094013   LR 0.050000   
+2022-11-02 03:36:49,468 - INFO  - Training [0][  280/  391]   Loss 3.072092   Top1 13.038504   Top5 56.130022   BatchTime 0.093470   LR 0.050000   
+2022-11-02 03:36:51,331 - INFO  - Training [0][  300/  391]   Loss 3.018082   Top1 13.200521   Top5 56.856771   BatchTime 0.093447   LR 0.050000   
+2022-11-02 03:36:53,315 - INFO  - Training [0][  320/  391]   Loss 2.968744   Top1 13.515625   Top5 57.680664   BatchTime 0.093806   LR 0.050000   
+2022-11-02 03:36:55,267 - INFO  - Training [0][  340/  391]   Loss 2.923134   Top1 13.782169   Top5 58.288143   BatchTime 0.094031   LR 0.050000   
+2022-11-02 03:36:57,216 - INFO  - Training [0][  360/  391]   Loss 2.882429   Top1 14.092882   Top5 58.969184   BatchTime 0.094221   LR 0.050000   
+2022-11-02 03:36:59,153 - INFO  - Training [0][  380/  391]   Loss 2.844341   Top1 14.358553   Top5 59.695724   BatchTime 0.094358   LR 0.050000   
+2022-11-02 03:37:00,629 - INFO  - ==> Top1: 14.520    Top5: 60.066    Loss: 2.825
+
+2022-11-02 03:37:00,630 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:37:03,174 - INFO  - Validation [0][   20/   79]   Loss 2.098441   Top1 21.718750   Top5 74.375000   BatchTime 0.127126   
+2022-11-02 03:37:03,651 - INFO  - Validation [0][   40/   79]   Loss 2.089441   Top1 21.835938   Top5 75.429688   BatchTime 0.075473   
+2022-11-02 03:37:04,547 - INFO  - Validation [0][   60/   79]   Loss 2.093474   Top1 21.783854   Top5 74.856771   BatchTime 0.065257   
+2022-11-02 03:37:05,371 - INFO  - ==> Top1: 21.870    Top5: 75.130    Loss: 2.091
+
+2022-11-02 03:37:05,451 - INFO  - Scoreboard best 1 ==> Epoch [0][Top1: 21.870   Top5: 75.130] Sparsity : 0.054
+2022-11-02 03:37:05,452 - INFO  - Scoreboard best 2 ==> Epoch [-1][Top1: 0.000   Top5: 0.000] Sparsity : 0.060
+2022-11-02 03:37:05,595 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:37:05,596 - INFO  - >>>>>>>> Epoch   1
+2022-11-02 03:37:05,597 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:37:09,220 - INFO  - Training [1][   20/  391]   Loss 2.173825   Top1 20.781250   Top5 71.914062   BatchTime 0.181127   LR 0.050000   
+2022-11-02 03:37:10,836 - INFO  - Training [1][   40/  391]   Loss 2.186384   Top1 20.390625   Top5 71.796875   BatchTime 0.130962   LR 0.050000   
+2022-11-02 03:37:12,413 - INFO  - Training [1][   60/  391]   Loss 2.168435   Top1 20.351562   Top5 72.044271   BatchTime 0.113585   LR 0.050000   
+2022-11-02 03:37:13,996 - INFO  - Training [1][   80/  391]   Loss 2.151755   Top1 20.839844   Top5 72.851562   BatchTime 0.104978   LR 0.050000   
+2022-11-02 03:37:15,599 - INFO  - Training [1][  100/  391]   Loss 2.148989   Top1 20.929688   Top5 72.789062   BatchTime 0.100013   LR 0.050000   
+2022-11-02 03:37:17,200 - INFO  - Training [1][  120/  391]   Loss 2.143076   Top1 20.891927   Top5 72.819010   BatchTime 0.096684   LR 0.050000   
+2022-11-02 03:37:18,826 - INFO  - Training [1][  140/  391]   Loss 2.140119   Top1 21.043527   Top5 72.935268   BatchTime 0.094489   LR 0.050000   
+2022-11-02 03:37:20,564 - INFO  - Training [1][  160/  391]   Loss 2.138554   Top1 21.054688   Top5 73.056641   BatchTime 0.093537   LR 0.050000   
+2022-11-02 03:37:22,364 - INFO  - Training [1][  180/  391]   Loss 2.136318   Top1 21.067708   Top5 73.055556   BatchTime 0.093146   LR 0.050000   
+2022-11-02 03:37:24,323 - INFO  - Training [1][  200/  391]   Loss 2.132502   Top1 21.210938   Top5 73.222656   BatchTime 0.093625   LR 0.050000   
+2022-11-02 03:37:26,304 - INFO  - Training [1][  220/  391]   Loss 2.128526   Top1 21.264205   Top5 73.469460   BatchTime 0.094116   LR 0.050000   
+2022-11-02 03:37:28,279 - INFO  - Training [1][  240/  391]   Loss 2.124598   Top1 21.311849   Top5 73.678385   BatchTime 0.094505   LR 0.050000   
+2022-11-02 03:37:30,238 - INFO  - Training [1][  260/  391]   Loss 2.119262   Top1 21.538462   Top5 73.912260   BatchTime 0.094766   LR 0.050000   
+2022-11-02 03:37:32,058 - INFO  - Training [1][  280/  391]   Loss 2.115500   Top1 21.693638   Top5 74.076451   BatchTime 0.094498   LR 0.050000   
+2022-11-02 03:37:33,882 - INFO  - Training [1][  300/  391]   Loss 2.110699   Top1 21.817708   Top5 74.250000   BatchTime 0.094277   LR 0.050000   
+2022-11-02 03:37:35,693 - INFO  - Training [1][  320/  391]   Loss 2.109129   Top1 21.882324   Top5 74.343262   BatchTime 0.094046   LR 0.050000   
+2022-11-02 03:37:37,504 - INFO  - Training [1][  340/  391]   Loss 2.105586   Top1 21.996783   Top5 74.487592   BatchTime 0.093838   LR 0.050000   
+2022-11-02 03:37:39,293 - INFO  - Training [1][  360/  391]   Loss 2.101572   Top1 22.107205   Top5 74.609375   BatchTime 0.093594   LR 0.050000   
+2022-11-02 03:37:41,083 - INFO  - Training [1][  380/  391]   Loss 2.098222   Top1 22.183388   Top5 74.753289   BatchTime 0.093378   LR 0.050000   
+2022-11-02 03:37:42,220 - INFO  - ==> Top1: 22.230    Top5: 74.844    Loss: 2.097
+
+2022-11-02 03:37:42,221 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:37:45,832 - INFO  - Validation [1][   20/   79]   Loss 2.057144   Top1 24.375000   Top5 77.695312   BatchTime 0.180433   
+2022-11-02 03:37:46,433 - INFO  - Validation [1][   40/   79]   Loss 2.065756   Top1 24.277344   Top5 77.753906   BatchTime 0.105250   
+2022-11-02 03:37:47,041 - INFO  - Validation [1][   60/   79]   Loss 2.065505   Top1 24.257812   Top5 77.734375   BatchTime 0.080300   
+2022-11-02 03:37:47,782 - INFO  - ==> Top1: 24.470    Top5: 77.780    Loss: 2.058
+
+2022-11-02 03:37:47,866 - INFO  - Scoreboard best 1 ==> Epoch [1][Top1: 24.470   Top5: 77.780] Sparsity : 0.054
+2022-11-02 03:37:47,868 - INFO  - Scoreboard best 2 ==> Epoch [0][Top1: 21.870   Top5: 75.130] Sparsity : 0.054
+2022-11-02 03:37:47,869 - INFO  - Scoreboard best 3 ==> Epoch [-1][Top1: 0.000   Top5: 0.000] Sparsity : 0.060
+2022-11-02 03:37:47,998 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:37:47,999 - INFO  - >>>>>>>> Epoch   2
+2022-11-02 03:37:48,001 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:37:51,575 - INFO  - Training [2][   20/  391]   Loss 2.055829   Top1 24.726562   Top5 76.367188   BatchTime 0.178684   LR 0.050000   
+2022-11-02 03:37:53,323 - INFO  - Training [2][   40/  391]   Loss 2.052839   Top1 25.410156   Top5 77.109375   BatchTime 0.133041   LR 0.050000   
+2022-11-02 03:37:55,068 - INFO  - Training [2][   60/  391]   Loss 2.047536   Top1 24.726562   Top5 77.526042   BatchTime 0.117777   LR 0.050000   
+2022-11-02 03:37:56,784 - INFO  - Training [2][   80/  391]   Loss 2.046205   Top1 24.482422   Top5 77.519531   BatchTime 0.109788   LR 0.050000   
+2022-11-02 03:37:58,496 - INFO  - Training [2][  100/  391]   Loss 2.043553   Top1 24.757812   Top5 77.585938   BatchTime 0.104947   LR 0.050000   
+2022-11-02 03:38:00,207 - INFO  - Training [2][  120/  391]   Loss 2.039912   Top1 24.882812   Top5 77.695312   BatchTime 0.101712   LR 0.050000   
+2022-11-02 03:38:01,952 - INFO  - Training [2][  140/  391]   Loss 2.033109   Top1 25.011161   Top5 77.946429   BatchTime 0.099649   LR 0.050000   
+2022-11-02 03:38:03,756 - INFO  - Training [2][  160/  391]   Loss 2.027361   Top1 25.151367   Top5 78.276367   BatchTime 0.098469   LR 0.050000   
+2022-11-02 03:38:05,702 - INFO  - Training [2][  180/  391]   Loss 2.023713   Top1 25.177951   Top5 78.433160   BatchTime 0.098336   LR 0.050000   
+2022-11-02 03:38:07,665 - INFO  - Training [2][  200/  391]   Loss 2.018386   Top1 25.316406   Top5 78.691406   BatchTime 0.098317   LR 0.050000   
+2022-11-02 03:38:09,614 - INFO  - Training [2][  220/  391]   Loss 2.012714   Top1 25.539773   Top5 78.824574   BatchTime 0.098239   LR 0.050000   
+2022-11-02 03:38:11,554 - INFO  - Training [2][  240/  391]   Loss 2.010271   Top1 25.615234   Top5 78.867188   BatchTime 0.098134   LR 0.050000   
+2022-11-02 03:38:13,497 - INFO  - Training [2][  260/  391]   Loss 2.007225   Top1 25.751202   Top5 78.918269   BatchTime 0.098060   LR 0.050000   
+2022-11-02 03:38:15,452 - INFO  - Training [2][  280/  391]   Loss 2.005268   Top1 25.809152   Top5 78.970424   BatchTime 0.098035   LR 0.050000   
+2022-11-02 03:38:17,403 - INFO  - Training [2][  300/  391]   Loss 2.003562   Top1 25.726562   Top5 79.031250   BatchTime 0.098002   LR 0.050000   
+2022-11-02 03:38:19,360 - INFO  - Training [2][  320/  391]   Loss 2.001182   Top1 25.869141   Top5 79.140625   BatchTime 0.097992   LR 0.050000   
+2022-11-02 03:38:21,296 - INFO  - Training [2][  340/  391]   Loss 1.997923   Top1 26.050092   Top5 79.223346   BatchTime 0.097924   LR 0.050000   
+2022-11-02 03:38:23,236 - INFO  - Training [2][  360/  391]   Loss 1.995924   Top1 26.130642   Top5 79.331597   BatchTime 0.097872   LR 0.050000   
+2022-11-02 03:38:25,167 - INFO  - Training [2][  380/  391]   Loss 1.993719   Top1 26.132812   Top5 79.438734   BatchTime 0.097803   LR 0.050000   
+2022-11-02 03:38:26,457 - INFO  - ==> Top1: 26.276    Top5: 79.472    Loss: 1.991
+
+2022-11-02 03:38:26,458 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:38:28,769 - INFO  - Validation [2][   20/   79]   Loss 1.941168   Top1 29.179688   Top5 81.562500   BatchTime 0.115380   
+2022-11-02 03:38:29,237 - INFO  - Validation [2][   40/   79]   Loss 1.936707   Top1 29.179688   Top5 81.894531   BatchTime 0.069393   
+2022-11-02 03:38:29,702 - INFO  - Validation [2][   60/   79]   Loss 1.937503   Top1 29.388021   Top5 81.562500   BatchTime 0.054017   
+2022-11-02 03:38:30,307 - INFO  - ==> Top1: 29.700    Top5: 81.560    Loss: 1.933
+
+2022-11-02 03:38:30,376 - INFO  - Scoreboard best 1 ==> Epoch [2][Top1: 29.700   Top5: 81.560] Sparsity : 0.055
+2022-11-02 03:38:30,377 - INFO  - Scoreboard best 2 ==> Epoch [1][Top1: 24.470   Top5: 77.780] Sparsity : 0.054
+2022-11-02 03:38:30,378 - INFO  - Scoreboard best 3 ==> Epoch [0][Top1: 21.870   Top5: 75.130] Sparsity : 0.054
+2022-11-02 03:38:30,517 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:38:30,518 - INFO  - >>>>>>>> Epoch   3
+2022-11-02 03:38:30,520 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:38:34,151 - INFO  - Training [3][   20/  391]   Loss 1.930969   Top1 29.140625   Top5 81.406250   BatchTime 0.181554   LR 0.050000   
+2022-11-02 03:38:35,725 - INFO  - Training [3][   40/  391]   Loss 1.929857   Top1 28.925781   Top5 81.054688   BatchTime 0.130133   LR 0.050000   
+2022-11-02 03:38:37,311 - INFO  - Training [3][   60/  391]   Loss 1.927482   Top1 29.062500   Top5 81.406250   BatchTime 0.113192   LR 0.050000   
+2022-11-02 03:38:38,876 - INFO  - Training [3][   80/  391]   Loss 1.928725   Top1 28.974609   Top5 81.357422   BatchTime 0.104449   LR 0.050000   
+2022-11-02 03:38:40,448 - INFO  - Training [3][  100/  391]   Loss 1.928482   Top1 28.789062   Top5 81.421875   BatchTime 0.099276   LR 0.050000   
+2022-11-02 03:38:42,173 - INFO  - Training [3][  120/  391]   Loss 1.927687   Top1 28.945312   Top5 81.510417   BatchTime 0.097107   LR 0.050000   
+2022-11-02 03:38:43,901 - INFO  - Training [3][  140/  391]   Loss 1.926410   Top1 28.945312   Top5 81.568080   BatchTime 0.095577   LR 0.050000   
+2022-11-02 03:38:45,626 - INFO  - Training [3][  160/  391]   Loss 1.928822   Top1 28.911133   Top5 81.586914   BatchTime 0.094408   LR 0.050000   
+2022-11-02 03:38:47,512 - INFO  - Training [3][  180/  391]   Loss 1.926840   Top1 28.854167   Top5 81.597222   BatchTime 0.094398   LR 0.050000   
+2022-11-02 03:38:49,464 - INFO  - Training [3][  200/  391]   Loss 1.924324   Top1 28.941406   Top5 81.710938   BatchTime 0.094717   LR 0.050000   
+2022-11-02 03:38:51,428 - INFO  - Training [3][  220/  391]   Loss 1.924106   Top1 28.938210   Top5 81.743608   BatchTime 0.095036   LR 0.050000   
+2022-11-02 03:38:53,576 - INFO  - Training [3][  240/  391]   Loss 1.918086   Top1 29.222005   Top5 81.923828   BatchTime 0.096064   LR 0.050000   
+2022-11-02 03:38:55,857 - INFO  - Training [3][  260/  391]   Loss 1.916957   Top1 29.278846   Top5 81.995192   BatchTime 0.097447   LR 0.050000   
+2022-11-02 03:38:58,136 - INFO  - Training [3][  280/  391]   Loss 1.913991   Top1 29.313616   Top5 82.162388   BatchTime 0.098625   LR 0.050000   
+2022-11-02 03:39:00,407 - INFO  - Training [3][  300/  391]   Loss 1.911675   Top1 29.380208   Top5 82.234375   BatchTime 0.099620   LR 0.050000   
+2022-11-02 03:39:02,659 - INFO  - Training [3][  320/  391]   Loss 1.910117   Top1 29.431152   Top5 82.241211   BatchTime 0.100432   LR 0.050000   
+2022-11-02 03:39:04,914 - INFO  - Training [3][  340/  391]   Loss 1.907890   Top1 29.462316   Top5 82.339154   BatchTime 0.101157   LR 0.050000   
+2022-11-02 03:39:07,137 - INFO  - Training [3][  360/  391]   Loss 1.904757   Top1 29.483507   Top5 82.443576   BatchTime 0.101712   LR 0.050000   
+2022-11-02 03:39:09,355 - INFO  - Training [3][  380/  391]   Loss 1.904046   Top1 29.533306   Top5 82.450658   BatchTime 0.102195   LR 0.050000   
+2022-11-02 03:39:10,739 - INFO  - ==> Top1: 29.578    Top5: 82.484    Loss: 1.903
+
+2022-11-02 03:39:10,740 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:39:13,703 - INFO  - Validation [3][   20/   79]   Loss 1.811054   Top1 32.187500   Top5 84.843750   BatchTime 0.147964   
+2022-11-02 03:39:14,318 - INFO  - Validation [3][   40/   79]   Loss 1.802779   Top1 33.085938   Top5 85.585938   BatchTime 0.089370   
+2022-11-02 03:39:14,918 - INFO  - Validation [3][   60/   79]   Loss 1.806997   Top1 32.721354   Top5 85.546875   BatchTime 0.069572   
+2022-11-02 03:39:15,607 - INFO  - ==> Top1: 32.940    Top5: 85.500    Loss: 1.805
+
+2022-11-02 03:39:15,694 - INFO  - Scoreboard best 1 ==> Epoch [3][Top1: 32.940   Top5: 85.500] Sparsity : 0.055
+2022-11-02 03:39:15,696 - INFO  - Scoreboard best 2 ==> Epoch [2][Top1: 29.700   Top5: 81.560] Sparsity : 0.055
+2022-11-02 03:39:15,696 - INFO  - Scoreboard best 3 ==> Epoch [1][Top1: 24.470   Top5: 77.780] Sparsity : 0.054
+2022-11-02 03:39:15,888 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:39:15,889 - INFO  - >>>>>>>> Epoch   4
+2022-11-02 03:39:15,891 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:39:19,654 - INFO  - Training [4][   20/  391]   Loss 1.811841   Top1 32.890625   Top5 84.648438   BatchTime 0.188124   LR 0.050000   
+2022-11-02 03:39:21,221 - INFO  - Training [4][   40/  391]   Loss 1.848958   Top1 31.738281   Top5 83.847656   BatchTime 0.133235   LR 0.050000   
+2022-11-02 03:39:22,897 - INFO  - Training [4][   60/  391]   Loss 1.850498   Top1 32.096354   Top5 83.867188   BatchTime 0.116756   LR 0.050000   
+2022-11-02 03:39:24,615 - INFO  - Training [4][   80/  391]   Loss 1.846311   Top1 31.923828   Top5 83.916016   BatchTime 0.109047   LR 0.050000   
+2022-11-02 03:39:26,377 - INFO  - Training [4][  100/  391]   Loss 1.847340   Top1 31.898438   Top5 83.929688   BatchTime 0.104853   LR 0.050000   
+2022-11-02 03:39:28,135 - INFO  - Training [4][  120/  391]   Loss 1.846067   Top1 31.894531   Top5 83.776042   BatchTime 0.102028   LR 0.050000   
+2022-11-02 03:39:29,905 - INFO  - Training [4][  140/  391]   Loss 1.845764   Top1 31.757812   Top5 83.822545   BatchTime 0.100094   LR 0.050000   
+2022-11-02 03:39:31,659 - INFO  - Training [4][  160/  391]   Loss 1.853560   Top1 31.450195   Top5 83.691406   BatchTime 0.098546   LR 0.050000   
+2022-11-02 03:39:33,394 - INFO  - Training [4][  180/  391]   Loss 1.854588   Top1 31.401910   Top5 83.697917   BatchTime 0.097236   LR 0.050000   
+2022-11-02 03:39:35,124 - INFO  - Training [4][  200/  391]   Loss 1.856322   Top1 31.300781   Top5 83.714844   BatchTime 0.096160   LR 0.050000   
+2022-11-02 03:39:36,994 - INFO  - Training [4][  220/  391]   Loss 1.856893   Top1 31.292614   Top5 83.707386   BatchTime 0.095919   LR 0.050000   
+2022-11-02 03:39:38,951 - INFO  - Training [4][  240/  391]   Loss 1.855695   Top1 31.266276   Top5 83.707682   BatchTime 0.096078   LR 0.050000   
+2022-11-02 03:39:40,906 - INFO  - Training [4][  260/  391]   Loss 1.853454   Top1 31.265024   Top5 83.734976   BatchTime 0.096206   LR 0.050000   
+2022-11-02 03:39:42,888 - INFO  - Training [4][  280/  391]   Loss 1.853536   Top1 31.247210   Top5 83.789062   BatchTime 0.096414   LR 0.050000   
+2022-11-02 03:39:44,838 - INFO  - Training [4][  300/  391]   Loss 1.851747   Top1 31.312500   Top5 83.820312   BatchTime 0.096486   LR 0.050000   
+2022-11-02 03:39:46,803 - INFO  - Training [4][  320/  391]   Loss 1.854468   Top1 31.157227   Top5 83.801270   BatchTime 0.096595   LR 0.050000   
+2022-11-02 03:39:48,749 - INFO  - Training [4][  340/  391]   Loss 1.867306   Top1 30.769761   Top5 83.262868   BatchTime 0.096638   LR 0.050000   
+2022-11-02 03:39:50,710 - INFO  - Training [4][  360/  391]   Loss 1.878734   Top1 30.368924   Top5 82.782118   BatchTime 0.096717   LR 0.050000   
+2022-11-02 03:39:52,667 - INFO  - Training [4][  380/  391]   Loss 1.885675   Top1 30.129523   Top5 82.487664   BatchTime 0.096774   LR 0.050000   
+2022-11-02 03:39:53,910 - INFO  - ==> Top1: 29.996    Top5: 82.380    Loss: 1.888
+
+2022-11-02 03:39:53,912 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:39:56,792 - INFO  - Validation [4][   20/   79]   Loss 1.912831   Top1 30.234375   Top5 81.445312   BatchTime 0.143928   
+2022-11-02 03:39:57,407 - INFO  - Validation [4][   40/   79]   Loss 1.913028   Top1 29.765625   Top5 81.250000   BatchTime 0.087325   
+2022-11-02 03:39:58,012 - INFO  - Validation [4][   60/   79]   Loss 1.917254   Top1 29.166667   Top5 81.276042   BatchTime 0.068306   
+2022-11-02 03:39:58,680 - INFO  - ==> Top1: 29.570    Top5: 81.550    Loss: 1.913
+
+2022-11-02 03:39:58,764 - INFO  - Scoreboard best 1 ==> Epoch [3][Top1: 32.940   Top5: 85.500] Sparsity : 0.055
+2022-11-02 03:39:58,765 - INFO  - Scoreboard best 2 ==> Epoch [2][Top1: 29.700   Top5: 81.560] Sparsity : 0.055
+2022-11-02 03:39:58,766 - INFO  - Scoreboard best 3 ==> Epoch [4][Top1: 29.570   Top5: 81.550] Sparsity : 0.055
+2022-11-02 03:39:58,851 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+
+2022-11-02 03:39:58,852 - INFO  - >>>>>>>> Epoch   5
+2022-11-02 03:39:58,853 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:40:02,218 - INFO  - Training [5][   20/  391]   Loss 1.943291   Top1 27.226562   Top5 80.664062   BatchTime 0.168223   LR 0.050000   
+2022-11-02 03:40:03,664 - INFO  - Training [5][   40/  391]   Loss 1.939526   Top1 27.578125   Top5 80.312500   BatchTime 0.120260   LR 0.050000   
+2022-11-02 03:40:05,109 - INFO  - Training [5][   60/  391]   Loss 1.951823   Top1 27.070312   Top5 80.091146   BatchTime 0.104255   LR 0.050000   
+2022-11-02 03:40:06,884 - INFO  - Training [5][   80/  391]   Loss 1.941415   Top1 27.275391   Top5 80.546875   BatchTime 0.100382   LR 0.050000   
+2022-11-02 03:40:08,692 - INFO  - Training [5][  100/  391]   Loss 1.940292   Top1 27.539062   Top5 80.468750   BatchTime 0.098379   LR 0.050000   
+2022-11-02 03:40:10,513 - INFO  - Training [5][  120/  391]   Loss 1.939354   Top1 27.434896   Top5 80.625000   BatchTime 0.097159   LR 0.050000   
+2022-11-02 03:40:12,331 - INFO  - Training [5][  140/  391]   Loss 1.935361   Top1 27.728795   Top5 80.691964   BatchTime 0.096263   LR 0.050000   
+2022-11-02 03:40:14,141 - INFO  - Training [5][  160/  391]   Loss 1.929881   Top1 28.071289   Top5 80.888672   BatchTime 0.095545   LR 0.050000   
+2022-11-02 03:40:15,955 - INFO  - Training [5][  180/  391]   Loss 1.925435   Top1 28.285590   Top5 81.223958   BatchTime 0.095006   LR 0.050000   
+2022-11-02 03:40:17,778 - INFO  - Training [5][  200/  391]   Loss 1.918477   Top1 28.542969   Top5 81.574219   BatchTime 0.094622   LR 0.050000   
+2022-11-02 03:40:19,598 - INFO  - Training [5][  220/  391]   Loss 1.914439   Top1 28.675426   Top5 81.747159   BatchTime 0.094289   LR 0.050000   
+2022-11-02 03:40:21,406 - INFO  - Training [5][  240/  391]   Loss 1.910414   Top1 28.909505   Top5 81.904297   BatchTime 0.093966   LR 0.050000   
+2022-11-02 03:40:23,219 - INFO  - Training [5][  260/  391]   Loss 1.907163   Top1 29.044471   Top5 81.980168   BatchTime 0.093709   LR 0.050000   
+2022-11-02 03:40:25,027 - INFO  - Training [5][  280/  391]   Loss 1.903115   Top1 29.185268   Top5 82.128906   BatchTime 0.093472   LR 0.050000   
+2022-11-02 03:40:26,841 - INFO  - Training [5][  300/  391]   Loss 1.900349   Top1 29.252604   Top5 82.218750   BatchTime 0.093288   LR 0.050000   
+2022-11-02 03:40:28,652 - INFO  - Training [5][  320/  391]   Loss 1.897909   Top1 29.421387   Top5 82.270508   BatchTime 0.093117   LR 0.050000   
+2022-11-02 03:40:30,459 - INFO  - Training [5][  340/  391]   Loss 1.894590   Top1 29.574908   Top5 82.369026   BatchTime 0.092954   LR 0.050000   
+2022-11-02 03:40:32,251 - INFO  - Training [5][  360/  391]   Loss 1.892339   Top1 29.637587   Top5 82.424045   BatchTime 0.092769   LR 0.050000   
+2022-11-02 03:40:34,042 - INFO  - Training [5][  380/  391]   Loss 1.890305   Top1 29.679276   Top5 82.504112   BatchTime 0.092597   LR 0.050000   
+2022-11-02 03:40:35,189 - INFO  - ==> Top1: 29.740    Top5: 82.522    Loss: 1.889
+
+2022-11-02 03:40:35,190 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:40:37,630 - INFO  - Validation [5][   20/   79]   Loss 1.795114   Top1 33.750000   Top5 86.054688   BatchTime 0.121875   
+2022-11-02 03:40:38,188 - INFO  - Validation [5][   40/   79]   Loss 1.798726   Top1 33.007812   Top5 85.683594   BatchTime 0.074890   
+2022-11-02 03:40:38,703 - INFO  - Validation [5][   60/   79]   Loss 1.799593   Top1 33.098958   Top5 85.351562   BatchTime 0.058511   
+2022-11-02 03:40:39,309 - INFO  - ==> Top1: 33.340    Top5: 85.660    Loss: 1.793
+
+2022-11-02 03:40:39,373 - INFO  - Scoreboard best 1 ==> Epoch [5][Top1: 33.340   Top5: 85.660] Sparsity : 0.055
+2022-11-02 03:40:39,373 - INFO  - Scoreboard best 2 ==> Epoch [3][Top1: 32.940   Top5: 85.500] Sparsity : 0.055
+2022-11-02 03:40:39,374 - INFO  - Scoreboard best 3 ==> Epoch [2][Top1: 29.700   Top5: 81.560] Sparsity : 0.055
+2022-11-02 03:40:39,515 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:40:39,516 - INFO  - >>>>>>>> Epoch   6
+2022-11-02 03:40:39,518 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:40:43,711 - INFO  - Training [6][   20/  391]   Loss 1.830681   Top1 31.640625   Top5 84.804688   BatchTime 0.209641   LR 0.050000   
+2022-11-02 03:40:45,677 - INFO  - Training [6][   40/  391]   Loss 1.825940   Top1 32.421875   Top5 84.296875   BatchTime 0.153990   LR 0.050000   
+2022-11-02 03:40:47,671 - INFO  - Training [6][   60/  391]   Loss 1.829130   Top1 32.291667   Top5 84.114583   BatchTime 0.135885   LR 0.050000   
+2022-11-02 03:40:49,673 - INFO  - Training [6][   80/  391]   Loss 1.825635   Top1 32.695312   Top5 84.345703   BatchTime 0.126933   LR 0.050000   
+2022-11-02 03:40:51,670 - INFO  - Training [6][  100/  391]   Loss 1.823871   Top1 32.476562   Top5 84.406250   BatchTime 0.121517   LR 0.050000   
+2022-11-02 03:40:53,670 - INFO  - Training [6][  120/  391]   Loss 1.823190   Top1 32.688802   Top5 84.381510   BatchTime 0.117929   LR 0.050000   
+2022-11-02 03:40:55,680 - INFO  - Training [6][  140/  391]   Loss 1.821476   Top1 32.645089   Top5 84.430804   BatchTime 0.115443   LR 0.050000   
+2022-11-02 03:40:57,670 - INFO  - Training [6][  160/  391]   Loss 1.821747   Top1 32.607422   Top5 84.340820   BatchTime 0.113447   LR 0.050000   
+2022-11-02 03:40:59,667 - INFO  - Training [6][  180/  391]   Loss 1.822453   Top1 32.682292   Top5 84.322917   BatchTime 0.111939   LR 0.050000   
+2022-11-02 03:41:01,656 - INFO  - Training [6][  200/  391]   Loss 1.823621   Top1 32.617188   Top5 84.261719   BatchTime 0.110690   LR 0.050000   
+2022-11-02 03:41:03,626 - INFO  - Training [6][  220/  391]   Loss 1.821942   Top1 32.741477   Top5 84.371449   BatchTime 0.109580   LR 0.050000   
+2022-11-02 03:41:05,576 - INFO  - Training [6][  240/  391]   Loss 1.822947   Top1 32.708333   Top5 84.339193   BatchTime 0.108571   LR 0.050000   
+2022-11-02 03:41:07,563 - INFO  - Training [6][  260/  391]   Loss 1.818865   Top1 32.755409   Top5 84.456130   BatchTime 0.107861   LR 0.050000   
+2022-11-02 03:41:09,515 - INFO  - Training [6][  280/  391]   Loss 1.815569   Top1 32.868304   Top5 84.570312   BatchTime 0.107129   LR 0.050000   
+2022-11-02 03:41:11,468 - INFO  - Training [6][  300/  391]   Loss 1.815112   Top1 32.833333   Top5 84.687500   BatchTime 0.106498   LR 0.050000   
+2022-11-02 03:41:13,425 - INFO  - Training [6][  320/  391]   Loss 1.813957   Top1 32.866211   Top5 84.736328   BatchTime 0.105956   LR 0.050000   
+2022-11-02 03:41:15,383 - INFO  - Training [6][  340/  391]   Loss 1.813139   Top1 32.895221   Top5 84.786305   BatchTime 0.105483   LR 0.050000   
+2022-11-02 03:41:17,357 - INFO  - Training [6][  360/  391]   Loss 1.812178   Top1 32.944878   Top5 84.782986   BatchTime 0.105104   LR 0.050000   
+2022-11-02 03:41:19,304 - INFO  - Training [6][  380/  391]   Loss 1.811900   Top1 32.997533   Top5 84.765625   BatchTime 0.104697   LR 0.050000   
+2022-11-02 03:41:20,530 - INFO  - ==> Top1: 33.022    Top5: 84.800    Loss: 1.811
+
+2022-11-02 03:41:20,531 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:41:23,390 - INFO  - Validation [6][   20/   79]   Loss 1.765332   Top1 34.492188   Top5 87.343750   BatchTime 0.142829   
+2022-11-02 03:41:23,931 - INFO  - Validation [6][   40/   79]   Loss 1.758065   Top1 34.355469   Top5 87.304688   BatchTime 0.084950   
+2022-11-02 03:41:24,431 - INFO  - Validation [6][   60/   79]   Loss 1.768105   Top1 34.010417   Top5 87.122396   BatchTime 0.064973   
+2022-11-02 03:41:25,015 - INFO  - ==> Top1: 34.050    Top5: 87.250    Loss: 1.764
+
+2022-11-02 03:41:25,090 - INFO  - Scoreboard best 1 ==> Epoch [6][Top1: 34.050   Top5: 87.250] Sparsity : 0.056
+2022-11-02 03:41:25,091 - INFO  - Scoreboard best 2 ==> Epoch [5][Top1: 33.340   Top5: 85.660] Sparsity : 0.055
+2022-11-02 03:41:25,091 - INFO  - Scoreboard best 3 ==> Epoch [3][Top1: 32.940   Top5: 85.500] Sparsity : 0.055
+2022-11-02 03:41:25,230 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:41:25,231 - INFO  - >>>>>>>> Epoch   7
+2022-11-02 03:41:25,233 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:41:28,653 - INFO  - Training [7][   20/  391]   Loss 1.826008   Top1 33.203125   Top5 85.351562   BatchTime 0.170999   LR 0.050000   
+2022-11-02 03:41:30,095 - INFO  - Training [7][   40/  391]   Loss 1.800994   Top1 33.945312   Top5 85.917969   BatchTime 0.121566   LR 0.050000   
+2022-11-02 03:41:31,534 - INFO  - Training [7][   60/  391]   Loss 1.787403   Top1 34.544271   Top5 86.145833   BatchTime 0.105011   LR 0.050000   
+2022-11-02 03:41:33,306 - INFO  - Training [7][   80/  391]   Loss 1.786286   Top1 34.277344   Top5 86.142578   BatchTime 0.100915   LR 0.050000   
+2022-11-02 03:41:35,128 - INFO  - Training [7][  100/  391]   Loss 1.783000   Top1 34.265625   Top5 86.210938   BatchTime 0.098952   LR 0.050000   
+2022-11-02 03:41:36,943 - INFO  - Training [7][  120/  391]   Loss 1.777015   Top1 34.453125   Top5 86.425781   BatchTime 0.097581   LR 0.050000   
+2022-11-02 03:41:38,764 - INFO  - Training [7][  140/  391]   Loss 1.779005   Top1 34.246652   Top5 86.383929   BatchTime 0.096650   LR 0.050000   
+2022-11-02 03:41:40,577 - INFO  - Training [7][  160/  391]   Loss 1.778429   Top1 34.350586   Top5 86.337891   BatchTime 0.095897   LR 0.050000   
+2022-11-02 03:41:42,395 - INFO  - Training [7][  180/  391]   Loss 1.777115   Top1 34.470486   Top5 86.345486   BatchTime 0.095343   LR 0.050000   
+2022-11-02 03:41:44,222 - INFO  - Training [7][  200/  391]   Loss 1.775696   Top1 34.425781   Top5 86.347656   BatchTime 0.094943   LR 0.050000   
+2022-11-02 03:41:46,051 - INFO  - Training [7][  220/  391]   Loss 1.774883   Top1 34.414062   Top5 86.310369   BatchTime 0.094624   LR 0.050000   
+2022-11-02 03:41:47,870 - INFO  - Training [7][  240/  391]   Loss 1.772342   Top1 34.459635   Top5 86.412760   BatchTime 0.094318   LR 0.050000   
+2022-11-02 03:41:49,686 - INFO  - Training [7][  260/  391]   Loss 1.772687   Top1 34.414062   Top5 86.379207   BatchTime 0.094046   LR 0.050000   
+2022-11-02 03:41:51,506 - INFO  - Training [7][  280/  391]   Loss 1.769301   Top1 34.531250   Top5 86.453683   BatchTime 0.093829   LR 0.050000   
+2022-11-02 03:41:53,321 - INFO  - Training [7][  300/  391]   Loss 1.770088   Top1 34.484375   Top5 86.442708   BatchTime 0.093624   LR 0.050000   
+2022-11-02 03:41:55,142 - INFO  - Training [7][  320/  391]   Loss 1.768908   Top1 34.562988   Top5 86.445312   BatchTime 0.093464   LR 0.050000   
+2022-11-02 03:41:56,947 - INFO  - Training [7][  340/  391]   Loss 1.766933   Top1 34.625460   Top5 86.472886   BatchTime 0.093274   LR 0.050000   
+2022-11-02 03:41:58,746 - INFO  - Training [7][  360/  391]   Loss 1.765968   Top1 34.702691   Top5 86.525608   BatchTime 0.093089   LR 0.050000   
+2022-11-02 03:42:00,535 - INFO  - Training [7][  380/  391]   Loss 1.764796   Top1 34.745066   Top5 86.548109   BatchTime 0.092899   LR 0.050000   
+2022-11-02 03:42:01,688 - INFO  - ==> Top1: 34.720    Top5: 86.532    Loss: 1.765
+
+2022-11-02 03:42:01,689 - INFO  - Validation: 10000 samples (128 per mini-batch)
+2022-11-02 03:42:04,275 - INFO  - Validation [7][   20/   79]   Loss 1.680544   Top1 38.750000   Top5 88.906250   BatchTime 0.129162   
+2022-11-02 03:42:04,970 - INFO  - Validation [7][   40/   79]   Loss 1.670548   Top1 38.867188   Top5 88.906250   BatchTime 0.081966   
+2022-11-02 03:42:05,619 - INFO  - Validation [7][   60/   79]   Loss 1.677341   Top1 38.307292   Top5 89.023438   BatchTime 0.065465   
+2022-11-02 03:42:06,410 - INFO  - ==> Top1: 38.550    Top5: 89.030    Loss: 1.674
+
+2022-11-02 03:42:06,479 - INFO  - Scoreboard best 1 ==> Epoch [7][Top1: 38.550   Top5: 89.030] Sparsity : 0.056
+2022-11-02 03:42:06,481 - INFO  - Scoreboard best 2 ==> Epoch [6][Top1: 34.050   Top5: 87.250] Sparsity : 0.056
+2022-11-02 03:42:06,482 - INFO  - Scoreboard best 3 ==> Epoch [5][Top1: 33.340   Top5: 85.660] Sparsity : 0.055
+2022-11-02 03:42:06,612 - INFO  - Saving checkpoint to:
+             Current: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_checkpoint.pth.tar
+                Best: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033611/MobileNetv2_imagenet_a8w8_5_best.pth.tar
+
+2022-11-02 03:42:06,613 - INFO  - >>>>>>>> Epoch   8
+2022-11-02 03:42:06,615 - INFO  - Training: 50000 samples (128 per mini-batch)
+2022-11-02 03:42:10,055 - INFO  - Training [8][   20/  391]   Loss 1.756882   Top1 34.414062   Top5 86.601562   BatchTime 0.172004   LR 0.050000   
+2022-11-02 03:42:11,657 - INFO  - Training [8][   40/  391]   Loss 1.744647   Top1 33.984375   Top5 87.460938   BatchTime 0.126041   LR 0.050000   
+2022-11-02 03:42:13,242 - INFO  - Training [8][   60/  391]   Loss 1.747837   Top1 34.505208   Top5 86.888021   BatchTime 0.110451   LR 0.050000   
+2022-11-02 03:42:14,820 - INFO  - Training [8][   80/  391]   Loss 1.742653   Top1 34.833984   Top5 86.845703   BatchTime 0.102557   LR 0.050000   

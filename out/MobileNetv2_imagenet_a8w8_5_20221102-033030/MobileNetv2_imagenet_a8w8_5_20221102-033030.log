@@ -1,0 +1,9 @@
+2022-11-02 03:30:30,527 - INFO  - Log file for this run: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033030/MobileNetv2_imagenet_a8w8_5_20221102-033030.log
+2022-11-02 03:30:30,532 - INFO  - TensorBoard data directory: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_20221102-033030/tb_runs
+2022-11-02 03:30:32,687 - INFO  - Dataset `cifar10` size:
+          Training Set = 50000 (391)
+        Validation Set = 10000 (79)
+              Test Set = 10000 (79)
+2022-11-02 03:30:45,008 - INFO  - Created `MobileNetv2` model for `cifar10` dataset
+          Use pre-trained model = True
+2022-11-02 03:30:49,483 - INFO  - Inserted quantizers into the original model
