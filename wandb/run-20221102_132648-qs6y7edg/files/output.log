@@ -1,0 +1,11 @@
+INFO - Log file for this run: /home/ilena7440/LSQ/out/MobileNetv2_cifar10_a8w8_5_20221102-132649/MobileNetv2_cifar10_a8w8_5_20221102-132649.log
+INFO - TensorBoard data directory: /home/ilena7440/LSQ/out/MobileNetv2_cifar10_a8w8_5_20221102-132649/tb_runs
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (391)
+        Validation Set = 10000 (79)
+              Test Set = 10000 (79)
+Files already downloaded and verified
+Files already downloaded and verified
+INFO - Created `MobileNetv2` model for `cifar10` dataset
+          Use pre-trained model = True
+hello

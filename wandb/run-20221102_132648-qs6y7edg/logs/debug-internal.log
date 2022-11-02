@@ -1,0 +1,33 @@
+2022-11-02 13:26:48,359 INFO    StreamThr :19376 [internal.py:wandb_internal():90] W&B internal server running at pid: 19376, started at: 2022-11-02 13:26:48.358828
+2022-11-02 13:26:48,363 DEBUG   HandlerThread:19376 [handler.py:handle_request():141] handle_request: status
+2022-11-02 13:26:48,366 DEBUG   SenderThread:19376 [sender.py:send_request():316] send_request: status
+2022-11-02 13:26:48,369 INFO    WriterThread:19376 [datastore.py:open_for_write():75] open: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/run-qs6y7edg.wandb
+2022-11-02 13:26:48,369 DEBUG   SenderThread:19376 [sender.py:send():302] send: header
+2022-11-02 13:26:48,377 DEBUG   SenderThread:19376 [sender.py:send():302] send: run
+2022-11-02 13:26:48,863 DEBUG   HandlerThread:19376 [handler.py:handle_request():141] handle_request: check_version
+2022-11-02 13:26:48,867 INFO    SenderThread:19376 [dir_watcher.py:__init__():216] watching files in: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files
+2022-11-02 13:26:48,867 INFO    SenderThread:19376 [sender.py:_start_run_threads():913] run started: qs6y7edg with start time 1667395608.351292
+2022-11-02 13:26:48,867 DEBUG   SenderThread:19376 [sender.py:send():302] send: summary
+2022-11-02 13:26:48,867 INFO    SenderThread:19376 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-02 13:26:48,868 DEBUG   SenderThread:19376 [sender.py:send_request():316] send_request: check_version
+2022-11-02 13:26:48,929 DEBUG   HandlerThread:19376 [handler.py:handle_request():141] handle_request: run_start
+2022-11-02 13:26:48,937 DEBUG   HandlerThread:19376 [meta.py:__init__():35] meta init
+2022-11-02 13:26:48,937 DEBUG   HandlerThread:19376 [meta.py:__init__():50] meta init done
+2022-11-02 13:26:48,937 DEBUG   HandlerThread:19376 [meta.py:probe():216] probe
+2022-11-02 13:26:48,947 DEBUG   HandlerThread:19376 [meta.py:_setup_git():206] setup git
+2022-11-02 13:26:48,973 DEBUG   HandlerThread:19376 [meta.py:_setup_git():213] setup git done
+2022-11-02 13:26:48,973 DEBUG   HandlerThread:19376 [meta.py:_save_pip():54] save pip
+2022-11-02 13:26:48,974 DEBUG   HandlerThread:19376 [meta.py:_save_pip():68] save pip done
+2022-11-02 13:26:48,974 DEBUG   HandlerThread:19376 [meta.py:probe():254] probe done
+2022-11-02 13:26:49,146 DEBUG   SenderThread:19376 [sender.py:send():302] send: files
+2022-11-02 13:26:49,146 INFO    SenderThread:19376 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2022-11-02 13:26:49,157 DEBUG   HandlerThread:19376 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-02 13:26:49,158 DEBUG   SenderThread:19376 [sender.py:send_request():316] send_request: stop_status
+2022-11-02 13:26:49,379 DEBUG   SenderThread:19376 [sender.py:send():302] send: telemetry
+2022-11-02 13:26:49,801 INFO    Thread-16 :19376 [upload_job.py:push():138] Uploaded file /tmp/tmpvdysm5nbwandb/3i83xc94-wandb-metadata.json
+2022-11-02 13:26:49,870 INFO    Thread-12 :19376 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files/wandb-metadata.json
+2022-11-02 13:26:49,870 INFO    Thread-12 :19376 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files/wandb-summary.json
+2022-11-02 13:26:49,870 INFO    Thread-12 :19376 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files/requirements.txt
+2022-11-02 13:26:49,871 INFO    Thread-12 :19376 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files/output.log
+2022-11-02 13:26:51,868 INFO    Thread-12 :19376 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files/output.log
+2022-11-02 13:26:53,869 INFO    Thread-12 :19376 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221102_132648-qs6y7edg/files/output.log
