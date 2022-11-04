@@ -1,0 +1,79 @@
+arch: MobileNetv2
+dataloader:
+  batch_size: 128
+  dataset: imagenet
+  deterministic: true
+  num_classes: 1000
+  path: /data/imagenet
+  serialized: false
+  val_split: 0.0
+  workers: 32
+device:
+  gpu:
+  - 0
+  type: cuda
+epochs: 80
+eta: 10
+eval: false
+hard_pruning: false
+init_mode: true
+lamb: 15
+log:
+  num_best_scores: 3
+  print_freq: 20
+lr_scheduler:
+  gamma: 0.1
+  milestones:
+  - 30
+  - 60
+  - 70
+  mode: multi_step
+  update_per_batch: true
+name: MobileNetv2_imagenet_a8w8_15_epoch80
+optimizer:
+  learning_rate: 0.01
+  momentum: 0.9
+  weight_decay: 4.0e-05
+output_dir: out
+pre_trained: true
+quan:
+  act:
+    all_positive: true
+    bit: 8
+    mode: lsq
+    per_channel: false
+    symmetric: false
+  excepts:
+    classifier:
+      act:
+        bit: null
+      weight:
+        bit: null
+    conv1:
+      act:
+        all_positive: false
+      weight:
+        bit: null
+    fc:
+      act:
+        bit: null
+      weight:
+        bit: null
+    features.0.0:
+      act:
+        all_positive: false
+        bit: null
+      weight:
+        bit: null
+  weight:
+    all_positive: false
+    bit: 8
+    block_size: 4
+    hard_pruning: false
+    mode: slsq
+    per_channel: false
+    symmetric: true
+    temperature: 0.001
+resume:
+  lean: false
+  path: null

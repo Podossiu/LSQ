@@ -1,0 +1,41 @@
+2022-11-04 14:58:39,825 INFO    MainThread:1110810 [internal.py:wandb_internal():90] W&B internal server running at pid: 1110810, started at: 2022-11-04 14:58:39.825470
+2022-11-04 14:58:39,826 INFO    WriterThread:1110810 [datastore.py:open_for_write():75] open: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/run-bkkjffvd.wandb
+2022-11-04 14:58:39,828 DEBUG   SenderThread:1110810 [sender.py:send():236] send: header
+2022-11-04 14:58:39,828 DEBUG   SenderThread:1110810 [sender.py:send():236] send: run
+2022-11-04 14:58:40,075 DEBUG   HandlerThread:1110810 [handler.py:handle_request():140] handle_request: check_version
+2022-11-04 14:58:40,078 INFO    SenderThread:1110810 [dir_watcher.py:__init__():216] watching files in: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files
+2022-11-04 14:58:40,078 INFO    SenderThread:1110810 [sender.py:_start_run_threads():815] run started: bkkjffvd with start time 1667541519
+2022-11-04 14:58:40,078 DEBUG   SenderThread:1110810 [sender.py:send():236] send: summary
+2022-11-04 14:58:40,078 INFO    SenderThread:1110810 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-11-04 14:58:40,078 DEBUG   SenderThread:1110810 [sender.py:send_request():250] send_request: check_version
+2022-11-04 14:58:40,120 DEBUG   HandlerThread:1110810 [handler.py:handle_request():140] handle_request: run_start
+2022-11-04 14:58:40,122 DEBUG   HandlerThread:1110810 [meta.py:__init__():35] meta init
+2022-11-04 14:58:40,122 DEBUG   HandlerThread:1110810 [meta.py:__init__():49] meta init done
+2022-11-04 14:58:40,122 DEBUG   HandlerThread:1110810 [meta.py:probe():209] probe
+2022-11-04 14:58:40,128 DEBUG   HandlerThread:1110810 [meta.py:_setup_git():199] setup git
+2022-11-04 14:58:40,139 DEBUG   HandlerThread:1110810 [meta.py:_setup_git():206] setup git done
+2022-11-04 14:58:40,139 DEBUG   HandlerThread:1110810 [meta.py:_save_pip():53] save pip
+2022-11-04 14:58:40,140 DEBUG   HandlerThread:1110810 [meta.py:_save_pip():67] save pip done
+2022-11-04 14:58:40,140 DEBUG   HandlerThread:1110810 [meta.py:probe():247] probe done
+2022-11-04 14:58:40,216 DEBUG   SenderThread:1110810 [sender.py:send():236] send: files
+2022-11-04 14:58:40,216 INFO    SenderThread:1110810 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-11-04 14:58:40,219 DEBUG   HandlerThread:1110810 [handler.py:handle_request():140] handle_request: stop_status
+2022-11-04 14:58:40,219 DEBUG   SenderThread:1110810 [sender.py:send_request():250] send_request: stop_status
+2022-11-04 14:58:40,420 DEBUG   SenderThread:1110810 [sender.py:send():236] send: telemetry
+2022-11-04 14:58:40,838 INFO    Thread-11 :1110810 [upload_job.py:push():138] Uploaded file /tmp/tmpx2nhbh22wandb/xsgkzh40-wandb-metadata.json
+2022-11-04 14:58:41,080 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_created():269] file/dir created: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/requirements.txt
+2022-11-04 14:58:41,080 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_created():269] file/dir created: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/wandb-metadata.json
+2022-11-04 14:58:41,080 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_created():269] file/dir created: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/output.log
+2022-11-04 14:58:41,080 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_created():269] file/dir created: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/wandb-summary.json
+2022-11-04 14:58:43,079 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/output.log
+2022-11-04 14:58:45,079 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/output.log
+2022-11-04 14:58:47,080 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/output.log
+2022-11-04 14:58:49,081 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/output.log
+2022-11-04 14:58:51,082 INFO    Thread-7  :1110810 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/ilena7440/slsq/LSQ/wandb/run-20221104_145839-bkkjffvd/files/output.log
+2022-11-04 14:58:55,422 DEBUG   HandlerThread:1110810 [handler.py:handle_request():140] handle_request: stop_status
+2022-11-04 14:58:55,422 DEBUG   SenderThread:1110810 [sender.py:send_request():250] send_request: stop_status
+2022-11-04 14:59:02,221 WARNING MainThread:1110810 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-11-04 14:59:02,346 DEBUG   SenderThread:1110810 [sender.py:send():236] send: telemetry
+2022-11-04 14:59:02,415 WARNING MainThread:1110810 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-11-04 14:59:02,415 ERROR   MainThread:1110810 [internal.py:wandb_internal():156] Internal process interrupted.
+2022-11-04 14:59:02,740 INFO    MainThread:1110810 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,1761 @@
+INFO - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758.log
+2022-11-03 23:27:58.261709: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-03 23:27:58.385513: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2022-11-03 23:27:58.768910: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-11-03 23:27:58.768956: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-11-03 23:27:58.768962: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+INFO - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/tb_runs
+Files already downloaded and verified
+Files already downloaded and verified
+hello
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 32 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (196)
+        Validation Set = 10000 (40)
+              Test Set = 10000 (40)
+INFO - Created `MobileNetv2` model for `cifar10` dataset
+          Use pre-trained model = False
+/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py:126: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (len(x.shape) == 4 and x.shape[1] != 1):
+/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py:94: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
+INFO - Inserted quantizers into the original model
+DataParallel(
+  (module): MobileNetV2(
+    (features): Sequential(
+      (0): Sequential(
+        (0): QuanConv2d(
+          3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+          (quan_w_fn): IdentityQuan()
+          (quan_a_fn): IdentityQuan()
+        )
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU(inplace=True)
+      )
+      (1): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (2): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            16, 96, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=96, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (3): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            144, 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            144, 24, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (4): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            144, 144, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=144, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            144, 32, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (5): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (6): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (7): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (8): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (9): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (10): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (11): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            384, 96, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (12): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (13): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (14): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            576, 576, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=576, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            576, 160, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (15): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (16): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (17): InvertedResidual(
+        (conv): Sequential(
+          (0): QuanConv2d(
+            160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (2): ReLU(inplace=True)
+          (3): QuanConv2d(
+            960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (4): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (5): ReLU(inplace=True)
+          (6): QuanConv2d(
+            960, 320, kernel_size=(1, 1), stride=(1, 1), bias=False
+            (quan_w_fn): SLsqQuan()
+            (quan_a_fn): LsqQuan()
+          )
+          (7): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (conv): Sequential(
+      (0): QuanConv2d(
+        320, 1280, kernel_size=(1, 1), stride=(1, 1), bias=False
+        (quan_w_fn): SLsqQuan()
+        (quan_a_fn): LsqQuan()
+      )
+      (1): BatchNorm2d(1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+    )
+    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+    (classifier): QuanLinear(
+      in_features=1280, out_features=10, bias=True
+      (quan_w_fn): IdentityQuan()
+      (quan_a_fn): IdentityQuan()
+    )
+  )
+)
+INFO - Loaded checkpoint MobileNetv2 model (next epoch 0) from /home/ilena7440/slsq/LSQ/pruned_model/MobileNetv2_cifar10_a8w8_5_epoch60_checkpoint.pth.tar
+INFO - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.01
+INFO - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [   20/   40]   Loss 0.404983   Top1 90.195312   Top5 99.511719   BatchTime 0.193672
+INFO - Validation [   40/   40]   Loss 0.395401   Top1 90.590000   Top5 99.570000   BatchTime 0.126549
+INFO - ==> Top1: 90.590    Top5: 99.570    Loss: 0.395
+INFO - Scoreboard best 1 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - >>>>>>>> Epoch   0
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [0][   20/  196]   Loss 0.026072   Top1 99.179688   Top5 100.000000   BatchTime 0.242918   LR 0.010000
+INFO - Training [0][   40/  196]   Loss 0.026566   Top1 99.150391   Top5 100.000000   BatchTime 0.183487   LR 0.010000
+INFO - Training [0][   60/  196]   Loss 0.027222   Top1 99.082031   Top5 100.000000   BatchTime 0.163906   LR 0.010000
+INFO - Training [0][   80/  196]   Loss 0.028006   Top1 99.028320   Top5 100.000000   BatchTime 0.154112   LR 0.010000
+INFO - Training [0][  100/  196]   Loss 0.028875   Top1 98.988281   Top5 100.000000   BatchTime 0.148112   LR 0.010000
+INFO - Training [0][  120/  196]   Loss 0.028980   Top1 99.016927   Top5 100.000000   BatchTime 0.144156   LR 0.010000
+INFO - Training [0][  140/  196]   Loss 0.029900   Top1 99.006696   Top5 100.000000   BatchTime 0.141225   LR 0.010000
+INFO - Training [0][  160/  196]   Loss 0.031447   Top1 98.928223   Top5 100.000000   BatchTime 0.139049   LR 0.010000
+INFO - Training [0][  180/  196]   Loss 0.032103   Top1 98.899740   Top5 100.000000   BatchTime 0.137339   LR 0.010000
+INFO - ==> Top1: 98.894    Top5: 100.000    Loss: 0.032
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [0][   20/   40]   Loss 0.422709   Top1 90.156250   Top5 99.550781   BatchTime 0.143459
+INFO - Validation [0][   40/   40]   Loss 0.402163   Top1 90.640000   Top5 99.570000   BatchTime 0.100028
+INFO - ==> Top1: 90.640    Top5: 99.570    Loss: 0.402
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - >>>>>>>> Epoch   1
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [1][   20/  196]   Loss 0.032587   Top1 98.984375   Top5 100.000000   BatchTime 0.202183   LR 0.010000
+INFO - Training [1][   40/  196]   Loss 0.033495   Top1 98.916016   Top5 100.000000   BatchTime 0.151704   LR 0.010000
+INFO - Training [1][   60/  196]   Loss 0.033844   Top1 98.906250   Top5 100.000000   BatchTime 0.135233   LR 0.010000
+INFO - Training [1][   80/  196]   Loss 0.032505   Top1 98.959961   Top5 100.000000   BatchTime 0.125292   LR 0.010000
+INFO - Training [1][  100/  196]   Loss 0.033482   Top1 98.937500   Top5 100.000000   BatchTime 0.124849   LR 0.010000
+INFO - Training [1][  120/  196]   Loss 0.032548   Top1 98.955078   Top5 100.000000   BatchTime 0.124784   LR 0.010000
+INFO - Training [1][  140/  196]   Loss 0.032716   Top1 98.948103   Top5 100.000000   BatchTime 0.124697   LR 0.010000
+INFO - Training [1][  160/  196]   Loss 0.032614   Top1 98.945312   Top5 100.000000   BatchTime 0.124536   LR 0.010000
+INFO - Training [1][  180/  196]   Loss 0.033606   Top1 98.914931   Top5 99.997830   BatchTime 0.124450   LR 0.010000
+INFO - ==> Top1: 98.882    Top5: 99.998    Loss: 0.034
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [1][   20/   40]   Loss 0.434121   Top1 89.980469   Top5 99.335938   BatchTime 0.144321
+INFO - Validation [1][   40/   40]   Loss 0.421849   Top1 90.190000   Top5 99.500000   BatchTime 0.100430
+INFO - ==> Top1: 90.190    Top5: 99.500    Loss: 0.422
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [1][Top1: 90.190   Top5: 99.500] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   2
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [2][   20/  196]   Loss 0.027154   Top1 98.925781   Top5 100.000000   BatchTime 0.220541   LR 0.010000
+INFO - Training [2][   40/  196]   Loss 0.028418   Top1 98.916016   Top5 100.000000   BatchTime 0.171814   LR 0.010000
+INFO - Training [2][   60/  196]   Loss 0.028723   Top1 98.893229   Top5 100.000000   BatchTime 0.156380   LR 0.010000
+INFO - Training [2][   80/  196]   Loss 0.029911   Top1 98.896484   Top5 100.000000   BatchTime 0.148328   LR 0.010000
+INFO - Training [2][  100/  196]   Loss 0.029867   Top1 98.910156   Top5 100.000000   BatchTime 0.143631   LR 0.010000
+INFO - Training [2][  120/  196]   Loss 0.030313   Top1 98.893229   Top5 100.000000   BatchTime 0.140370   LR 0.010000
+INFO - Training [2][  140/  196]   Loss 0.030753   Top1 98.878348   Top5 100.000000   BatchTime 0.138098   LR 0.010000
+INFO - Training [2][  160/  196]   Loss 0.031949   Top1 98.857422   Top5 100.000000   BatchTime 0.136228   LR 0.010000
+INFO - Training [2][  180/  196]   Loss 0.032561   Top1 98.836806   Top5 100.000000   BatchTime 0.134765   LR 0.010000
+INFO - ==> Top1: 98.830    Top5: 100.000    Loss: 0.033
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [2][   20/   40]   Loss 0.442107   Top1 90.195312   Top5 99.453125   BatchTime 0.128461
+INFO - Validation [2][   40/   40]   Loss 0.425591   Top1 90.600000   Top5 99.550000   BatchTime 0.086814
+INFO - ==> Top1: 90.600    Top5: 99.550    Loss: 0.426
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   3
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [3][   20/  196]   Loss 0.024891   Top1 99.199219   Top5 100.000000   BatchTime 0.192214   LR 0.010000
+INFO - Training [3][   40/  196]   Loss 0.025113   Top1 99.169922   Top5 100.000000   BatchTime 0.157981   LR 0.010000
+INFO - Training [3][   60/  196]   Loss 0.028087   Top1 99.062500   Top5 99.993490   BatchTime 0.146574   LR 0.010000
+INFO - Training [3][   80/  196]   Loss 0.029606   Top1 98.994141   Top5 99.995117   BatchTime 0.141017   LR 0.010000
+INFO - Training [3][  100/  196]   Loss 0.030006   Top1 98.992188   Top5 99.996094   BatchTime 0.137657   LR 0.010000
+INFO - Training [3][  120/  196]   Loss 0.030175   Top1 98.974609   Top5 99.996745   BatchTime 0.135375   LR 0.010000
+INFO - Training [3][  140/  196]   Loss 0.030872   Top1 98.953683   Top5 99.997210   BatchTime 0.133751   LR 0.010000
+INFO - Training [3][  160/  196]   Loss 0.030976   Top1 98.945312   Top5 99.997559   BatchTime 0.132470   LR 0.010000
+INFO - Training [3][  180/  196]   Loss 0.030841   Top1 98.953993   Top5 99.997830   BatchTime 0.131475   LR 0.010000
+INFO - ==> Top1: 98.926    Top5: 99.998    Loss: 0.032
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [3][   20/   40]   Loss 0.440977   Top1 89.941406   Top5 99.570312   BatchTime 0.143256
+INFO - Validation [3][   40/   40]   Loss 0.427584   Top1 90.310000   Top5 99.620000   BatchTime 0.099507
+INFO - ==> Top1: 90.310    Top5: 99.620    Loss: 0.428
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   4
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [4][   20/  196]   Loss 0.032738   Top1 98.906250   Top5 100.000000   BatchTime 0.220842   LR 0.010000
+INFO - Training [4][   40/  196]   Loss 0.028842   Top1 99.062500   Top5 100.000000   BatchTime 0.172852   LR 0.010000
+INFO - Training [4][   60/  196]   Loss 0.030080   Top1 98.997396   Top5 99.993490   BatchTime 0.156859   LR 0.010000
+INFO - Training [4][   80/  196]   Loss 0.030201   Top1 98.969727   Top5 99.995117   BatchTime 0.148692   LR 0.010000
+INFO - Training [4][  100/  196]   Loss 0.031380   Top1 98.929688   Top5 99.996094   BatchTime 0.143748   LR 0.010000
+INFO - Training [4][  120/  196]   Loss 0.031555   Top1 98.922526   Top5 99.996745   BatchTime 0.140521   LR 0.010000
+INFO - Training [4][  140/  196]   Loss 0.031702   Top1 98.922991   Top5 99.997210   BatchTime 0.138126   LR 0.010000
+INFO - Training [4][  160/  196]   Loss 0.032045   Top1 98.916016   Top5 99.997559   BatchTime 0.132123   LR 0.010000
+INFO - Training [4][  180/  196]   Loss 0.032055   Top1 98.908420   Top5 99.997830   BatchTime 0.128894   LR 0.010000
+INFO - ==> Top1: 98.890    Top5: 99.998    Loss: 0.032
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [4][   20/   40]   Loss 0.455635   Top1 90.234375   Top5 99.472656   BatchTime 0.129706
+INFO - Validation [4][   40/   40]   Loss 0.435932   Top1 90.420000   Top5 99.560000   BatchTime 0.092776
+INFO - ==> Top1: 90.420    Top5: 99.560    Loss: 0.436
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   5
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [5][   20/  196]   Loss 0.027176   Top1 99.179688   Top5 100.000000   BatchTime 0.218969   LR 0.010000
+INFO - Training [5][   40/  196]   Loss 0.031313   Top1 98.964844   Top5 100.000000   BatchTime 0.171748   LR 0.010000
+INFO - Training [5][   60/  196]   Loss 0.032570   Top1 98.873698   Top5 100.000000   BatchTime 0.155883   LR 0.010000
+INFO - Training [5][   80/  196]   Loss 0.031542   Top1 98.906250   Top5 100.000000   BatchTime 0.149066   LR 0.010000
+INFO - Training [5][  100/  196]   Loss 0.031000   Top1 98.917969   Top5 100.000000   BatchTime 0.144133   LR 0.010000
+INFO - Training [5][  120/  196]   Loss 0.031918   Top1 98.876953   Top5 100.000000   BatchTime 0.140790   LR 0.010000
+INFO - Training [5][  140/  196]   Loss 0.032221   Top1 98.878348   Top5 100.000000   BatchTime 0.138374   LR 0.010000
+INFO - Training [5][  160/  196]   Loss 0.031659   Top1 98.906250   Top5 100.000000   BatchTime 0.136533   LR 0.010000
+INFO - Training [5][  180/  196]   Loss 0.032388   Top1 98.886719   Top5 100.000000   BatchTime 0.135072   LR 0.010000
+INFO - ==> Top1: 98.884    Top5: 100.000    Loss: 0.033
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [5][   20/   40]   Loss 0.447515   Top1 90.273438   Top5 99.511719   BatchTime 0.142867
+INFO - Validation [5][   40/   40]   Loss 0.430193   Top1 90.490000   Top5 99.610000   BatchTime 0.098759
+INFO - ==> Top1: 90.490    Top5: 99.610    Loss: 0.430
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [-1][Top1: 90.590   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   6
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [6][   20/  196]   Loss 0.029733   Top1 99.062500   Top5 100.000000   BatchTime 0.218962   LR 0.010000
+INFO - Training [6][   40/  196]   Loss 0.028205   Top1 99.091797   Top5 100.000000   BatchTime 0.171489   LR 0.010000
+INFO - Training [6][   60/  196]   Loss 0.027562   Top1 99.088542   Top5 100.000000   BatchTime 0.155627   LR 0.010000
+INFO - Training [6][   80/  196]   Loss 0.025620   Top1 99.174805   Top5 100.000000   BatchTime 0.147661   LR 0.010000
+INFO - Training [6][  100/  196]   Loss 0.027187   Top1 99.113281   Top5 99.996094   BatchTime 0.138847   LR 0.010000
+INFO - Training [6][  120/  196]   Loss 0.027338   Top1 99.082031   Top5 99.996745   BatchTime 0.132054   LR 0.010000
+INFO - Training [6][  140/  196]   Loss 0.027331   Top1 99.082031   Top5 99.997210   BatchTime 0.127834   LR 0.010000
+INFO - Training [6][  160/  196]   Loss 0.027305   Top1 99.067383   Top5 99.997559   BatchTime 0.124390   LR 0.010000
+INFO - Training [6][  180/  196]   Loss 0.027796   Top1 99.029948   Top5 99.997830   BatchTime 0.120748   LR 0.010000
+INFO - ==> Top1: 99.022    Top5: 99.998    Loss: 0.028
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [6][   20/   40]   Loss 0.450137   Top1 90.273438   Top5 99.550781   BatchTime 0.145993
+INFO - Validation [6][   40/   40]   Loss 0.426382   Top1 90.600000   Top5 99.570000   BatchTime 0.101224
+INFO - ==> Top1: 90.600    Top5: 99.570    Loss: 0.426
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [6][Top1: 90.600   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   7
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [7][   20/  196]   Loss 0.026759   Top1 99.160156   Top5 100.000000   BatchTime 0.220178   LR 0.010000
+INFO - Training [7][   40/  196]   Loss 0.028133   Top1 99.072266   Top5 100.000000   BatchTime 0.172196   LR 0.010000
+INFO - Training [7][   60/  196]   Loss 0.027300   Top1 99.114583   Top5 100.000000   BatchTime 0.156121   LR 0.010000
+INFO - Training [7][   80/  196]   Loss 0.027896   Top1 99.082031   Top5 100.000000   BatchTime 0.148091   LR 0.010000
+INFO - Training [7][  100/  196]   Loss 0.028740   Top1 99.023438   Top5 100.000000   BatchTime 0.143285   LR 0.010000
+INFO - Training [7][  120/  196]   Loss 0.028986   Top1 98.997396   Top5 100.000000   BatchTime 0.140153   LR 0.010000
+INFO - Training [7][  140/  196]   Loss 0.029093   Top1 98.981585   Top5 100.000000   BatchTime 0.137831   LR 0.010000
+INFO - Training [7][  160/  196]   Loss 0.029265   Top1 98.977051   Top5 100.000000   BatchTime 0.136073   LR 0.010000
+INFO - Training [7][  180/  196]   Loss 0.029439   Top1 98.971354   Top5 100.000000   BatchTime 0.134684   LR 0.010000
+INFO - ==> Top1: 98.974    Top5: 100.000    Loss: 0.029
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [7][   20/   40]   Loss 0.454944   Top1 90.312500   Top5 99.511719   BatchTime 0.143906
+INFO - Validation [7][   40/   40]   Loss 0.435083   Top1 90.420000   Top5 99.570000   BatchTime 0.099707
+INFO - ==> Top1: 90.420    Top5: 99.570    Loss: 0.435
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [6][Top1: 90.600   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   8
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [8][   20/  196]   Loss 0.023527   Top1 99.296875   Top5 100.000000   BatchTime 0.218600   LR 0.010000
+INFO - Training [8][   40/  196]   Loss 0.024897   Top1 99.169922   Top5 100.000000   BatchTime 0.166779   LR 0.010000
+INFO - Training [8][   60/  196]   Loss 0.025355   Top1 99.166667   Top5 100.000000   BatchTime 0.142182   LR 0.010000
+INFO - Training [8][   80/  196]   Loss 0.026235   Top1 99.135742   Top5 100.000000   BatchTime 0.132425   LR 0.010000
+INFO - Training [8][  100/  196]   Loss 0.026415   Top1 99.113281   Top5 100.000000   BatchTime 0.126420   LR 0.010000
+INFO - Training [8][  120/  196]   Loss 0.026594   Top1 99.111328   Top5 100.000000   BatchTime 0.121209   LR 0.010000
+INFO - Training [8][  140/  196]   Loss 0.026329   Top1 99.129464   Top5 100.000000   BatchTime 0.120172   LR 0.010000
+INFO - Training [8][  160/  196]   Loss 0.027575   Top1 99.079590   Top5 100.000000   BatchTime 0.120621   LR 0.010000
+INFO - Training [8][  180/  196]   Loss 0.027021   Top1 99.075521   Top5 100.000000   BatchTime 0.120941   LR 0.010000
+INFO - ==> Top1: 99.068    Top5: 100.000    Loss: 0.028
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [8][   20/   40]   Loss 0.460408   Top1 89.960938   Top5 99.550781   BatchTime 0.146015
+INFO - Validation [8][   40/   40]   Loss 0.442979   Top1 89.980000   Top5 99.630000   BatchTime 0.102028
+INFO - ==> Top1: 89.980    Top5: 99.630    Loss: 0.443
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [6][Top1: 90.600   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [2][Top1: 90.600   Top5: 99.550] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   9
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [9][   20/  196]   Loss 0.023327   Top1 99.121094   Top5 100.000000   BatchTime 0.217976   LR 0.010000
+INFO - Training [9][   40/  196]   Loss 0.025733   Top1 99.121094   Top5 99.990234   BatchTime 0.171297   LR 0.010000
+INFO - Training [9][   60/  196]   Loss 0.024537   Top1 99.173177   Top5 99.993490   BatchTime 0.155639   LR 0.010000
+INFO - Training [9][   80/  196]   Loss 0.023883   Top1 99.194336   Top5 99.995117   BatchTime 0.147575   LR 0.010000
+INFO - Training [9][  100/  196]   Loss 0.025483   Top1 99.132812   Top5 99.996094   BatchTime 0.144142   LR 0.010000
+INFO - Training [9][  120/  196]   Loss 0.024716   Top1 99.169922   Top5 99.996745   BatchTime 0.140750   LR 0.010000
+INFO - Training [9][  140/  196]   Loss 0.024837   Top1 99.162946   Top5 99.997210   BatchTime 0.138331   LR 0.010000
+INFO - Training [9][  160/  196]   Loss 0.024864   Top1 99.157715   Top5 99.997559   BatchTime 0.136444   LR 0.010000
+INFO - Training [9][  180/  196]   Loss 0.024963   Top1 99.153646   Top5 99.995660   BatchTime 0.134995   LR 0.010000
+INFO - ==> Top1: 99.160    Top5: 99.996    Loss: 0.025
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [9][   20/   40]   Loss 0.461379   Top1 90.488281   Top5 99.550781   BatchTime 0.144293
+INFO - Validation [9][   40/   40]   Loss 0.439396   Top1 90.670000   Top5 99.650000   BatchTime 0.099675
+INFO - ==> Top1: 90.670    Top5: 99.650    Loss: 0.439
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [6][Top1: 90.600   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - >>>>>>>> Epoch  10
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [10][   20/  196]   Loss 0.023761   Top1 99.160156   Top5 100.000000   BatchTime 0.204330   LR 0.010000
+INFO - Training [10][   40/  196]   Loss 0.024730   Top1 99.062500   Top5 100.000000   BatchTime 0.155253   LR 0.010000
+INFO - Training [10][   60/  196]   Loss 0.024923   Top1 99.101562   Top5 100.000000   BatchTime 0.132738   LR 0.010000
+INFO - Training [10][   80/  196]   Loss 0.025553   Top1 99.067383   Top5 100.000000   BatchTime 0.130114   LR 0.010000
+INFO - Training [10][  100/  196]   Loss 0.025185   Top1 99.101562   Top5 100.000000   BatchTime 0.128969   LR 0.010000
+INFO - Training [10][  120/  196]   Loss 0.025018   Top1 99.098307   Top5 100.000000   BatchTime 0.128314   LR 0.010000
+INFO - Training [10][  140/  196]   Loss 0.025149   Top1 99.095982   Top5 100.000000   BatchTime 0.127780   LR 0.010000
+INFO - Training [10][  160/  196]   Loss 0.024900   Top1 99.125977   Top5 100.000000   BatchTime 0.127228   LR 0.010000
+INFO - Training [10][  180/  196]   Loss 0.024748   Top1 99.127604   Top5 100.000000   BatchTime 0.126865   LR 0.010000
+INFO - ==> Top1: 99.138    Top5: 100.000    Loss: 0.025
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [10][   20/   40]   Loss 0.469323   Top1 90.312500   Top5 99.433594   BatchTime 0.145145
+INFO - Validation [10][   40/   40]   Loss 0.449628   Top1 90.490000   Top5 99.530000   BatchTime 0.100974
+INFO - ==> Top1: 90.490    Top5: 99.530    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [6][Top1: 90.600   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  11
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [11][   20/  196]   Loss 0.021992   Top1 99.277344   Top5 100.000000   BatchTime 0.220768   LR 0.010000
+INFO - Training [11][   40/  196]   Loss 0.024922   Top1 99.218750   Top5 100.000000   BatchTime 0.172574   LR 0.010000
+INFO - Training [11][   60/  196]   Loss 0.026365   Top1 99.173177   Top5 100.000000   BatchTime 0.156373   LR 0.010000
+INFO - Training [11][   80/  196]   Loss 0.026621   Top1 99.169922   Top5 100.000000   BatchTime 0.148348   LR 0.010000
+INFO - Training [11][  100/  196]   Loss 0.027632   Top1 99.128906   Top5 100.000000   BatchTime 0.143524   LR 0.010000
+INFO - Training [11][  120/  196]   Loss 0.027552   Top1 99.127604   Top5 100.000000   BatchTime 0.140228   LR 0.010000
+INFO - Training [11][  140/  196]   Loss 0.027741   Top1 99.095982   Top5 100.000000   BatchTime 0.137867   LR 0.010000
+INFO - Training [11][  160/  196]   Loss 0.027255   Top1 99.106445   Top5 100.000000   BatchTime 0.136037   LR 0.010000
+INFO - Training [11][  180/  196]   Loss 0.026970   Top1 99.112413   Top5 100.000000   BatchTime 0.134616   LR 0.010000
+INFO - ==> Top1: 99.102    Top5: 100.000    Loss: 0.027
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [11][   20/   40]   Loss 0.462496   Top1 90.253906   Top5 99.453125   BatchTime 0.133362
+INFO - Validation [11][   40/   40]   Loss 0.439356   Top1 90.630000   Top5 99.580000   BatchTime 0.087808
+INFO - ==> Top1: 90.630    Top5: 99.580    Loss: 0.439
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  12
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [12][   20/  196]   Loss 0.030777   Top1 98.945312   Top5 100.000000   BatchTime 0.225306   LR 0.010000
+INFO - Training [12][   40/  196]   Loss 0.026854   Top1 99.062500   Top5 100.000000   BatchTime 0.175360   LR 0.010000
+INFO - Training [12][   60/  196]   Loss 0.027429   Top1 99.036458   Top5 100.000000   BatchTime 0.158636   LR 0.010000
+INFO - Training [12][   80/  196]   Loss 0.027155   Top1 99.033203   Top5 100.000000   BatchTime 0.150014   LR 0.010000
+INFO - Training [12][  100/  196]   Loss 0.025487   Top1 99.109375   Top5 100.000000   BatchTime 0.144913   LR 0.010000
+INFO - Training [12][  120/  196]   Loss 0.025192   Top1 99.121094   Top5 100.000000   BatchTime 0.141455   LR 0.010000
+INFO - Training [12][  140/  196]   Loss 0.025371   Top1 99.101562   Top5 100.000000   BatchTime 0.138950   LR 0.010000
+INFO - Training [12][  160/  196]   Loss 0.024661   Top1 99.155273   Top5 100.000000   BatchTime 0.137004   LR 0.010000
+INFO - Training [12][  180/  196]   Loss 0.024152   Top1 99.168837   Top5 100.000000   BatchTime 0.135498   LR 0.010000
+INFO - ==> Top1: 99.164    Top5: 100.000    Loss: 0.024
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [12][   20/   40]   Loss 0.468665   Top1 90.234375   Top5 99.472656   BatchTime 0.144995
+INFO - Validation [12][   40/   40]   Loss 0.444911   Top1 90.420000   Top5 99.590000   BatchTime 0.100500
+INFO - ==> Top1: 90.420    Top5: 99.590    Loss: 0.445
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  13
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [13][   20/  196]   Loss 0.021642   Top1 99.257812   Top5 100.000000   BatchTime 0.221197   LR 0.010000
+INFO - Training [13][   40/  196]   Loss 0.022545   Top1 99.248047   Top5 100.000000   BatchTime 0.172993   LR 0.010000
+INFO - Training [13][   60/  196]   Loss 0.024461   Top1 99.166667   Top5 100.000000   BatchTime 0.157016   LR 0.010000
+INFO - Training [13][   80/  196]   Loss 0.025096   Top1 99.135742   Top5 100.000000   BatchTime 0.149857   LR 0.010000
+INFO - Training [13][  100/  196]   Loss 0.025572   Top1 99.125000   Top5 100.000000   BatchTime 0.144854   LR 0.010000
+INFO - Training [13][  120/  196]   Loss 0.024398   Top1 99.169922   Top5 100.000000   BatchTime 0.141576   LR 0.010000
+INFO - Training [13][  140/  196]   Loss 0.023716   Top1 99.193638   Top5 100.000000   BatchTime 0.134146   LR 0.010000
+INFO - Training [13][  160/  196]   Loss 0.024023   Top1 99.187012   Top5 100.000000   BatchTime 0.130178   LR 0.010000
+INFO - Training [13][  180/  196]   Loss 0.024514   Top1 99.164497   Top5 100.000000   BatchTime 0.126963   LR 0.010000
+INFO - ==> Top1: 99.174    Top5: 100.000    Loss: 0.024
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [13][   20/   40]   Loss 0.474657   Top1 90.175781   Top5 99.453125   BatchTime 0.147624
+INFO - Validation [13][   40/   40]   Loss 0.456133   Top1 90.380000   Top5 99.580000   BatchTime 0.102011
+INFO - ==> Top1: 90.380    Top5: 99.580    Loss: 0.456
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  14
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [14][   20/  196]   Loss 0.019791   Top1 99.335938   Top5 100.000000   BatchTime 0.219174   LR 0.010000
+INFO - Training [14][   40/  196]   Loss 0.021142   Top1 99.277344   Top5 100.000000   BatchTime 0.171757   LR 0.010000
+INFO - Training [14][   60/  196]   Loss 0.021291   Top1 99.270833   Top5 100.000000   BatchTime 0.155907   LR 0.010000
+INFO - Training [14][   80/  196]   Loss 0.022234   Top1 99.238281   Top5 100.000000   BatchTime 0.148064   LR 0.010000
+INFO - Training [14][  100/  196]   Loss 0.021421   Top1 99.296875   Top5 100.000000   BatchTime 0.143511   LR 0.010000
+INFO - Training [14][  120/  196]   Loss 0.021261   Top1 99.283854   Top5 100.000000   BatchTime 0.140359   LR 0.010000
+INFO - Training [14][  140/  196]   Loss 0.021257   Top1 99.282924   Top5 100.000000   BatchTime 0.137958   LR 0.010000
+INFO - Training [14][  160/  196]   Loss 0.021749   Top1 99.267578   Top5 100.000000   BatchTime 0.136167   LR 0.010000
+INFO - Training [14][  180/  196]   Loss 0.022123   Top1 99.257812   Top5 100.000000   BatchTime 0.134835   LR 0.010000
+INFO - ==> Top1: 99.230    Top5: 100.000    Loss: 0.022
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [14][   20/   40]   Loss 0.468162   Top1 90.195312   Top5 99.628906   BatchTime 0.146984
+INFO - Validation [14][   40/   40]   Loss 0.450584   Top1 90.520000   Top5 99.640000   BatchTime 0.101896
+INFO - ==> Top1: 90.520    Top5: 99.640    Loss: 0.451
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  15
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [15][   20/  196]   Loss 0.020090   Top1 99.414062   Top5 100.000000   BatchTime 0.221407   LR 0.010000
+INFO - Training [15][   40/  196]   Loss 0.020165   Top1 99.287109   Top5 100.000000   BatchTime 0.172955   LR 0.010000
+INFO - Training [15][   60/  196]   Loss 0.019658   Top1 99.303385   Top5 100.000000   BatchTime 0.156484   LR 0.010000
+INFO - Training [15][   80/  196]   Loss 0.020479   Top1 99.277344   Top5 100.000000   BatchTime 0.144590   LR 0.010000
+INFO - Training [15][  100/  196]   Loss 0.020051   Top1 99.285156   Top5 100.000000   BatchTime 0.135406   LR 0.010000
+INFO - Training [15][  120/  196]   Loss 0.020650   Top1 99.248047   Top5 100.000000   BatchTime 0.130162   LR 0.010000
+INFO - Training [15][  140/  196]   Loss 0.021412   Top1 99.246652   Top5 100.000000   BatchTime 0.126507   LR 0.010000
+INFO - Training [15][  160/  196]   Loss 0.021415   Top1 99.250488   Top5 100.000000   BatchTime 0.121476   LR 0.010000
+INFO - Training [15][  180/  196]   Loss 0.021478   Top1 99.255642   Top5 100.000000   BatchTime 0.121280   LR 0.010000
+INFO - ==> Top1: 99.256    Top5: 100.000    Loss: 0.022
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [15][   20/   40]   Loss 0.478869   Top1 89.746094   Top5 99.531250   BatchTime 0.145397
+INFO - Validation [15][   40/   40]   Loss 0.457846   Top1 90.120000   Top5 99.610000   BatchTime 0.100545
+INFO - ==> Top1: 90.120    Top5: 99.610    Loss: 0.458
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  16
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [16][   20/  196]   Loss 0.020029   Top1 99.296875   Top5 100.000000   BatchTime 0.220187   LR 0.010000
+INFO - Training [16][   40/  196]   Loss 0.020920   Top1 99.287109   Top5 100.000000   BatchTime 0.172286   LR 0.010000
+INFO - Training [16][   60/  196]   Loss 0.021355   Top1 99.251302   Top5 100.000000   BatchTime 0.156233   LR 0.010000
+INFO - Training [16][   80/  196]   Loss 0.020209   Top1 99.287109   Top5 100.000000   BatchTime 0.148342   LR 0.010000
+INFO - Training [16][  100/  196]   Loss 0.020526   Top1 99.277344   Top5 100.000000   BatchTime 0.143548   LR 0.010000
+INFO - Training [16][  120/  196]   Loss 0.021104   Top1 99.274089   Top5 100.000000   BatchTime 0.140352   LR 0.010000
+INFO - Training [16][  140/  196]   Loss 0.021557   Top1 99.241071   Top5 100.000000   BatchTime 0.138060   LR 0.010000
+INFO - Training [16][  160/  196]   Loss 0.021685   Top1 99.228516   Top5 100.000000   BatchTime 0.136254   LR 0.010000
+INFO - Training [16][  180/  196]   Loss 0.021397   Top1 99.242622   Top5 100.000000   BatchTime 0.134842   LR 0.010000
+INFO - ==> Top1: 99.256    Top5: 100.000    Loss: 0.021
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [16][   20/   40]   Loss 0.479265   Top1 90.195312   Top5 99.589844   BatchTime 0.143159
+INFO - Validation [16][   40/   40]   Loss 0.463039   Top1 90.500000   Top5 99.630000   BatchTime 0.099973
+INFO - ==> Top1: 90.500    Top5: 99.630    Loss: 0.463
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  17
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [17][   20/  196]   Loss 0.024795   Top1 99.199219   Top5 100.000000   BatchTime 0.211665   LR 0.010000
+INFO - Training [17][   40/  196]   Loss 0.023392   Top1 99.228516   Top5 100.000000   BatchTime 0.152293   LR 0.010000
+INFO - Training [17][   60/  196]   Loss 0.022788   Top1 99.225260   Top5 100.000000   BatchTime 0.135743   LR 0.010000
+INFO - Training [17][   80/  196]   Loss 0.023773   Top1 99.204102   Top5 100.000000   BatchTime 0.127690   LR 0.010000
+INFO - Training [17][  100/  196]   Loss 0.023034   Top1 99.230469   Top5 100.000000   BatchTime 0.121117   LR 0.010000
+INFO - Training [17][  120/  196]   Loss 0.022929   Top1 99.244792   Top5 100.000000   BatchTime 0.120801   LR 0.010000
+INFO - Training [17][  140/  196]   Loss 0.022751   Top1 99.260603   Top5 100.000000   BatchTime 0.121322   LR 0.010000
+INFO - Training [17][  160/  196]   Loss 0.022348   Top1 99.265137   Top5 100.000000   BatchTime 0.121691   LR 0.010000
+INFO - Training [17][  180/  196]   Loss 0.021903   Top1 99.279514   Top5 100.000000   BatchTime 0.121892   LR 0.010000
+INFO - ==> Top1: 99.278    Top5: 100.000    Loss: 0.022
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [17][   20/   40]   Loss 0.457542   Top1 90.527344   Top5 99.609375   BatchTime 0.146123
+INFO - Validation [17][   40/   40]   Loss 0.446764   Top1 90.580000   Top5 99.620000   BatchTime 0.101496
+INFO - ==> Top1: 90.580    Top5: 99.620    Loss: 0.447
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  18
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [18][   20/  196]   Loss 0.025004   Top1 99.179688   Top5 100.000000   BatchTime 0.219931   LR 0.010000
+INFO - Training [18][   40/  196]   Loss 0.021919   Top1 99.296875   Top5 100.000000   BatchTime 0.172109   LR 0.010000
+INFO - Training [18][   60/  196]   Loss 0.020206   Top1 99.368490   Top5 100.000000   BatchTime 0.156201   LR 0.010000
+INFO - Training [18][   80/  196]   Loss 0.020181   Top1 99.365234   Top5 100.000000   BatchTime 0.148383   LR 0.010000
+INFO - Training [18][  100/  196]   Loss 0.020079   Top1 99.347656   Top5 100.000000   BatchTime 0.143759   LR 0.010000
+INFO - Training [18][  120/  196]   Loss 0.020426   Top1 99.326172   Top5 100.000000   BatchTime 0.140474   LR 0.010000
+INFO - Training [18][  140/  196]   Loss 0.020811   Top1 99.321987   Top5 100.000000   BatchTime 0.138089   LR 0.010000
+INFO - Training [18][  160/  196]   Loss 0.020327   Top1 99.318848   Top5 100.000000   BatchTime 0.136280   LR 0.010000
+INFO - Training [18][  180/  196]   Loss 0.020737   Top1 99.309896   Top5 100.000000   BatchTime 0.134842   LR 0.010000
+INFO - ==> Top1: 99.322    Top5: 100.000    Loss: 0.021
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [18][   20/   40]   Loss 0.478443   Top1 90.097656   Top5 99.589844   BatchTime 0.137138
+INFO - Validation [18][   40/   40]   Loss 0.461129   Top1 90.310000   Top5 99.630000   BatchTime 0.086255
+INFO - ==> Top1: 90.310    Top5: 99.630    Loss: 0.461
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  19
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [19][   20/  196]   Loss 0.020314   Top1 99.257812   Top5 100.000000   BatchTime 0.202058   LR 0.010000
+INFO - Training [19][   40/  196]   Loss 0.020236   Top1 99.287109   Top5 100.000000   BatchTime 0.148430   LR 0.010000
+INFO - Training [19][   60/  196]   Loss 0.020162   Top1 99.277344   Top5 100.000000   BatchTime 0.137842   LR 0.010000
+INFO - Training [19][   80/  196]   Loss 0.020857   Top1 99.262695   Top5 100.000000   BatchTime 0.134575   LR 0.010000
+INFO - Training [19][  100/  196]   Loss 0.020755   Top1 99.285156   Top5 100.000000   BatchTime 0.132545   LR 0.010000
+INFO - Training [19][  120/  196]   Loss 0.020735   Top1 99.270833   Top5 100.000000   BatchTime 0.131300   LR 0.010000
+INFO - Training [19][  140/  196]   Loss 0.020491   Top1 99.288504   Top5 100.000000   BatchTime 0.130405   LR 0.010000
+INFO - Training [19][  160/  196]   Loss 0.020628   Top1 99.284668   Top5 100.000000   BatchTime 0.129683   LR 0.010000
+INFO - Training [19][  180/  196]   Loss 0.020864   Top1 99.281684   Top5 100.000000   BatchTime 0.129062   LR 0.010000
+INFO - ==> Top1: 99.268    Top5: 99.998    Loss: 0.021
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [19][   20/   40]   Loss 0.490359   Top1 89.843750   Top5 99.511719   BatchTime 0.144799
+INFO - Validation [19][   40/   40]   Loss 0.465111   Top1 90.340000   Top5 99.590000   BatchTime 0.100452
+INFO - ==> Top1: 90.340    Top5: 99.590    Loss: 0.465
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 90.630   Top5: 99.580] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  20
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [20][   20/  196]   Loss 0.019035   Top1 99.433594   Top5 100.000000   BatchTime 0.219634   LR 0.001000
+INFO - Training [20][   40/  196]   Loss 0.019750   Top1 99.345703   Top5 100.000000   BatchTime 0.172127   LR 0.001000
+INFO - Training [20][   60/  196]   Loss 0.021411   Top1 99.277344   Top5 100.000000   BatchTime 0.156204   LR 0.001000
+INFO - Training [20][   80/  196]   Loss 0.022126   Top1 99.262695   Top5 100.000000   BatchTime 0.148166   LR 0.001000
+INFO - Training [20][  100/  196]   Loss 0.021731   Top1 99.277344   Top5 100.000000   BatchTime 0.143354   LR 0.001000
+INFO - Training [20][  120/  196]   Loss 0.022237   Top1 99.280599   Top5 100.000000   BatchTime 0.140192   LR 0.001000
+INFO - Training [20][  140/  196]   Loss 0.021900   Top1 99.285714   Top5 100.000000   BatchTime 0.137824   LR 0.001000
+INFO - Training [20][  160/  196]   Loss 0.021451   Top1 99.291992   Top5 100.000000   BatchTime 0.135957   LR 0.001000
+INFO - Training [20][  180/  196]   Loss 0.021441   Top1 99.292535   Top5 100.000000   BatchTime 0.131990   LR 0.001000
+INFO - ==> Top1: 99.294    Top5: 100.000    Loss: 0.021
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [20][   20/   40]   Loss 0.472823   Top1 90.312500   Top5 99.589844   BatchTime 0.131450
+INFO - Validation [20][   40/   40]   Loss 0.451008   Top1 90.670000   Top5 99.640000   BatchTime 0.082946
+INFO - ==> Top1: 90.670    Top5: 99.640    Loss: 0.451
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [20][Top1: 90.670   Top5: 99.640] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [0][Top1: 90.640   Top5: 99.570] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  21
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [21][   20/  196]   Loss 0.015299   Top1 99.433594   Top5 100.000000   BatchTime 0.223424   LR 0.001000
+INFO - Training [21][   40/  196]   Loss 0.015918   Top1 99.482422   Top5 100.000000   BatchTime 0.173669   LR 0.001000
+INFO - Training [21][   60/  196]   Loss 0.017621   Top1 99.368490   Top5 100.000000   BatchTime 0.157230   LR 0.001000
+INFO - Training [21][   80/  196]   Loss 0.017782   Top1 99.350586   Top5 100.000000   BatchTime 0.148419   LR 0.001000
+INFO - Training [21][  100/  196]   Loss 0.017625   Top1 99.386719   Top5 100.000000   BatchTime 0.143556   LR 0.001000
+INFO - Training [21][  120/  196]   Loss 0.018117   Top1 99.368490   Top5 100.000000   BatchTime 0.140324   LR 0.001000
+INFO - Training [21][  140/  196]   Loss 0.018137   Top1 99.380580   Top5 100.000000   BatchTime 0.138624   LR 0.001000
+INFO - Training [21][  160/  196]   Loss 0.018133   Top1 99.367676   Top5 100.000000   BatchTime 0.136685   LR 0.001000
+INFO - Training [21][  180/  196]   Loss 0.018183   Top1 99.372830   Top5 100.000000   BatchTime 0.135201   LR 0.001000
+INFO - ==> Top1: 99.372    Top5: 100.000    Loss: 0.018
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [21][   20/   40]   Loss 0.465315   Top1 90.429688   Top5 99.628906   BatchTime 0.143433
+INFO - Validation [21][   40/   40]   Loss 0.447034   Top1 90.660000   Top5 99.670000   BatchTime 0.099475
+INFO - ==> Top1: 90.660    Top5: 99.670    Loss: 0.447
+INFO - Scoreboard best 1 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 2 ==> Epoch [20][Top1: 90.670   Top5: 99.640] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [21][Top1: 90.660   Top5: 99.670] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  22
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [22][   20/  196]   Loss 0.017343   Top1 99.375000   Top5 100.000000   BatchTime 0.219793   LR 0.001000
+INFO - Training [22][   40/  196]   Loss 0.018225   Top1 99.355469   Top5 100.000000   BatchTime 0.172005   LR 0.001000
+INFO - Training [22][   60/  196]   Loss 0.016958   Top1 99.420573   Top5 100.000000   BatchTime 0.155753   LR 0.001000
+INFO - Training [22][   80/  196]   Loss 0.017197   Top1 99.409180   Top5 100.000000   BatchTime 0.147761   LR 0.001000
+INFO - Training [22][  100/  196]   Loss 0.018105   Top1 99.378906   Top5 100.000000   BatchTime 0.143031   LR 0.001000
+INFO - Training [22][  120/  196]   Loss 0.017730   Top1 99.397786   Top5 100.000000   BatchTime 0.134418   LR 0.001000
+INFO - Training [22][  140/  196]   Loss 0.017901   Top1 99.402902   Top5 100.000000   BatchTime 0.130121   LR 0.001000
+INFO - Training [22][  160/  196]   Loss 0.018085   Top1 99.372559   Top5 100.000000   BatchTime 0.126367   LR 0.001000
+INFO - Training [22][  180/  196]   Loss 0.018111   Top1 99.361979   Top5 100.000000   BatchTime 0.123052   LR 0.001000
+INFO - ==> Top1: 99.360    Top5: 100.000    Loss: 0.018
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [22][   20/   40]   Loss 0.468168   Top1 90.566406   Top5 99.589844   BatchTime 0.147994
+INFO - Validation [22][   40/   40]   Loss 0.448912   Top1 90.770000   Top5 99.630000   BatchTime 0.102174
+INFO - ==> Top1: 90.770    Top5: 99.630    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 90.670   Top5: 99.640] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - >>>>>>>> Epoch  23
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [23][   20/  196]   Loss 0.014594   Top1 99.550781   Top5 100.000000   BatchTime 0.219506   LR 0.001000
+INFO - Training [23][   40/  196]   Loss 0.015490   Top1 99.521484   Top5 100.000000   BatchTime 0.171786   LR 0.001000
+INFO - Training [23][   60/  196]   Loss 0.015674   Top1 99.485677   Top5 100.000000   BatchTime 0.155883   LR 0.001000
+INFO - Training [23][   80/  196]   Loss 0.015048   Top1 99.511719   Top5 100.000000   BatchTime 0.147946   LR 0.001000
+INFO - Training [23][  100/  196]   Loss 0.016034   Top1 99.472656   Top5 100.000000   BatchTime 0.143211   LR 0.001000
+INFO - Training [23][  120/  196]   Loss 0.016111   Top1 99.466146   Top5 99.996745   BatchTime 0.140062   LR 0.001000
+INFO - Training [23][  140/  196]   Loss 0.016078   Top1 99.478237   Top5 99.997210   BatchTime 0.137752   LR 0.001000
+INFO - Training [23][  160/  196]   Loss 0.016161   Top1 99.467773   Top5 99.997559   BatchTime 0.135937   LR 0.001000
+INFO - Training [23][  180/  196]   Loss 0.016478   Top1 99.459635   Top5 99.997830   BatchTime 0.134510   LR 0.001000
+INFO - ==> Top1: 99.454    Top5: 99.998    Loss: 0.017
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [23][   20/   40]   Loss 0.469250   Top1 90.644531   Top5 99.628906   BatchTime 0.142956
+INFO - Validation [23][   40/   40]   Loss 0.448769   Top1 90.760000   Top5 99.680000   BatchTime 0.099016
+INFO - ==> Top1: 90.760    Top5: 99.680    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [23][Top1: 90.760   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [9][Top1: 90.670   Top5: 99.650] Sparsity : 0.774
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  24
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [24][   20/  196]   Loss 0.013214   Top1 99.609375   Top5 100.000000   BatchTime 0.219156   LR 0.001000
+INFO - Training [24][   40/  196]   Loss 0.014413   Top1 99.550781   Top5 100.000000   BatchTime 0.171331   LR 0.001000
+INFO - Training [24][   60/  196]   Loss 0.016335   Top1 99.446615   Top5 100.000000   BatchTime 0.147164   LR 0.001000
+INFO - Training [24][   80/  196]   Loss 0.016099   Top1 99.453125   Top5 100.000000   BatchTime 0.135554   LR 0.001000
+INFO - Training [24][  100/  196]   Loss 0.015818   Top1 99.445312   Top5 100.000000   BatchTime 0.128931   LR 0.001000
+INFO - Training [24][  120/  196]   Loss 0.015809   Top1 99.449870   Top5 100.000000   BatchTime 0.124744   LR 0.001000
+INFO - Training [24][  140/  196]   Loss 0.016043   Top1 99.461496   Top5 100.000000   BatchTime 0.119531   LR 0.001000
+INFO - Training [24][  160/  196]   Loss 0.016372   Top1 99.436035   Top5 100.000000   BatchTime 0.120488   LR 0.001000
+INFO - Training [24][  180/  196]   Loss 0.016745   Top1 99.429253   Top5 100.000000   BatchTime 0.120820   LR 0.001000
+INFO - ==> Top1: 99.434    Top5: 100.000    Loss: 0.017
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [24][   20/   40]   Loss 0.462552   Top1 90.546875   Top5 99.531250   BatchTime 0.143731
+INFO - Validation [24][   40/   40]   Loss 0.446522   Top1 90.700000   Top5 99.600000   BatchTime 0.099728
+INFO - ==> Top1: 90.700    Top5: 99.600    Loss: 0.447
+INFO - Scoreboard best 1 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [23][Top1: 90.760   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [24][Top1: 90.700   Top5: 99.600] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  25
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [25][   20/  196]   Loss 0.013855   Top1 99.550781   Top5 100.000000   BatchTime 0.219191   LR 0.001000
+INFO - Training [25][   40/  196]   Loss 0.014383   Top1 99.570312   Top5 100.000000   BatchTime 0.171222   LR 0.001000
+INFO - Training [25][   60/  196]   Loss 0.015398   Top1 99.531250   Top5 100.000000   BatchTime 0.155493   LR 0.001000
+INFO - Training [25][   80/  196]   Loss 0.016145   Top1 99.487305   Top5 100.000000   BatchTime 0.147533   LR 0.001000
+INFO - Training [25][  100/  196]   Loss 0.016239   Top1 99.460938   Top5 100.000000   BatchTime 0.142797   LR 0.001000
+INFO - Training [25][  120/  196]   Loss 0.016162   Top1 99.485677   Top5 100.000000   BatchTime 0.139637   LR 0.001000
+INFO - Training [25][  140/  196]   Loss 0.016114   Top1 99.469866   Top5 100.000000   BatchTime 0.137448   LR 0.001000
+INFO - Training [25][  160/  196]   Loss 0.016539   Top1 99.467773   Top5 100.000000   BatchTime 0.136517   LR 0.001000
+INFO - Training [25][  180/  196]   Loss 0.016961   Top1 99.448785   Top5 100.000000   BatchTime 0.135044   LR 0.001000
+INFO - ==> Top1: 99.452    Top5: 100.000    Loss: 0.017
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [25][   20/   40]   Loss 0.467365   Top1 90.605469   Top5 99.589844   BatchTime 0.142544
+INFO - Validation [25][   40/   40]   Loss 0.446095   Top1 90.720000   Top5 99.640000   BatchTime 0.098970
+INFO - ==> Top1: 90.720    Top5: 99.640    Loss: 0.446
+INFO - Scoreboard best 1 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [23][Top1: 90.760   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [25][Top1: 90.720   Top5: 99.640] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  26
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [26][   20/  196]   Loss 0.011799   Top1 99.687500   Top5 100.000000   BatchTime 0.201320   LR 0.001000
+INFO - Training [26][   40/  196]   Loss 0.014606   Top1 99.560547   Top5 100.000000   BatchTime 0.151340   LR 0.001000
+INFO - Training [26][   60/  196]   Loss 0.015316   Top1 99.531250   Top5 100.000000   BatchTime 0.134628   LR 0.001000
+INFO - Training [26][   80/  196]   Loss 0.015978   Top1 99.472656   Top5 100.000000   BatchTime 0.123138   LR 0.001000
+INFO - Training [26][  100/  196]   Loss 0.015896   Top1 99.472656   Top5 100.000000   BatchTime 0.122029   LR 0.001000
+INFO - Training [26][  120/  196]   Loss 0.016091   Top1 99.459635   Top5 100.000000   BatchTime 0.122411   LR 0.001000
+INFO - Training [26][  140/  196]   Loss 0.015776   Top1 99.464286   Top5 100.000000   BatchTime 0.122597   LR 0.001000
+INFO - Training [26][  160/  196]   Loss 0.016041   Top1 99.460449   Top5 100.000000   BatchTime 0.122668   LR 0.001000
+INFO - Training [26][  180/  196]   Loss 0.016029   Top1 99.448785   Top5 100.000000   BatchTime 0.122729   LR 0.001000
+INFO - ==> Top1: 99.446    Top5: 100.000    Loss: 0.016
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [26][   20/   40]   Loss 0.465042   Top1 90.683594   Top5 99.609375   BatchTime 0.145466
+INFO - Validation [26][   40/   40]   Loss 0.443632   Top1 90.970000   Top5 99.660000   BatchTime 0.100950
+INFO - ==> Top1: 90.970    Top5: 99.660    Loss: 0.444
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [23][Top1: 90.760   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - >>>>>>>> Epoch  27
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [27][   20/  196]   Loss 0.015324   Top1 99.492188   Top5 100.000000   BatchTime 0.219667   LR 0.001000
+INFO - Training [27][   40/  196]   Loss 0.014562   Top1 99.521484   Top5 100.000000   BatchTime 0.172203   LR 0.001000
+INFO - Training [27][   60/  196]   Loss 0.015731   Top1 99.459635   Top5 100.000000   BatchTime 0.156110   LR 0.001000
+INFO - Training [27][   80/  196]   Loss 0.015517   Top1 99.462891   Top5 100.000000   BatchTime 0.148233   LR 0.001000
+INFO - Training [27][  100/  196]   Loss 0.015875   Top1 99.449219   Top5 100.000000   BatchTime 0.143475   LR 0.001000
+INFO - Training [27][  120/  196]   Loss 0.015987   Top1 99.446615   Top5 100.000000   BatchTime 0.140182   LR 0.001000
+INFO - Training [27][  140/  196]   Loss 0.016295   Top1 99.441964   Top5 100.000000   BatchTime 0.137818   LR 0.001000
+INFO - Training [27][  160/  196]   Loss 0.016374   Top1 99.448242   Top5 100.000000   BatchTime 0.135923   LR 0.001000
+INFO - Training [27][  180/  196]   Loss 0.016045   Top1 99.470486   Top5 100.000000   BatchTime 0.134491   LR 0.001000
+INFO - ==> Top1: 99.454    Top5: 99.998    Loss: 0.016
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [27][   20/   40]   Loss 0.463848   Top1 90.761719   Top5 99.628906   BatchTime 0.136682
+INFO - Validation [27][   40/   40]   Loss 0.447711   Top1 90.730000   Top5 99.690000   BatchTime 0.090227
+INFO - ==> Top1: 90.730    Top5: 99.690    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [23][Top1: 90.760   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  28
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [28][   20/  196]   Loss 0.015166   Top1 99.511719   Top5 100.000000   BatchTime 0.200298   LR 0.001000
+INFO - Training [28][   40/  196]   Loss 0.015472   Top1 99.492188   Top5 100.000000   BatchTime 0.162278   LR 0.001000
+INFO - Training [28][   60/  196]   Loss 0.015500   Top1 99.531250   Top5 100.000000   BatchTime 0.149588   LR 0.001000
+INFO - Training [28][   80/  196]   Loss 0.014941   Top1 99.541016   Top5 100.000000   BatchTime 0.143234   LR 0.001000
+INFO - Training [28][  100/  196]   Loss 0.014391   Top1 99.535156   Top5 100.000000   BatchTime 0.139328   LR 0.001000
+INFO - Training [28][  120/  196]   Loss 0.014729   Top1 99.524740   Top5 99.996745   BatchTime 0.136678   LR 0.001000
+INFO - Training [28][  140/  196]   Loss 0.015246   Top1 99.514509   Top5 99.997210   BatchTime 0.134876   LR 0.001000
+INFO - Training [28][  160/  196]   Loss 0.015393   Top1 99.501953   Top5 99.997559   BatchTime 0.133440   LR 0.001000
+INFO - Training [28][  180/  196]   Loss 0.015568   Top1 99.490017   Top5 99.997830   BatchTime 0.132310   LR 0.001000
+INFO - ==> Top1: 99.476    Top5: 99.998    Loss: 0.016
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [28][   20/   40]   Loss 0.465954   Top1 90.761719   Top5 99.648438   BatchTime 0.144186
+INFO - Validation [28][   40/   40]   Loss 0.447421   Top1 90.940000   Top5 99.660000   BatchTime 0.098082
+INFO - ==> Top1: 90.940    Top5: 99.660    Loss: 0.447
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [22][Top1: 90.770   Top5: 99.630] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  29
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [29][   20/  196]   Loss 0.016081   Top1 99.433594   Top5 100.000000   BatchTime 0.221021   LR 0.001000
+INFO - Training [29][   40/  196]   Loss 0.015239   Top1 99.462891   Top5 100.000000   BatchTime 0.172686   LR 0.001000
+INFO - Training [29][   60/  196]   Loss 0.014779   Top1 99.492188   Top5 100.000000   BatchTime 0.156462   LR 0.001000
+INFO - Training [29][   80/  196]   Loss 0.014351   Top1 99.526367   Top5 100.000000   BatchTime 0.148288   LR 0.001000
+INFO - Training [29][  100/  196]   Loss 0.014490   Top1 99.511719   Top5 100.000000   BatchTime 0.143345   LR 0.001000
+INFO - Training [29][  120/  196]   Loss 0.014252   Top1 99.537760   Top5 100.000000   BatchTime 0.140062   LR 0.001000
+INFO - Training [29][  140/  196]   Loss 0.014146   Top1 99.539621   Top5 100.000000   BatchTime 0.138063   LR 0.001000
+INFO - Training [29][  160/  196]   Loss 0.014308   Top1 99.528809   Top5 100.000000   BatchTime 0.131761   LR 0.001000
+INFO - Training [29][  180/  196]   Loss 0.014357   Top1 99.533420   Top5 100.000000   BatchTime 0.128986   LR 0.001000
+INFO - ==> Top1: 99.540    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [29][   20/   40]   Loss 0.470920   Top1 90.644531   Top5 99.589844   BatchTime 0.139666
+INFO - Validation [29][   40/   40]   Loss 0.450280   Top1 90.870000   Top5 99.650000   BatchTime 0.097313
+INFO - ==> Top1: 90.870    Top5: 99.650    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  30
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [30][   20/  196]   Loss 0.014991   Top1 99.492188   Top5 100.000000   BatchTime 0.219806   LR 0.001000
+INFO - Training [30][   40/  196]   Loss 0.014103   Top1 99.531250   Top5 100.000000   BatchTime 0.172055   LR 0.001000
+INFO - Training [30][   60/  196]   Loss 0.014774   Top1 99.524740   Top5 100.000000   BatchTime 0.156108   LR 0.001000
+INFO - Training [30][   80/  196]   Loss 0.014091   Top1 99.541016   Top5 100.000000   BatchTime 0.147972   LR 0.001000
+INFO - Training [30][  100/  196]   Loss 0.014633   Top1 99.515625   Top5 100.000000   BatchTime 0.143278   LR 0.001000
+INFO - Training [30][  120/  196]   Loss 0.014497   Top1 99.524740   Top5 100.000000   BatchTime 0.140084   LR 0.001000
+INFO - Training [30][  140/  196]   Loss 0.014615   Top1 99.525670   Top5 100.000000   BatchTime 0.137789   LR 0.001000
+INFO - Training [30][  160/  196]   Loss 0.014840   Top1 99.523926   Top5 100.000000   BatchTime 0.135986   LR 0.001000
+INFO - Training [30][  180/  196]   Loss 0.014944   Top1 99.537760   Top5 100.000000   BatchTime 0.134590   LR 0.001000
+INFO - ==> Top1: 99.536    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [30][   20/   40]   Loss 0.465318   Top1 90.664062   Top5 99.531250   BatchTime 0.143974
+INFO - Validation [30][   40/   40]   Loss 0.448785   Top1 90.810000   Top5 99.630000   BatchTime 0.099865
+INFO - ==> Top1: 90.810    Top5: 99.630    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  31
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [31][   20/  196]   Loss 0.017006   Top1 99.433594   Top5 100.000000   BatchTime 0.218535   LR 0.001000
+INFO - Training [31][   40/  196]   Loss 0.017647   Top1 99.472656   Top5 100.000000   BatchTime 0.171161   LR 0.001000
+INFO - Training [31][   60/  196]   Loss 0.016068   Top1 99.498698   Top5 100.000000   BatchTime 0.155284   LR 0.001000
+INFO - Training [31][   80/  196]   Loss 0.015571   Top1 99.506836   Top5 100.000000   BatchTime 0.147419   LR 0.001000
+INFO - Training [31][  100/  196]   Loss 0.015588   Top1 99.480469   Top5 100.000000   BatchTime 0.136567   LR 0.001000
+INFO - Training [31][  120/  196]   Loss 0.015706   Top1 99.488932   Top5 100.000000   BatchTime 0.131175   LR 0.001000
+INFO - Training [31][  140/  196]   Loss 0.015700   Top1 99.497768   Top5 100.000000   BatchTime 0.126956   LR 0.001000
+INFO - Training [31][  160/  196]   Loss 0.015696   Top1 99.497070   Top5 100.000000   BatchTime 0.123438   LR 0.001000
+INFO - Training [31][  180/  196]   Loss 0.015592   Top1 99.496528   Top5 100.000000   BatchTime 0.119910   LR 0.001000
+INFO - ==> Top1: 99.500    Top5: 100.000    Loss: 0.016
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [31][   20/   40]   Loss 0.470886   Top1 90.546875   Top5 99.628906   BatchTime 0.144986
+INFO - Validation [31][   40/   40]   Loss 0.452231   Top1 90.740000   Top5 99.660000   BatchTime 0.100842
+INFO - ==> Top1: 90.740    Top5: 99.660    Loss: 0.452
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  32
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [32][   20/  196]   Loss 0.015140   Top1 99.492188   Top5 100.000000   BatchTime 0.218943   LR 0.001000
+INFO - Training [32][   40/  196]   Loss 0.013786   Top1 99.541016   Top5 100.000000   BatchTime 0.171832   LR 0.001000
+INFO - Training [32][   60/  196]   Loss 0.013821   Top1 99.550781   Top5 100.000000   BatchTime 0.156044   LR 0.001000
+INFO - Training [32][   80/  196]   Loss 0.013491   Top1 99.580078   Top5 100.000000   BatchTime 0.147997   LR 0.001000
+INFO - Training [32][  100/  196]   Loss 0.013697   Top1 99.570312   Top5 100.000000   BatchTime 0.143087   LR 0.001000
+INFO - Training [32][  120/  196]   Loss 0.014044   Top1 99.550781   Top5 100.000000   BatchTime 0.140161   LR 0.001000
+INFO - Training [32][  140/  196]   Loss 0.014251   Top1 99.547991   Top5 100.000000   BatchTime 0.137813   LR 0.001000
+INFO - Training [32][  160/  196]   Loss 0.014588   Top1 99.531250   Top5 100.000000   BatchTime 0.136033   LR 0.001000
+INFO - Training [32][  180/  196]   Loss 0.014782   Top1 99.509549   Top5 100.000000   BatchTime 0.134614   LR 0.001000
+INFO - ==> Top1: 99.514    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [32][   20/   40]   Loss 0.469309   Top1 90.410156   Top5 99.628906   BatchTime 0.145863
+INFO - Validation [32][   40/   40]   Loss 0.450317   Top1 90.620000   Top5 99.660000   BatchTime 0.101235
+INFO - ==> Top1: 90.620    Top5: 99.660    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  33
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [33][   20/  196]   Loss 0.010334   Top1 99.687500   Top5 100.000000   BatchTime 0.217336   LR 0.001000
+INFO - Training [33][   40/  196]   Loss 0.011177   Top1 99.619141   Top5 100.000000   BatchTime 0.158212   LR 0.001000
+INFO - Training [33][   60/  196]   Loss 0.012324   Top1 99.570312   Top5 100.000000   BatchTime 0.139381   LR 0.001000
+INFO - Training [33][   80/  196]   Loss 0.012810   Top1 99.555664   Top5 100.000000   BatchTime 0.130135   LR 0.001000
+INFO - Training [33][  100/  196]   Loss 0.013385   Top1 99.531250   Top5 100.000000   BatchTime 0.124789   LR 0.001000
+INFO - Training [33][  120/  196]   Loss 0.013615   Top1 99.521484   Top5 100.000000   BatchTime 0.118502   LR 0.001000
+INFO - Training [33][  140/  196]   Loss 0.013687   Top1 99.522879   Top5 100.000000   BatchTime 0.116586   LR 0.001000
+INFO - Training [33][  160/  196]   Loss 0.013833   Top1 99.521484   Top5 100.000000   BatchTime 0.114529   LR 0.001000
+INFO - Training [33][  180/  196]   Loss 0.013887   Top1 99.524740   Top5 100.000000   BatchTime 0.112541   LR 0.001000
+INFO - ==> Top1: 99.528    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [33][   20/   40]   Loss 0.467059   Top1 90.566406   Top5 99.570312   BatchTime 0.121525
+INFO - Validation [33][   40/   40]   Loss 0.449250   Top1 90.780000   Top5 99.640000   BatchTime 0.077747
+INFO - ==> Top1: 90.780    Top5: 99.640    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  34
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [34][   20/  196]   Loss 0.013669   Top1 99.589844   Top5 100.000000   BatchTime 0.191261   LR 0.001000
+INFO - Training [34][   40/  196]   Loss 0.012832   Top1 99.628906   Top5 100.000000   BatchTime 0.139209   LR 0.001000
+INFO - Training [34][   60/  196]   Loss 0.013429   Top1 99.563802   Top5 100.000000   BatchTime 0.121776   LR 0.001000
+INFO - Training [34][   80/  196]   Loss 0.013882   Top1 99.565430   Top5 100.000000   BatchTime 0.114126   LR 0.001000
+INFO - Training [34][  100/  196]   Loss 0.014349   Top1 99.542969   Top5 100.000000   BatchTime 0.108952   LR 0.001000
+INFO - Training [34][  120/  196]   Loss 0.013956   Top1 99.550781   Top5 100.000000   BatchTime 0.105412   LR 0.001000
+INFO - Training [34][  140/  196]   Loss 0.014260   Top1 99.539621   Top5 100.000000   BatchTime 0.103378   LR 0.001000
+INFO - Training [34][  160/  196]   Loss 0.014830   Top1 99.538574   Top5 100.000000   BatchTime 0.102736   LR 0.001000
+INFO - Training [34][  180/  196]   Loss 0.015385   Top1 99.522569   Top5 100.000000   BatchTime 0.102551   LR 0.001000
+INFO - ==> Top1: 99.510    Top5: 100.000    Loss: 0.016
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [34][   20/   40]   Loss 0.464651   Top1 90.664062   Top5 99.609375   BatchTime 0.146913
+INFO - Validation [34][   40/   40]   Loss 0.447657   Top1 90.810000   Top5 99.660000   BatchTime 0.101794
+INFO - ==> Top1: 90.810    Top5: 99.660    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  35
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [35][   20/  196]   Loss 0.016058   Top1 99.511719   Top5 100.000000   BatchTime 0.220258   LR 0.001000
+INFO - Training [35][   40/  196]   Loss 0.015390   Top1 99.511719   Top5 100.000000   BatchTime 0.171856   LR 0.001000
+INFO - Training [35][   60/  196]   Loss 0.014926   Top1 99.570312   Top5 100.000000   BatchTime 0.155716   LR 0.001000
+INFO - Training [35][   80/  196]   Loss 0.014292   Top1 99.584961   Top5 100.000000   BatchTime 0.147680   LR 0.001000
+INFO - Training [35][  100/  196]   Loss 0.014190   Top1 99.566406   Top5 100.000000   BatchTime 0.142833   LR 0.001000
+INFO - Training [35][  120/  196]   Loss 0.014770   Top1 99.547526   Top5 100.000000   BatchTime 0.139708   LR 0.001000
+INFO - Training [35][  140/  196]   Loss 0.014378   Top1 99.561942   Top5 100.000000   BatchTime 0.137406   LR 0.001000
+INFO - Training [35][  160/  196]   Loss 0.014344   Top1 99.562988   Top5 100.000000   BatchTime 0.135600   LR 0.001000
+INFO - Training [35][  180/  196]   Loss 0.014317   Top1 99.557292   Top5 100.000000   BatchTime 0.134205   LR 0.001000
+INFO - ==> Top1: 99.544    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [35][   20/   40]   Loss 0.465878   Top1 90.566406   Top5 99.609375   BatchTime 0.144813
+INFO - Validation [35][   40/   40]   Loss 0.448227   Top1 90.780000   Top5 99.660000   BatchTime 0.101272
+INFO - ==> Top1: 90.780    Top5: 99.660    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  36
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [36][   20/  196]   Loss 0.012765   Top1 99.648438   Top5 100.000000   BatchTime 0.220659   LR 0.001000
+INFO - Training [36][   40/  196]   Loss 0.013818   Top1 99.609375   Top5 100.000000   BatchTime 0.171858   LR 0.001000
+INFO - Training [36][   60/  196]   Loss 0.014436   Top1 99.576823   Top5 100.000000   BatchTime 0.155461   LR 0.001000
+INFO - Training [36][   80/  196]   Loss 0.014223   Top1 99.555664   Top5 100.000000   BatchTime 0.146146   LR 0.001000
+INFO - Training [36][  100/  196]   Loss 0.014642   Top1 99.566406   Top5 100.000000   BatchTime 0.134572   LR 0.001000
+INFO - Training [36][  120/  196]   Loss 0.014626   Top1 99.570312   Top5 100.000000   BatchTime 0.129311   LR 0.001000
+INFO - Training [36][  140/  196]   Loss 0.014868   Top1 99.542411   Top5 100.000000   BatchTime 0.125289   LR 0.001000
+INFO - Training [36][  160/  196]   Loss 0.014791   Top1 99.541016   Top5 100.000000   BatchTime 0.121899   LR 0.001000
+INFO - Training [36][  180/  196]   Loss 0.014346   Top1 99.544271   Top5 100.000000   BatchTime 0.118925   LR 0.001000
+INFO - ==> Top1: 99.548    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [36][   20/   40]   Loss 0.469256   Top1 90.761719   Top5 99.570312   BatchTime 0.143442
+INFO - Validation [36][   40/   40]   Loss 0.452628   Top1 90.820000   Top5 99.660000   BatchTime 0.100106
+INFO - ==> Top1: 90.820    Top5: 99.660    Loss: 0.453
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  37
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [37][   20/  196]   Loss 0.014832   Top1 99.472656   Top5 100.000000   BatchTime 0.218178   LR 0.001000
+INFO - Training [37][   40/  196]   Loss 0.015158   Top1 99.472656   Top5 100.000000   BatchTime 0.171030   LR 0.001000
+INFO - Training [37][   60/  196]   Loss 0.014206   Top1 99.524740   Top5 100.000000   BatchTime 0.155353   LR 0.001000
+INFO - Training [37][   80/  196]   Loss 0.014084   Top1 99.531250   Top5 100.000000   BatchTime 0.147430   LR 0.001000
+INFO - Training [37][  100/  196]   Loss 0.014724   Top1 99.492188   Top5 100.000000   BatchTime 0.142638   LR 0.001000
+INFO - Training [37][  120/  196]   Loss 0.015146   Top1 99.485677   Top5 100.000000   BatchTime 0.139646   LR 0.001000
+INFO - Training [37][  140/  196]   Loss 0.015144   Top1 99.475446   Top5 100.000000   BatchTime 0.137333   LR 0.001000
+INFO - Training [37][  160/  196]   Loss 0.014863   Top1 99.477539   Top5 100.000000   BatchTime 0.135504   LR 0.001000
+INFO - Training [37][  180/  196]   Loss 0.014759   Top1 99.492188   Top5 100.000000   BatchTime 0.134094   LR 0.001000
+INFO - ==> Top1: 99.478    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [37][   20/   40]   Loss 0.468954   Top1 90.585938   Top5 99.570312   BatchTime 0.143801
+INFO - Validation [37][   40/   40]   Loss 0.450584   Top1 90.750000   Top5 99.640000   BatchTime 0.100195
+INFO - ==> Top1: 90.750    Top5: 99.640    Loss: 0.451
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [29][Top1: 90.870   Top5: 99.650] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  38
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [38][   20/  196]   Loss 0.012563   Top1 99.570312   Top5 100.000000   BatchTime 0.215953   LR 0.001000
+INFO - Training [38][   40/  196]   Loss 0.015550   Top1 99.501953   Top5 100.000000   BatchTime 0.157151   LR 0.001000
+INFO - Training [38][   60/  196]   Loss 0.014554   Top1 99.511719   Top5 100.000000   BatchTime 0.140599   LR 0.001000
+INFO - Training [38][   80/  196]   Loss 0.014850   Top1 99.511719   Top5 100.000000   BatchTime 0.131104   LR 0.001000
+INFO - Training [38][  100/  196]   Loss 0.014542   Top1 99.531250   Top5 100.000000   BatchTime 0.125679   LR 0.001000
+INFO - Training [38][  120/  196]   Loss 0.013979   Top1 99.554036   Top5 100.000000   BatchTime 0.122092   LR 0.001000
+INFO - Training [38][  140/  196]   Loss 0.014009   Top1 99.550781   Top5 100.000000   BatchTime 0.122301   LR 0.001000
+INFO - Training [38][  160/  196]   Loss 0.013732   Top1 99.553223   Top5 100.000000   BatchTime 0.122365   LR 0.001000
+INFO - Training [38][  180/  196]   Loss 0.013941   Top1 99.539931   Top5 100.000000   BatchTime 0.122479   LR 0.001000
+INFO - ==> Top1: 99.538    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [38][   20/   40]   Loss 0.470591   Top1 90.839844   Top5 99.628906   BatchTime 0.146783
+INFO - Validation [38][   40/   40]   Loss 0.454468   Top1 90.920000   Top5 99.660000   BatchTime 0.101592
+INFO - ==> Top1: 90.920    Top5: 99.660    Loss: 0.454
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [38][Top1: 90.920   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  39
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [39][   20/  196]   Loss 0.013144   Top1 99.550781   Top5 100.000000   BatchTime 0.219122   LR 0.001000
+INFO - Training [39][   40/  196]   Loss 0.013639   Top1 99.550781   Top5 100.000000   BatchTime 0.171227   LR 0.001000
+INFO - Training [39][   60/  196]   Loss 0.013570   Top1 99.570312   Top5 100.000000   BatchTime 0.155289   LR 0.001000
+INFO - Training [39][   80/  196]   Loss 0.013091   Top1 99.584961   Top5 100.000000   BatchTime 0.147329   LR 0.001000
+INFO - Training [39][  100/  196]   Loss 0.013819   Top1 99.542969   Top5 100.000000   BatchTime 0.142599   LR 0.001000
+INFO - Training [39][  120/  196]   Loss 0.013609   Top1 99.560547   Top5 100.000000   BatchTime 0.139328   LR 0.001000
+INFO - Training [39][  140/  196]   Loss 0.014635   Top1 99.525670   Top5 100.000000   BatchTime 0.137016   LR 0.001000
+INFO - Training [39][  160/  196]   Loss 0.014196   Top1 99.541016   Top5 100.000000   BatchTime 0.135274   LR 0.001000
+INFO - Training [39][  180/  196]   Loss 0.014511   Top1 99.526910   Top5 100.000000   BatchTime 0.133911   LR 0.001000
+INFO - ==> Top1: 99.528    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [39][   20/   40]   Loss 0.467070   Top1 90.664062   Top5 99.648438   BatchTime 0.142913
+INFO - Validation [39][   40/   40]   Loss 0.449426   Top1 90.890000   Top5 99.650000   BatchTime 0.091307
+INFO - ==> Top1: 90.890    Top5: 99.650    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [38][Top1: 90.920   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  40
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [40][   20/  196]   Loss 0.014692   Top1 99.570312   Top5 100.000000   BatchTime 0.201855   LR 0.000100
+INFO - Training [40][   40/  196]   Loss 0.015420   Top1 99.560547   Top5 100.000000   BatchTime 0.150965   LR 0.000100
+INFO - Training [40][   60/  196]   Loss 0.016106   Top1 99.550781   Top5 100.000000   BatchTime 0.131998   LR 0.000100
+INFO - Training [40][   80/  196]   Loss 0.015527   Top1 99.550781   Top5 100.000000   BatchTime 0.129895   LR 0.000100
+INFO - Training [40][  100/  196]   Loss 0.016719   Top1 99.472656   Top5 100.000000   BatchTime 0.128587   LR 0.000100
+INFO - Training [40][  120/  196]   Loss 0.016231   Top1 99.485677   Top5 100.000000   BatchTime 0.127679   LR 0.000100
+INFO - Training [40][  140/  196]   Loss 0.016067   Top1 99.483817   Top5 100.000000   BatchTime 0.127092   LR 0.000100
+INFO - Training [40][  160/  196]   Loss 0.015335   Top1 99.514160   Top5 100.000000   BatchTime 0.126486   LR 0.000100
+INFO - Training [40][  180/  196]   Loss 0.015253   Top1 99.522569   Top5 100.000000   BatchTime 0.126041   LR 0.000100
+INFO - ==> Top1: 99.526    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [40][   20/   40]   Loss 0.465657   Top1 90.644531   Top5 99.589844   BatchTime 0.144816
+INFO - Validation [40][   40/   40]   Loss 0.447591   Top1 90.810000   Top5 99.650000   BatchTime 0.101520
+INFO - ==> Top1: 90.810    Top5: 99.650    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [38][Top1: 90.920   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  41
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [41][   20/  196]   Loss 0.013142   Top1 99.570312   Top5 100.000000   BatchTime 0.220581   LR 0.000100
+INFO - Training [41][   40/  196]   Loss 0.014748   Top1 99.541016   Top5 100.000000   BatchTime 0.171811   LR 0.000100
+INFO - Training [41][   60/  196]   Loss 0.015198   Top1 99.518229   Top5 100.000000   BatchTime 0.155585   LR 0.000100
+INFO - Training [41][   80/  196]   Loss 0.014838   Top1 99.477539   Top5 100.000000   BatchTime 0.147582   LR 0.000100
+INFO - Training [41][  100/  196]   Loss 0.014460   Top1 99.503906   Top5 100.000000   BatchTime 0.142733   LR 0.000100
+INFO - Training [41][  120/  196]   Loss 0.014426   Top1 99.514974   Top5 100.000000   BatchTime 0.139455   LR 0.000100
+INFO - Training [41][  140/  196]   Loss 0.014067   Top1 99.531250   Top5 100.000000   BatchTime 0.137058   LR 0.000100
+INFO - Training [41][  160/  196]   Loss 0.014153   Top1 99.523926   Top5 100.000000   BatchTime 0.135212   LR 0.000100
+INFO - Training [41][  180/  196]   Loss 0.014422   Top1 99.511719   Top5 100.000000   BatchTime 0.133670   LR 0.000100
+INFO - ==> Top1: 99.526    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [41][   20/   40]   Loss 0.472375   Top1 90.781250   Top5 99.589844   BatchTime 0.133465
+INFO - Validation [41][   40/   40]   Loss 0.451948   Top1 91.040000   Top5 99.670000   BatchTime 0.085923
+INFO - ==> Top1: 91.040    Top5: 99.670    Loss: 0.452
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq/LSQ/hard_pruned_model/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_best.pth.tar
+INFO - >>>>>>>> Epoch  42
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [42][   20/  196]   Loss 0.010568   Top1 99.687500   Top5 100.000000   BatchTime 0.223547   LR 0.000100
+INFO - Training [42][   40/  196]   Loss 0.013611   Top1 99.472656   Top5 100.000000   BatchTime 0.173413   LR 0.000100
+INFO - Training [42][   60/  196]   Loss 0.013965   Top1 99.505208   Top5 100.000000   BatchTime 0.158940   LR 0.000100
+INFO - Training [42][   80/  196]   Loss 0.014639   Top1 99.492188   Top5 100.000000   BatchTime 0.150218   LR 0.000100
+INFO - Training [42][  100/  196]   Loss 0.014154   Top1 99.507812   Top5 100.000000   BatchTime 0.144827   LR 0.000100
+INFO - Training [42][  120/  196]   Loss 0.014657   Top1 99.492188   Top5 100.000000   BatchTime 0.141285   LR 0.000100
+INFO - Training [42][  140/  196]   Loss 0.014403   Top1 99.508929   Top5 100.000000   BatchTime 0.138727   LR 0.000100
+INFO - Training [42][  160/  196]   Loss 0.014287   Top1 99.523926   Top5 100.000000   BatchTime 0.136755   LR 0.000100
+INFO - Training [42][  180/  196]   Loss 0.014222   Top1 99.529080   Top5 100.000000   BatchTime 0.135267   LR 0.000100
+INFO - ==> Top1: 99.538    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [42][   20/   40]   Loss 0.466851   Top1 90.800781   Top5 99.609375   BatchTime 0.144139
+INFO - Validation [42][   40/   40]   Loss 0.445110   Top1 90.920000   Top5 99.650000   BatchTime 0.099779
+INFO - ==> Top1: 90.920    Top5: 99.650    Loss: 0.445
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  43
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [43][   20/  196]   Loss 0.013382   Top1 99.589844   Top5 100.000000   BatchTime 0.217620   LR 0.000100
+INFO - Training [43][   40/  196]   Loss 0.012958   Top1 99.589844   Top5 100.000000   BatchTime 0.170925   LR 0.000100
+INFO - Training [43][   60/  196]   Loss 0.014327   Top1 99.518229   Top5 100.000000   BatchTime 0.154907   LR 0.000100
+INFO - Training [43][   80/  196]   Loss 0.013607   Top1 99.531250   Top5 100.000000   BatchTime 0.146903   LR 0.000100
+INFO - Training [43][  100/  196]   Loss 0.013951   Top1 99.550781   Top5 100.000000   BatchTime 0.142113   LR 0.000100
+INFO - Training [43][  120/  196]   Loss 0.014252   Top1 99.541016   Top5 100.000000   BatchTime 0.135615   LR 0.000100
+INFO - Training [43][  140/  196]   Loss 0.014429   Top1 99.534040   Top5 100.000000   BatchTime 0.130306   LR 0.000100
+INFO - Training [43][  160/  196]   Loss 0.014395   Top1 99.538574   Top5 100.000000   BatchTime 0.126595   LR 0.000100
+INFO - Training [43][  180/  196]   Loss 0.014470   Top1 99.544271   Top5 100.000000   BatchTime 0.124123   LR 0.000100
+INFO - ==> Top1: 99.534    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [43][   20/   40]   Loss 0.469271   Top1 90.781250   Top5 99.609375   BatchTime 0.148141
+INFO - Validation [43][   40/   40]   Loss 0.449511   Top1 90.870000   Top5 99.680000   BatchTime 0.102212
+INFO - ==> Top1: 90.870    Top5: 99.680    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [28][Top1: 90.940   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  44
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [44][   20/  196]   Loss 0.015302   Top1 99.355469   Top5 100.000000   BatchTime 0.218123   LR 0.000100
+INFO - Training [44][   40/  196]   Loss 0.015376   Top1 99.414062   Top5 100.000000   BatchTime 0.170928   LR 0.000100
+INFO - Training [44][   60/  196]   Loss 0.015102   Top1 99.459635   Top5 100.000000   BatchTime 0.155020   LR 0.000100
+INFO - Training [44][   80/  196]   Loss 0.014493   Top1 99.492188   Top5 100.000000   BatchTime 0.147103   LR 0.000100
+INFO - Training [44][  100/  196]   Loss 0.015008   Top1 99.488281   Top5 100.000000   BatchTime 0.142389   LR 0.000100
+INFO - Training [44][  120/  196]   Loss 0.014640   Top1 99.505208   Top5 100.000000   BatchTime 0.139177   LR 0.000100
+INFO - Training [44][  140/  196]   Loss 0.014740   Top1 99.514509   Top5 100.000000   BatchTime 0.136949   LR 0.000100
+INFO - Training [44][  160/  196]   Loss 0.014903   Top1 99.511719   Top5 100.000000   BatchTime 0.135202   LR 0.000100
+INFO - Training [44][  180/  196]   Loss 0.014391   Top1 99.535590   Top5 100.000000   BatchTime 0.133878   LR 0.000100
+INFO - ==> Top1: 99.552    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [44][   20/   40]   Loss 0.467407   Top1 90.625000   Top5 99.648438   BatchTime 0.144515
+INFO - Validation [44][   40/   40]   Loss 0.448954   Top1 90.940000   Top5 99.680000   BatchTime 0.100334
+INFO - ==> Top1: 90.940    Top5: 99.680    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [44][Top1: 90.940   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  45
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [45][   20/  196]   Loss 0.014046   Top1 99.531250   Top5 100.000000   BatchTime 0.219029   LR 0.000100
+INFO - Training [45][   40/  196]   Loss 0.014764   Top1 99.541016   Top5 100.000000   BatchTime 0.171131   LR 0.000100
+INFO - Training [45][   60/  196]   Loss 0.015496   Top1 99.518229   Top5 100.000000   BatchTime 0.151406   LR 0.000100
+INFO - Training [45][   80/  196]   Loss 0.015584   Top1 99.511719   Top5 100.000000   BatchTime 0.137424   LR 0.000100
+INFO - Training [45][  100/  196]   Loss 0.015556   Top1 99.492188   Top5 100.000000   BatchTime 0.130513   LR 0.000100
+INFO - Training [45][  120/  196]   Loss 0.014887   Top1 99.521484   Top5 100.000000   BatchTime 0.126069   LR 0.000100
+INFO - Training [45][  140/  196]   Loss 0.015252   Top1 99.506138   Top5 100.000000   BatchTime 0.121223   LR 0.000100
+INFO - Training [45][  160/  196]   Loss 0.015488   Top1 99.509277   Top5 100.000000   BatchTime 0.120558   LR 0.000100
+INFO - Training [45][  180/  196]   Loss 0.015311   Top1 99.522569   Top5 100.000000   BatchTime 0.120868   LR 0.000100
+INFO - ==> Top1: 99.532    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [45][   20/   40]   Loss 0.474318   Top1 90.605469   Top5 99.609375   BatchTime 0.143067
+INFO - Validation [45][   40/   40]   Loss 0.453528   Top1 90.850000   Top5 99.650000   BatchTime 0.099698
+INFO - ==> Top1: 90.850    Top5: 99.650    Loss: 0.454
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [44][Top1: 90.940   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  46
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [46][   20/  196]   Loss 0.013830   Top1 99.628906   Top5 100.000000   BatchTime 0.219922   LR 0.000100
+INFO - Training [46][   40/  196]   Loss 0.014121   Top1 99.580078   Top5 100.000000   BatchTime 0.171948   LR 0.000100
+INFO - Training [46][   60/  196]   Loss 0.013959   Top1 99.570312   Top5 100.000000   BatchTime 0.158177   LR 0.000100
+INFO - Training [46][   80/  196]   Loss 0.013874   Top1 99.594727   Top5 100.000000   BatchTime 0.149747   LR 0.000100
+INFO - Training [46][  100/  196]   Loss 0.013496   Top1 99.593750   Top5 100.000000   BatchTime 0.144804   LR 0.000100
+INFO - Training [46][  120/  196]   Loss 0.013540   Top1 99.606120   Top5 100.000000   BatchTime 0.141249   LR 0.000100
+INFO - Training [46][  140/  196]   Loss 0.013353   Top1 99.603795   Top5 100.000000   BatchTime 0.138881   LR 0.000100
+INFO - Training [46][  160/  196]   Loss 0.013671   Top1 99.587402   Top5 100.000000   BatchTime 0.136932   LR 0.000100
+INFO - Training [46][  180/  196]   Loss 0.013543   Top1 99.583333   Top5 100.000000   BatchTime 0.135377   LR 0.000100
+INFO - ==> Top1: 99.576    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [46][   20/   40]   Loss 0.472170   Top1 90.644531   Top5 99.531250   BatchTime 0.143591
+INFO - Validation [46][   40/   40]   Loss 0.451494   Top1 90.820000   Top5 99.590000   BatchTime 0.100229
+INFO - ==> Top1: 90.820    Top5: 99.590    Loss: 0.451
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [44][Top1: 90.940   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  47
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [47][   20/  196]   Loss 0.010418   Top1 99.667969   Top5 100.000000   BatchTime 0.199417   LR 0.000100
+INFO - Training [47][   40/  196]   Loss 0.013062   Top1 99.589844   Top5 100.000000   BatchTime 0.151109   LR 0.000100
+INFO - Training [47][   60/  196]   Loss 0.015329   Top1 99.498698   Top5 100.000000   BatchTime 0.134994   LR 0.000100
+INFO - Training [47][   80/  196]   Loss 0.015947   Top1 99.477539   Top5 100.000000   BatchTime 0.123895   LR 0.000100
+INFO - Training [47][  100/  196]   Loss 0.015186   Top1 99.503906   Top5 100.000000   BatchTime 0.123536   LR 0.000100
+INFO - Training [47][  120/  196]   Loss 0.014486   Top1 99.524740   Top5 100.000000   BatchTime 0.123565   LR 0.000100
+INFO - Training [47][  140/  196]   Loss 0.014220   Top1 99.550781   Top5 100.000000   BatchTime 0.123598   LR 0.000100
+INFO - Training [47][  160/  196]   Loss 0.013934   Top1 99.553223   Top5 100.000000   BatchTime 0.123310   LR 0.000100
+INFO - Training [47][  180/  196]   Loss 0.014627   Top1 99.535590   Top5 100.000000   BatchTime 0.123301   LR 0.000100
+INFO - ==> Top1: 99.524    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [47][   20/   40]   Loss 0.472134   Top1 90.664062   Top5 99.687500   BatchTime 0.145328
+INFO - Validation [47][   40/   40]   Loss 0.447425   Top1 90.850000   Top5 99.690000   BatchTime 0.100298
+INFO - ==> Top1: 90.850    Top5: 99.690    Loss: 0.447
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [44][Top1: 90.940   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  48
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [48][   20/  196]   Loss 0.014553   Top1 99.550781   Top5 100.000000   BatchTime 0.223025   LR 0.000100
+INFO - Training [48][   40/  196]   Loss 0.014271   Top1 99.550781   Top5 100.000000   BatchTime 0.173437   LR 0.000100
+INFO - Training [48][   60/  196]   Loss 0.013920   Top1 99.563802   Top5 100.000000   BatchTime 0.157086   LR 0.000100
+INFO - Training [48][   80/  196]   Loss 0.013761   Top1 99.545898   Top5 100.000000   BatchTime 0.149019   LR 0.000100
+INFO - Training [48][  100/  196]   Loss 0.014298   Top1 99.523438   Top5 100.000000   BatchTime 0.144075   LR 0.000100
+INFO - Training [48][  120/  196]   Loss 0.014422   Top1 99.508464   Top5 100.000000   BatchTime 0.140779   LR 0.000100
+INFO - Training [48][  140/  196]   Loss 0.014427   Top1 99.503348   Top5 100.000000   BatchTime 0.138280   LR 0.000100
+INFO - Training [48][  160/  196]   Loss 0.013893   Top1 99.531250   Top5 100.000000   BatchTime 0.136358   LR 0.000100
+INFO - Training [48][  180/  196]   Loss 0.013958   Top1 99.531250   Top5 100.000000   BatchTime 0.134829   LR 0.000100
+INFO - ==> Top1: 99.534    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [48][   20/   40]   Loss 0.468166   Top1 90.449219   Top5 99.609375   BatchTime 0.134388
+INFO - Validation [48][   40/   40]   Loss 0.447868   Top1 90.760000   Top5 99.650000   BatchTime 0.088806
+INFO - ==> Top1: 90.760    Top5: 99.650    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [44][Top1: 90.940   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  49
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [49][   20/  196]   Loss 0.014339   Top1 99.511719   Top5 100.000000   BatchTime 0.199209   LR 0.000100
+INFO - Training [49][   40/  196]   Loss 0.014533   Top1 99.521484   Top5 100.000000   BatchTime 0.161656   LR 0.000100
+INFO - Training [49][   60/  196]   Loss 0.013722   Top1 99.511719   Top5 100.000000   BatchTime 0.149047   LR 0.000100
+INFO - Training [49][   80/  196]   Loss 0.013970   Top1 99.511719   Top5 100.000000   BatchTime 0.142696   LR 0.000100
+INFO - Training [49][  100/  196]   Loss 0.013628   Top1 99.523438   Top5 100.000000   BatchTime 0.138919   LR 0.000100
+INFO - Training [49][  120/  196]   Loss 0.014011   Top1 99.511719   Top5 100.000000   BatchTime 0.136361   LR 0.000100
+INFO - Training [49][  140/  196]   Loss 0.014177   Top1 99.506138   Top5 100.000000   BatchTime 0.134586   LR 0.000100
+INFO - Training [49][  160/  196]   Loss 0.014097   Top1 99.511719   Top5 100.000000   BatchTime 0.133196   LR 0.000100
+INFO - Training [49][  180/  196]   Loss 0.014085   Top1 99.516059   Top5 100.000000   BatchTime 0.132090   LR 0.000100
+INFO - ==> Top1: 99.518    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [49][   20/   40]   Loss 0.474405   Top1 90.371094   Top5 99.609375   BatchTime 0.144160
+INFO - Validation [49][   40/   40]   Loss 0.450248   Top1 90.810000   Top5 99.660000   BatchTime 0.100080
+INFO - ==> Top1: 90.810    Top5: 99.660    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [44][Top1: 90.940   Top5: 99.680] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  50
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [50][   20/  196]   Loss 0.013632   Top1 99.531250   Top5 100.000000   BatchTime 0.220726   LR 0.000010
+INFO - Training [50][   40/  196]   Loss 0.015512   Top1 99.414062   Top5 100.000000   BatchTime 0.172259   LR 0.000010
+INFO - Training [50][   60/  196]   Loss 0.015045   Top1 99.440104   Top5 100.000000   BatchTime 0.156044   LR 0.000010
+INFO - Training [50][   80/  196]   Loss 0.014738   Top1 99.467773   Top5 100.000000   BatchTime 0.149667   LR 0.000010
+INFO - Training [50][  100/  196]   Loss 0.014849   Top1 99.472656   Top5 100.000000   BatchTime 0.144580   LR 0.000010
+INFO - Training [50][  120/  196]   Loss 0.014314   Top1 99.492188   Top5 100.000000   BatchTime 0.141146   LR 0.000010
+INFO - Training [50][  140/  196]   Loss 0.014463   Top1 99.489397   Top5 100.000000   BatchTime 0.137118   LR 0.000010
+INFO - Training [50][  160/  196]   Loss 0.014388   Top1 99.489746   Top5 100.000000   BatchTime 0.131442   LR 0.000010
+INFO - Training [50][  180/  196]   Loss 0.014825   Top1 99.474826   Top5 100.000000   BatchTime 0.127975   LR 0.000010
+INFO - ==> Top1: 99.468    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [50][   20/   40]   Loss 0.468174   Top1 90.820312   Top5 99.628906   BatchTime 0.137352
+INFO - Validation [50][   40/   40]   Loss 0.449652   Top1 91.010000   Top5 99.680000   BatchTime 0.096319
+INFO - ==> Top1: 91.010    Top5: 99.680    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [26][Top1: 90.970   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  51
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [51][   20/  196]   Loss 0.012263   Top1 99.550781   Top5 100.000000   BatchTime 0.221199   LR 0.000010
+INFO - Training [51][   40/  196]   Loss 0.013775   Top1 99.501953   Top5 100.000000   BatchTime 0.172506   LR 0.000010
+INFO - Training [51][   60/  196]   Loss 0.013253   Top1 99.583333   Top5 100.000000   BatchTime 0.156012   LR 0.000010
+INFO - Training [51][   80/  196]   Loss 0.013329   Top1 99.584961   Top5 100.000000   BatchTime 0.147942   LR 0.000010
+INFO - Training [51][  100/  196]   Loss 0.013523   Top1 99.570312   Top5 100.000000   BatchTime 0.142700   LR 0.000010
+INFO - Training [51][  120/  196]   Loss 0.013540   Top1 99.557292   Top5 100.000000   BatchTime 0.139408   LR 0.000010
+INFO - Training [51][  140/  196]   Loss 0.014201   Top1 99.531250   Top5 100.000000   BatchTime 0.137020   LR 0.000010
+INFO - Training [51][  160/  196]   Loss 0.014238   Top1 99.523926   Top5 100.000000   BatchTime 0.135202   LR 0.000010
+INFO - Training [51][  180/  196]   Loss 0.014409   Top1 99.529080   Top5 100.000000   BatchTime 0.133848   LR 0.000010
+INFO - ==> Top1: 99.530    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [51][   20/   40]   Loss 0.463256   Top1 90.722656   Top5 99.648438   BatchTime 0.143852
+INFO - Validation [51][   40/   40]   Loss 0.447745   Top1 91.010000   Top5 99.660000   BatchTime 0.099335
+INFO - ==> Top1: 91.010    Top5: 99.660    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  52
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [52][   20/  196]   Loss 0.014987   Top1 99.511719   Top5 100.000000   BatchTime 0.219563   LR 0.000010
+INFO - Training [52][   40/  196]   Loss 0.014645   Top1 99.541016   Top5 100.000000   BatchTime 0.171373   LR 0.000010
+INFO - Training [52][   60/  196]   Loss 0.015893   Top1 99.485677   Top5 100.000000   BatchTime 0.155147   LR 0.000010
+INFO - Training [52][   80/  196]   Loss 0.014662   Top1 99.521484   Top5 100.000000   BatchTime 0.147212   LR 0.000010
+INFO - Training [52][  100/  196]   Loss 0.014761   Top1 99.507812   Top5 100.000000   BatchTime 0.136408   LR 0.000010
+INFO - Training [52][  120/  196]   Loss 0.014369   Top1 99.527995   Top5 100.000000   BatchTime 0.130608   LR 0.000010
+INFO - Training [52][  140/  196]   Loss 0.013931   Top1 99.553571   Top5 100.000000   BatchTime 0.126326   LR 0.000010
+INFO - Training [52][  160/  196]   Loss 0.013903   Top1 99.553223   Top5 100.000000   BatchTime 0.123230   LR 0.000010
+INFO - Training [52][  180/  196]   Loss 0.013914   Top1 99.559462   Top5 100.000000   BatchTime 0.119793   LR 0.000010
+INFO - ==> Top1: 99.554    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [52][   20/   40]   Loss 0.473888   Top1 90.781250   Top5 99.648438   BatchTime 0.143231
+INFO - Validation [52][   40/   40]   Loss 0.451853   Top1 90.910000   Top5 99.710000   BatchTime 0.099776
+INFO - ==> Top1: 90.910    Top5: 99.710    Loss: 0.452
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  53
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [53][   20/  196]   Loss 0.013318   Top1 99.628906   Top5 100.000000   BatchTime 0.221343   LR 0.000010
+INFO - Training [53][   40/  196]   Loss 0.012612   Top1 99.619141   Top5 100.000000   BatchTime 0.172454   LR 0.000010
+INFO - Training [53][   60/  196]   Loss 0.012545   Top1 99.609375   Top5 100.000000   BatchTime 0.156133   LR 0.000010
+INFO - Training [53][   80/  196]   Loss 0.012752   Top1 99.609375   Top5 100.000000   BatchTime 0.148129   LR 0.000010
+INFO - Training [53][  100/  196]   Loss 0.013046   Top1 99.574219   Top5 100.000000   BatchTime 0.143233   LR 0.000010
+INFO - Training [53][  120/  196]   Loss 0.012973   Top1 99.576823   Top5 100.000000   BatchTime 0.139918   LR 0.000010
+INFO - Training [53][  140/  196]   Loss 0.012894   Top1 99.584263   Top5 100.000000   BatchTime 0.137626   LR 0.000010
+INFO - Training [53][  160/  196]   Loss 0.013271   Top1 99.572754   Top5 100.000000   BatchTime 0.135848   LR 0.000010
+INFO - Training [53][  180/  196]   Loss 0.013275   Top1 99.568142   Top5 100.000000   BatchTime 0.134456   LR 0.000010
+INFO - ==> Top1: 99.552    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [53][   20/   40]   Loss 0.464275   Top1 90.820312   Top5 99.628906   BatchTime 0.145855
+INFO - Validation [53][   40/   40]   Loss 0.446518   Top1 90.960000   Top5 99.650000   BatchTime 0.101159
+INFO - ==> Top1: 90.960    Top5: 99.650    Loss: 0.447
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  54
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [54][   20/  196]   Loss 0.015562   Top1 99.492188   Top5 100.000000   BatchTime 0.217075   LR 0.000010
+INFO - Training [54][   40/  196]   Loss 0.014916   Top1 99.541016   Top5 100.000000   BatchTime 0.158950   LR 0.000010
+INFO - Training [54][   60/  196]   Loss 0.014354   Top1 99.537760   Top5 100.000000   BatchTime 0.139556   LR 0.000010
+INFO - Training [54][   80/  196]   Loss 0.014072   Top1 99.545898   Top5 100.000000   BatchTime 0.131797   LR 0.000010
+INFO - Training [54][  100/  196]   Loss 0.014463   Top1 99.531250   Top5 100.000000   BatchTime 0.125910   LR 0.000010
+INFO - Training [54][  120/  196]   Loss 0.014539   Top1 99.527995   Top5 99.996745   BatchTime 0.121218   LR 0.000010
+INFO - Training [54][  140/  196]   Loss 0.015013   Top1 99.520089   Top5 99.997210   BatchTime 0.121616   LR 0.000010
+INFO - Training [54][  160/  196]   Loss 0.014636   Top1 99.526367   Top5 99.997559   BatchTime 0.121854   LR 0.000010
+INFO - Training [54][  180/  196]   Loss 0.014866   Top1 99.516059   Top5 99.997830   BatchTime 0.121926   LR 0.000010
+INFO - ==> Top1: 99.512    Top5: 99.998    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [54][   20/   40]   Loss 0.473156   Top1 90.468750   Top5 99.570312   BatchTime 0.144260
+INFO - Validation [54][   40/   40]   Loss 0.451864   Top1 90.700000   Top5 99.650000   BatchTime 0.100351
+INFO - ==> Top1: 90.700    Top5: 99.650    Loss: 0.452
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  55
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [55][   20/  196]   Loss 0.014763   Top1 99.531250   Top5 100.000000   BatchTime 0.217305   LR 0.000010
+INFO - Training [55][   40/  196]   Loss 0.013232   Top1 99.580078   Top5 100.000000   BatchTime 0.170601   LR 0.000010
+INFO - Training [55][   60/  196]   Loss 0.012916   Top1 99.576823   Top5 100.000000   BatchTime 0.154946   LR 0.000010
+INFO - Training [55][   80/  196]   Loss 0.013382   Top1 99.584961   Top5 100.000000   BatchTime 0.147222   LR 0.000010
+INFO - Training [55][  100/  196]   Loss 0.013879   Top1 99.570312   Top5 100.000000   BatchTime 0.142601   LR 0.000010
+INFO - Training [55][  120/  196]   Loss 0.013911   Top1 99.567057   Top5 100.000000   BatchTime 0.139409   LR 0.000010
+INFO - Training [55][  140/  196]   Loss 0.014376   Top1 99.542411   Top5 100.000000   BatchTime 0.137099   LR 0.000010
+INFO - Training [55][  160/  196]   Loss 0.015036   Top1 99.519043   Top5 100.000000   BatchTime 0.135338   LR 0.000010
+INFO - Training [55][  180/  196]   Loss 0.014787   Top1 99.535590   Top5 100.000000   BatchTime 0.133995   LR 0.000010
+INFO - ==> Top1: 99.530    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [55][   20/   40]   Loss 0.471143   Top1 90.566406   Top5 99.628906   BatchTime 0.143969
+INFO - Validation [55][   40/   40]   Loss 0.450118   Top1 90.740000   Top5 99.670000   BatchTime 0.093028
+INFO - ==> Top1: 90.740    Top5: 99.670    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  56
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [56][   20/  196]   Loss 0.011724   Top1 99.667969   Top5 100.000000   BatchTime 0.200925   LR 0.000010
+INFO - Training [56][   40/  196]   Loss 0.013904   Top1 99.560547   Top5 100.000000   BatchTime 0.152326   LR 0.000010
+INFO - Training [56][   60/  196]   Loss 0.014362   Top1 99.537760   Top5 100.000000   BatchTime 0.132014   LR 0.000010
+INFO - Training [56][   80/  196]   Loss 0.015226   Top1 99.521484   Top5 100.000000   BatchTime 0.130414   LR 0.000010
+INFO - Training [56][  100/  196]   Loss 0.014843   Top1 99.535156   Top5 100.000000   BatchTime 0.129128   LR 0.000010
+INFO - Training [56][  120/  196]   Loss 0.015429   Top1 99.524740   Top5 100.000000   BatchTime 0.128317   LR 0.000010
+INFO - Training [56][  140/  196]   Loss 0.015008   Top1 99.536830   Top5 100.000000   BatchTime 0.127607   LR 0.000010
+INFO - Training [56][  160/  196]   Loss 0.015043   Top1 99.548340   Top5 100.000000   BatchTime 0.127089   LR 0.000010
+INFO - Training [56][  180/  196]   Loss 0.014870   Top1 99.539931   Top5 100.000000   BatchTime 0.126681   LR 0.000010
+INFO - ==> Top1: 99.548    Top5: 100.000    Loss: 0.015
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [56][   20/   40]   Loss 0.470312   Top1 90.566406   Top5 99.609375   BatchTime 0.144176
+INFO - Validation [56][   40/   40]   Loss 0.449467   Top1 90.800000   Top5 99.660000   BatchTime 0.100975
+INFO - ==> Top1: 90.800    Top5: 99.660    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  57
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [57][   20/  196]   Loss 0.011905   Top1 99.589844   Top5 100.000000   BatchTime 0.219582   LR 0.000010
+INFO - Training [57][   40/  196]   Loss 0.011209   Top1 99.658203   Top5 100.000000   BatchTime 0.172121   LR 0.000010
+INFO - Training [57][   60/  196]   Loss 0.010963   Top1 99.641927   Top5 100.000000   BatchTime 0.156174   LR 0.000010
+INFO - Training [57][   80/  196]   Loss 0.011731   Top1 99.614258   Top5 100.000000   BatchTime 0.148121   LR 0.000010
+INFO - Training [57][  100/  196]   Loss 0.012104   Top1 99.621094   Top5 100.000000   BatchTime 0.143234   LR 0.000010
+INFO - Training [57][  120/  196]   Loss 0.012148   Top1 99.606120   Top5 100.000000   BatchTime 0.140038   LR 0.000010
+INFO - Training [57][  140/  196]   Loss 0.012361   Top1 99.589844   Top5 100.000000   BatchTime 0.137577   LR 0.000010
+INFO - Training [57][  160/  196]   Loss 0.012457   Top1 99.584961   Top5 100.000000   BatchTime 0.135693   LR 0.000010
+INFO - Training [57][  180/  196]   Loss 0.012333   Top1 99.592014   Top5 100.000000   BatchTime 0.134289   LR 0.000010
+INFO - ==> Top1: 99.580    Top5: 100.000    Loss: 0.013
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [57][   20/   40]   Loss 0.468328   Top1 90.527344   Top5 99.648438   BatchTime 0.134540
+INFO - Validation [57][   40/   40]   Loss 0.449786   Top1 90.780000   Top5 99.670000   BatchTime 0.087789
+INFO - ==> Top1: 90.780    Top5: 99.670    Loss: 0.450
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  58
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [58][   20/  196]   Loss 0.010880   Top1 99.687500   Top5 100.000000   BatchTime 0.225615   LR 0.000010
+INFO - Training [58][   40/  196]   Loss 0.011557   Top1 99.648438   Top5 100.000000   BatchTime 0.174669   LR 0.000010
+INFO - Training [58][   60/  196]   Loss 0.012375   Top1 99.570312   Top5 100.000000   BatchTime 0.157776   LR 0.000010
+INFO - Training [58][   80/  196]   Loss 0.012639   Top1 99.560547   Top5 100.000000   BatchTime 0.149377   LR 0.000010
+INFO - Training [58][  100/  196]   Loss 0.012828   Top1 99.558594   Top5 100.000000   BatchTime 0.144275   LR 0.000010
+INFO - Training [58][  120/  196]   Loss 0.012940   Top1 99.550781   Top5 100.000000   BatchTime 0.141969   LR 0.000010
+INFO - Training [58][  140/  196]   Loss 0.013509   Top1 99.536830   Top5 100.000000   BatchTime 0.139420   LR 0.000010
+INFO - Training [58][  160/  196]   Loss 0.013708   Top1 99.526367   Top5 100.000000   BatchTime 0.137338   LR 0.000010
+INFO - Training [58][  180/  196]   Loss 0.013653   Top1 99.522569   Top5 100.000000   BatchTime 0.135687   LR 0.000010
+INFO - ==> Top1: 99.508    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [58][   20/   40]   Loss 0.474386   Top1 90.820312   Top5 99.648438   BatchTime 0.142943
+INFO - Validation [58][   40/   40]   Loss 0.448145   Top1 90.940000   Top5 99.670000   BatchTime 0.099342
+INFO - ==> Top1: 90.940    Top5: 99.670    Loss: 0.448
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  59
+INFO - Training: 50000 samples (256 per mini-batch)
+INFO - Training [59][   20/  196]   Loss 0.013031   Top1 99.628906   Top5 100.000000   BatchTime 0.217739   LR 0.000010
+INFO - Training [59][   40/  196]   Loss 0.011242   Top1 99.687500   Top5 100.000000   BatchTime 0.170576   LR 0.000010
+INFO - Training [59][   60/  196]   Loss 0.013459   Top1 99.615885   Top5 100.000000   BatchTime 0.155047   LR 0.000010
+INFO - Training [59][   80/  196]   Loss 0.013413   Top1 99.594727   Top5 100.000000   BatchTime 0.147124   LR 0.000010
+INFO - Training [59][  100/  196]   Loss 0.013688   Top1 99.593750   Top5 100.000000   BatchTime 0.142258   LR 0.000010
+INFO - Training [59][  120/  196]   Loss 0.014569   Top1 99.537760   Top5 100.000000   BatchTime 0.138426   LR 0.000010
+INFO - Training [59][  140/  196]   Loss 0.014477   Top1 99.545201   Top5 100.000000   BatchTime 0.131816   LR 0.000010
+INFO - Training [59][  160/  196]   Loss 0.014414   Top1 99.553223   Top5 100.000000   BatchTime 0.127951   LR 0.000010
+INFO - Training [59][  180/  196]   Loss 0.014685   Top1 99.546441   Top5 100.000000   BatchTime 0.124999   LR 0.000010
+INFO - ==> Top1: 99.548    Top5: 100.000    Loss: 0.014
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [59][   20/   40]   Loss 0.469721   Top1 90.703125   Top5 99.628906   BatchTime 0.149744
+INFO - Validation [59][   40/   40]   Loss 0.454431   Top1 90.770000   Top5 99.690000   BatchTime 0.103530
+INFO - ==> Top1: 90.770    Top5: 99.690    Loss: 0.454
+INFO - Scoreboard best 1 ==> Epoch [41][Top1: 91.040   Top5: 99.670] Sparsity : 0.775
+INFO - Scoreboard best 2 ==> Epoch [50][Top1: 91.010   Top5: 99.680] Sparsity : 0.775
+INFO - Scoreboard best 3 ==> Epoch [51][Top1: 91.010   Top5: 99.660] Sparsity : 0.775
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_20221103-232758/MobileNetv2_cifar10_a8w8_hard_pruning_5_epoch60_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch -1 (final model evaluation)
+INFO - Validation: 10000 samples (256 per mini-batch)
+INFO - Validation [   20/   40]   Loss 0.469721   Top1 90.703125   Top5 99.628906   BatchTime 0.146030
+INFO - Validation [   40/   40]   Loss 0.454431   Top1 90.770000   Top5 99.690000   BatchTime 0.100499
+INFO - ==> Top1: 90.770    Top5: 99.690    Loss: 0.454
+INFO - Program completed successfully ... exiting ...
+INFO - If you have any questions or suggestions, please visit: github.com/zhutmost/lsq-net

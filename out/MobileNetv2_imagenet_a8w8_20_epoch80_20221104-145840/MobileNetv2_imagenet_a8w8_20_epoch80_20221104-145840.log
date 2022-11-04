@@ -1,0 +1,25 @@
+2022-11-04 14:58:40,222 - INFO  - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_20_epoch80_20221104-145840/MobileNetv2_imagenet_a8w8_20_epoch80_20221104-145840.log
+2022-11-04 14:58:41,357 - INFO  - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_20_epoch80_20221104-145840/tb_runs
+2022-11-04 14:58:43,680 - INFO  - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+2022-11-04 14:58:45,983 - INFO  - Created `MobileNetv2` model for `imagenet` dataset
+          Use pre-trained model = True
+2022-11-04 14:58:48,551 - INFO  - Inserted quantizers into the original model
+2022-11-04 14:58:48,858 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+2022-11-04 14:58:48,858 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.01
+
+2022-11-04 14:58:48,858 - INFO  - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-04 14:58:48,858 - INFO  - Validation: 50000 samples (128 per mini-batch)
