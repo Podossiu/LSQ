@@ -1,0 +1,26 @@
+{
+    "os": "Linux-4.15.0-196-generic-x86_64-with-glibc2.27",
+    "python": "3.8.0",
+    "heartbeatAt": "2022-11-07T08:02:50.565495",
+    "startedAt": "2022-11-07T08:02:49.371482",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "cuda": null,
+    "args": [
+        "examples/lsq/mobilenet/imagenet/soft_pruning/mobilenetv2_a8w8_imagenet_30_epoch80.yaml"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/Podossiu/LSQ.git",
+        "commit": "47977cba96ca1f435a4f54a69b9a676fe73af590"
+    },
+    "email": "ilena7440@naver.com",
+    "root": "/home/ilena7440/slsq/LSQ",
+    "host": "eslab10",
+    "username": "ilena7440",
+    "executable": "/home/ilena7440/qilbertenv/bin/python3"
+}
