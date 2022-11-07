@@ -1,0 +1,269 @@
+INFO - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_30_epoch80_20221106-164128/MobileNetv2_imagenet_a8w8_30_epoch80_20221106-164128.log
+2022-11-06 16:41:28.973167: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-06 16:41:29.130928: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2022-11-06 16:41:29.562109: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-11-06 16:41:29.562165: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-11-06 16:41:29.562172: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+INFO - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_30_epoch80_20221106-164128/tb_runs
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 32 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+INFO - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+INFO - Created `MobileNetv2` model for `imagenet` dataset
+          Use pre-trained model = True
+/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py:128: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (len(x.shape) == 4 and x.shape[1] != 1):
+/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py:94: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+********************pre-trained*****************
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+INFO - Inserted quantizers into the original model
+INFO - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.01
+INFO - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+INFO - Validation: 50000 samples (128 per mini-batch)
+Munch({'update_per_batch': True, 'mode': 'cos_warm_restarts', 'lr_min': 0, 'cycle': 5, 'cycle_scale': 2, 'amp_scale': 0.5})
+cos_warm_restarts
+INFO - Validation [   20/  391]   Loss 27.609890   Top1 0.000000   Top5 0.117188   BatchTime 0.627753
+INFO - Validation [   40/  391]   Loss 28.591004   Top1 0.000000   Top5 0.058594   BatchTime 0.399056
+INFO - Validation [   60/  391]   Loss 27.567062   Top1 0.000000   Top5 0.403646   BatchTime 0.324008
+INFO - Validation [   80/  391]   Loss 24.924523   Top1 0.000000   Top5 0.419922   BatchTime 0.286876
+INFO - Validation [  100/  391]   Loss 23.307600   Top1 0.000000   Top5 0.335938   BatchTime 0.264767
+INFO - Validation [  120/  391]   Loss 23.457049   Top1 0.312500   Top5 0.657552   BatchTime 0.249583
+INFO - Validation [  140/  391]   Loss 24.179314   Top1 0.267857   Top5 0.563616   BatchTime 0.238968
+INFO - Validation [  160/  391]   Loss 24.201449   Top1 0.234375   Top5 0.493164   BatchTime 0.230835
+INFO - Validation [  180/  391]   Loss 24.038137   Top1 0.208333   Top5 0.438368   BatchTime 0.224793
+INFO - Validation [  200/  391]   Loss 24.115841   Top1 0.187500   Top5 0.394531   BatchTime 0.220019
+INFO - Validation [  220/  391]   Loss 24.233748   Top1 0.184659   Top5 0.529119   BatchTime 0.215678
+INFO - Validation [  240/  391]   Loss 24.254343   Top1 0.169271   Top5 0.488281   BatchTime 0.211271
+INFO - Validation [  260/  391]   Loss 24.264850   Top1 0.156250   Top5 0.450721   BatchTime 0.207481
+INFO - Validation [  280/  391]   Loss 24.328493   Top1 0.145089   Top5 0.502232   BatchTime 0.204242
+INFO - Validation [  300/  391]   Loss 24.268197   Top1 0.135417   Top5 0.611979   BatchTime 0.201838
+INFO - Validation [  320/  391]   Loss 24.314753   Top1 0.126953   Top5 0.573730   BatchTime 0.208672
+INFO - Validation [  340/  391]   Loss 24.194326   Top1 0.119485   Top5 0.562960   BatchTime 0.205683
+INFO - Validation [  360/  391]   Loss 24.101134   Top1 0.112847   Top5 0.531684   BatchTime 0.202616
+INFO - Validation [  380/  391]   Loss 24.285498   Top1 0.106908   Top5 0.503701   BatchTime 0.199888
+INFO - ==> Top1: 0.104    Top5: 0.490    Loss: 24.380
+INFO - Scoreboard best 1 ==> Epoch [-1][Top1: 0.104   Top5: 0.490] Sparsity : 0.060
+INFO - >>>>>>>> Epoch   0
+INFO - Training: 1281167 samples (128 per mini-batch)
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+Parameter containing:
+tensor(0.0418, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0624, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0610, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0296, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0329, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0609, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0207, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0220, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0871, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0175, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0351, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0728, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0206, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0135, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0847, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0161, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0112, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0935, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0163, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0374, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0619, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0165, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0094, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0724, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0106, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0088, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0764, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0083, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0094, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0794, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0148, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0243, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0478, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0082, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0093, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0566, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0065, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0102, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0647, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0065, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0276, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0359, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0108, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0098, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0454, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0084, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0111, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0579, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0036, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0219, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0308, device='cuda:0', requires_grad=True)
+INFO - Training [0][   20/10010]   Loss 5.987191   Top1 5.937500   Top5 14.843750   BatchTime 0.702730   LR 0.010000
