@@ -1,0 +1,7 @@
+2022-11-07 15:09:21,775 - INFO  - Log file for this run: /home/ilena7440/LSQ/out/ResNet18_imagenet_a8w8_30_epoch80_20221107-150921/ResNet18_imagenet_a8w8_30_epoch80_20221107-150921.log
+2022-11-07 15:09:21,785 - INFO  - TensorBoard data directory: /home/ilena7440/LSQ/out/ResNet18_imagenet_a8w8_30_epoch80_20221107-150921/tb_runs
+2022-11-07 15:09:26,284 - INFO  - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+2022-11-07 15:09:26,286 - ERROR  - Model architecture `ResNet18` for `imagenet` dataset is not supported

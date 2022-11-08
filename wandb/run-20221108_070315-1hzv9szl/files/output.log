@@ -1,0 +1,390 @@
+INFO - Log file for this run: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_epoch80_20221108-070316/MobileNetv2_imagenet_a8w8_5_epoch80_20221108-070316.log
+INFO - TensorBoard data directory: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_epoch80_20221108-070316/tb_runs
+INFO - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+********************pre-trained*****************
+INFO - Created `MobileNetv2` model for `imagenet` dataset
+          Use pre-trained model = True
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+/home/ilena7440/LSQ/quan/quantizer/lsq.py:137: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (len(x.shape) == 4 and x.shape[1] != 1):
+/home/ilena7440/LSQ/quan/quantizer/lsq.py:94: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+INFO - Inserted quantizers into the original model
+INFO - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.01
+INFO - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+INFO - Validation: 50000 samples (128 per mini-batch)
+Munch({'update_per_batch': True, 'mode': 'multi_step', 'milestones': [20, 40, 60], 'gamma': 0.1})
+multi_step
+INFO - Validation [   20/  391]   Loss 27.494913   Top1 0.000000   Top5 0.195312   BatchTime 0.881060
+INFO - Validation [   40/  391]   Loss 28.448224   Top1 0.000000   Top5 0.097656   BatchTime 0.520508
+INFO - Validation [   60/  391]   Loss 27.423778   Top1 0.000000   Top5 0.325521   BatchTime 0.401102
+INFO - Validation [   80/  391]   Loss 24.824962   Top1 0.000000   Top5 0.302734   BatchTime 0.340477
+INFO - Validation [  100/  391]   Loss 23.227259   Top1 0.000000   Top5 0.242188   BatchTime 0.304828
+INFO - Validation [  120/  391]   Loss 23.376797   Top1 0.305990   Top5 0.566406   BatchTime 0.280503
+INFO - Validation [  140/  391]   Loss 24.091063   Top1 0.262277   Top5 0.485491   BatchTime 0.266280
+INFO - Validation [  160/  391]   Loss 24.116644   Top1 0.229492   Top5 0.424805   BatchTime 0.253060
+INFO - Validation [  180/  391]   Loss 23.953435   Top1 0.203993   Top5 0.377604   BatchTime 0.244449
+INFO - Validation [  200/  391]   Loss 24.033057   Top1 0.183594   Top5 0.339844   BatchTime 0.243725
+INFO - Validation [  220/  391]   Loss 24.152783   Top1 0.174006   Top5 0.486506   BatchTime 0.236209
+INFO - Validation [  240/  391]   Loss 24.172772   Top1 0.159505   Top5 0.445964   BatchTime 0.229701
+INFO - Validation [  260/  391]   Loss 24.182259   Top1 0.147236   Top5 0.411659   BatchTime 0.224047
+INFO - Validation [  280/  391]   Loss 24.245119   Top1 0.136719   Top5 0.474330   BatchTime 0.219363
+INFO - Validation [  300/  391]   Loss 24.186415   Top1 0.127604   Top5 0.604167   BatchTime 0.219028
+INFO - Validation [  320/  391]   Loss 24.234352   Top1 0.119629   Top5 0.566406   BatchTime 0.222163
+INFO - Validation [  340/  391]   Loss 24.112010   Top1 0.112592   Top5 0.567555   BatchTime 0.216958
+INFO - Validation [  360/  391]   Loss 24.020201   Top1 0.106337   Top5 0.536024   BatchTime 0.211497
+INFO - Validation [  380/  391]   Loss 24.203591   Top1 0.100740   Top5 0.507812   BatchTime 0.206941
+INFO - ==> Top1: 0.098    Top5: 0.494    Loss: 24.300
+INFO - Scoreboard best 1 ==> Epoch [-1][Top1: 0.098   Top5: 0.494] Sparsity : 0.060
+INFO - >>>>>>>> Epoch   0
+INFO - Training: 1281167 samples (128 per mini-batch)
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+Parameter containing:
+tensor(0.0418, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0624, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0610, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0296, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0329, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0609, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0207, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0220, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0871, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0175, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0351, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0728, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0206, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0135, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0847, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0161, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0112, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0934, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0163, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0374, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0619, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0165, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0094, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0723, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0106, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0088, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0764, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0083, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0094, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0794, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0148, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0243, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0478, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0082, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0093, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0565, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0065, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0102, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0647, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0065, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0276, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0359, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0108, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0098, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0455, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0084, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0111, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0580, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0036, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0219, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0308, device='cuda:0', requires_grad=True)
+INFO - Training [0][   20/10010]   Loss 5.861108   Top1 5.390625   Top5 15.078125   BatchTime 1.003076   LR 0.010000
+INFO - Training [0][   40/10010]   Loss 5.778959   Top1 6.445312   Top5 16.621094   BatchTime 0.686846   LR 0.010000
+INFO - Training [0][   60/10010]   Loss 5.572240   Top1 7.291667   Top5 19.270833   BatchTime 0.578006   LR 0.010000
+INFO - Training [0][   80/10010]   Loss 5.349237   Top1 8.818359   Top5 21.953125   BatchTime 0.518591   LR 0.010000
+INFO - Training [0][  100/10010]   Loss 5.132459   Top1 10.648438   Top5 25.304688   BatchTime 0.482537   LR 0.010000
+INFO - Training [0][  120/10010]   Loss 4.932342   Top1 12.701823   Top5 28.509115   BatchTime 0.463314   LR 0.010000
+INFO - Training [0][  140/10010]   Loss 4.759725   Top1 14.162946   Top5 31.227679   BatchTime 0.444433   LR 0.010000
+INFO - Training [0][  160/10010]   Loss 4.612315   Top1 15.805664   Top5 33.774414   BatchTime 0.430335   LR 0.010000
+INFO - Training [0][  180/10010]   Loss 4.487538   Top1 17.170139   Top5 35.807292   BatchTime 0.419288   LR 0.010000
+INFO - Training [0][  200/10010]   Loss 4.376893   Top1 18.472656   Top5 37.667969   BatchTime 0.411043   LR 0.010000
+INFO - Training [0][  220/10010]   Loss 4.264215   Top1 19.872159   Top5 39.563210   BatchTime 0.403576   LR 0.010000
+INFO - Training [0][  240/10010]   Loss 4.166938   Top1 21.263021   Top5 41.246745   BatchTime 0.397414   LR 0.010000
+INFO - Training [0][  260/10010]   Loss 4.078417   Top1 22.421875   Top5 42.827524   BatchTime 0.392485   LR 0.010000
+INFO - Training [0][  280/10010]   Loss 4.007652   Top1 23.404018   Top5 44.051339   BatchTime 0.388362   LR 0.010000
+INFO - Training [0][  300/10010]   Loss 3.923516   Top1 24.442708   Top5 45.466146   BatchTime 0.384776   LR 0.010000
+INFO - Training [0][  320/10010]   Loss 3.846608   Top1 25.468750   Top5 46.811523   BatchTime 0.381535   LR 0.010000
+INFO - Training [0][  340/10010]   Loss 3.781858   Top1 26.399357   Top5 47.943474   BatchTime 0.378546   LR 0.010000
+INFO - Training [0][  360/10010]   Loss 3.721692   Top1 27.204861   Top5 48.962674   BatchTime 0.375935   LR 0.010000
+INFO - Training [0][  380/10010]   Loss 3.668542   Top1 27.989309   Top5 49.866365   BatchTime 0.373992   LR 0.010000
+INFO - Training [0][  400/10010]   Loss 3.615516   Top1 28.767578   Top5 50.732422   BatchTime 0.372059   LR 0.010000
+INFO - Training [0][  420/10010]   Loss 3.560435   Top1 29.549851   Top5 51.666667   BatchTime 0.370119   LR 0.010000
+INFO - Training [0][  440/10010]   Loss 3.512509   Top1 30.273438   Top5 52.453835   BatchTime 0.368385   LR 0.010000
+INFO - Training [0][  460/10010]   Loss 3.468893   Top1 30.833899   Top5 53.221807   BatchTime 0.366935   LR 0.010000
+INFO - Training [0][  480/10010]   Loss 3.426135   Top1 31.505534   Top5 53.959961   BatchTime 0.365338   LR 0.010000
+INFO - Training [0][  500/10010]   Loss 3.383492   Top1 32.114063   Top5 54.660938   BatchTime 0.363606   LR 0.010000
+INFO - Training [0][  520/10010]   Loss 3.346416   Top1 32.657752   Top5 55.300481   BatchTime 0.362317   LR 0.010000
+INFO - Training [0][  540/10010]   Loss 3.313805   Top1 33.181424   Top5 55.826100   BatchTime 0.361219   LR 0.010000
+INFO - Training [0][  560/10010]   Loss 3.279628   Top1 33.674665   Top5 56.417411   BatchTime 0.360114   LR 0.010000
+INFO - Training [0][  580/10010]   Loss 3.246609   Top1 34.164871   Top5 56.967942   BatchTime 0.359027   LR 0.010000
+INFO - Training [0][  600/10010]   Loss 3.216260   Top1 34.602865   Top5 57.479167   BatchTime 0.358002   LR 0.010000
+INFO - Training [0][  620/10010]   Loss 3.185867   Top1 35.066784   Top5 58.000252   BatchTime 0.357080   LR 0.010000
+INFO - Training [0][  640/10010]   Loss 3.156929   Top1 35.501709   Top5 58.498535   BatchTime 0.356339   LR 0.010000
+INFO - Training [0][  660/10010]   Loss 3.130342   Top1 35.916193   Top5 58.916903   BatchTime 0.355694   LR 0.010000
+INFO - Training [0][  680/10010]   Loss 3.103921   Top1 36.339614   Top5 59.376149   BatchTime 0.355031   LR 0.010000
+INFO - Training [0][  700/10010]   Loss 3.079486   Top1 36.666295   Top5 59.808036   BatchTime 0.354461   LR 0.010000
+INFO - Training [0][  720/10010]   Loss 3.052873   Top1 37.078993   Top5 60.251736   BatchTime 0.353823   LR 0.010000
+INFO - Training [0][  740/10010]   Loss 3.027284   Top1 37.478885   Top5 60.665118   BatchTime 0.353343   LR 0.010000
+INFO - Training [0][  760/10010]   Loss 3.005324   Top1 37.797081   Top5 61.035156   BatchTime 0.352743   LR 0.010000
+INFO - Training [0][  780/10010]   Loss 2.984143   Top1 38.154046   Top5 61.385216   BatchTime 0.352255   LR 0.010000
+INFO - Training [0][  800/10010]   Loss 2.966719   Top1 38.429688   Top5 61.688477   BatchTime 0.351868   LR 0.010000
+INFO - Training [0][  820/10010]   Loss 2.948083   Top1 38.722370   Top5 62.010290   BatchTime 0.351421   LR 0.010000
+INFO - Training [0][  840/10010]   Loss 2.928578   Top1 39.059710   Top5 62.353981   BatchTime 0.350965   LR 0.010000
+INFO - Training [0][  860/10010]   Loss 2.909328   Top1 39.367733   Top5 62.682594   BatchTime 0.350613   LR 0.010000
+INFO - Training [0][  880/10010]   Loss 2.893298   Top1 39.625355   Top5 62.945668   BatchTime 0.350247   LR 0.010000
+INFO - Training [0][  900/10010]   Loss 2.878392   Top1 39.875000   Top5 63.201389   BatchTime 0.349872   LR 0.010000
+INFO - Training [0][  920/10010]   Loss 2.863300   Top1 40.095109   Top5 63.445992   BatchTime 0.349461   LR 0.010000
+INFO - Training [0][  940/10010]   Loss 2.845896   Top1 40.366523   Top5 63.752493   BatchTime 0.349075   LR 0.010000
+INFO - Training [0][  960/10010]   Loss 2.832284   Top1 40.558268   Top5 63.986003   BatchTime 0.348713   LR 0.010000
+INFO - Training [0][  980/10010]   Loss 2.816287   Top1 40.822704   Top5 64.241071   BatchTime 0.348199   LR 0.010000
+INFO - Training [0][ 1000/10010]   Loss 2.800951   Top1 41.046875   Top5 64.496875   BatchTime 0.347664   LR 0.010000
+INFO - Training [0][ 1020/10010]   Loss 2.787221   Top1 41.248468   Top5 64.734988   BatchTime 0.347205   LR 0.010000
+INFO - Training [0][ 1040/10010]   Loss 2.773950   Top1 41.457332   Top5 64.939153   BatchTime 0.346881   LR 0.010000
+INFO - Training [0][ 1060/10010]   Loss 2.760697   Top1 41.667895   Top5 65.179098   BatchTime 0.346486   LR 0.010000
+INFO - Training [0][ 1080/10010]   Loss 2.748853   Top1 41.847512   Top5 65.384115   BatchTime 0.346096   LR 0.010000
+INFO - Training [0][ 1100/10010]   Loss 2.736903   Top1 42.068182   Top5 65.573864   BatchTime 0.345807   LR 0.010000
+INFO - Training [0][ 1120/10010]   Loss 2.726076   Top1 42.245396   Top5 65.743583   BatchTime 0.345423   LR 0.010000
+INFO - Training [0][ 1140/10010]   Loss 2.712566   Top1 42.441064   Top5 65.971080   BatchTime 0.345035   LR 0.010000
+INFO - Training [0][ 1160/10010]   Loss 2.699372   Top1 42.627290   Top5 66.187365   BatchTime 0.344696   LR 0.010000
+INFO - Training [0][ 1180/10010]   Loss 2.687560   Top1 42.823755   Top5 66.380429   BatchTime 0.344532   LR 0.010000
+INFO - Training [0][ 1200/10010]   Loss 2.676785   Top1 43.027344   Top5 66.560547   BatchTime 0.344376   LR 0.010000
+INFO - Training [0][ 1220/10010]   Loss 2.665600   Top1 43.228740   Top5 66.741803   BatchTime 0.344171   LR 0.010000
+INFO - Training [0][ 1240/10010]   Loss 2.655588   Top1 43.399068   Top5 66.914693   BatchTime 0.343929   LR 0.010000
+INFO - Training [0][ 1260/10010]   Loss 2.645200   Top1 43.555928   Top5 67.088294   BatchTime 0.343815   LR 0.010000
+INFO - Training [0][ 1280/10010]   Loss 2.635571   Top1 43.726196   Top5 67.239990   BatchTime 0.344554   LR 0.010000
+INFO - Training [0][ 1300/10010]   Loss 2.627245   Top1 43.873798   Top5 67.377404   BatchTime 0.344480   LR 0.010000
+INFO - Training [0][ 1320/10010]   Loss 2.619202   Top1 44.021070   Top5 67.511837   BatchTime 0.344556   LR 0.010000
+INFO - Training [0][ 1340/10010]   Loss 2.609927   Top1 44.176189   Top5 67.659748   BatchTime 0.344875   LR 0.010000
+INFO - Training [0][ 1360/10010]   Loss 2.601158   Top1 44.302045   Top5 67.796415   BatchTime 0.345045   LR 0.010000
+INFO - Training [0][ 1380/10010]   Loss 2.591474   Top1 44.468976   Top5 67.961957   BatchTime 0.345135   LR 0.010000
+INFO - Training [0][ 1400/10010]   Loss 2.581783   Top1 44.626674   Top5 68.121652   BatchTime 0.344997   LR 0.010000
+INFO - Training [0][ 1420/10010]   Loss 2.573452   Top1 44.771677   Top5 68.248239   BatchTime 0.344741   LR 0.010000
+INFO - Training [0][ 1440/10010]   Loss 2.565092   Top1 44.922960   Top5 68.384332   BatchTime 0.344497   LR 0.010000
+INFO - Training [0][ 1460/10010]   Loss 2.555832   Top1 45.069563   Top5 68.535424   BatchTime 0.344225   LR 0.010000
+INFO - Training [0][ 1480/10010]   Loss 2.548562   Top1 45.182644   Top5 68.668180   BatchTime 0.343957   LR 0.010000
+INFO - Training [0][ 1500/10010]   Loss 2.540136   Top1 45.319271   Top5 68.803646   BatchTime 0.343688   LR 0.010000
+INFO - Training [0][ 1520/10010]   Loss 2.533376   Top1 45.430201   Top5 68.910876   BatchTime 0.343432   LR 0.010000
+INFO - Training [0][ 1540/10010]   Loss 2.526298   Top1 45.554992   Top5 69.017857   BatchTime 0.343256   LR 0.010000
+INFO - Training [0][ 1560/10010]   Loss 2.518539   Top1 45.692107   Top5 69.143129   BatchTime 0.343142   LR 0.010000
+INFO - Training [0][ 1580/10010]   Loss 2.511946   Top1 45.810423   Top5 69.243968   BatchTime 0.343854   LR 0.010000
+INFO - Training [0][ 1600/10010]   Loss 2.505124   Top1 45.919922   Top5 69.362305   BatchTime 0.343757   LR 0.010000
+INFO - Training [0][ 1620/10010]   Loss 2.497552   Top1 46.033951   Top5 69.499421   BatchTime 0.343746   LR 0.010000
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f129e9cad30>
+Traceback (most recent call last):
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1510, in __del__
+    self._shutdown_workers()
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1474, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/usr/lib/python3.8/multiprocessing/popen_fork.py", line 44, in wait
+    if not wait([self.sentinel], timeout):
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "main.py", line 175, in <module>
+    main()
+  File "main.py", line 123, in main
+    t_top1, t_top5, t_loss, masking_loss = process.train(train_loader, model, criterion, optimizer,
+  File "/home/ilena7440/LSQ/process.py", line 62, in train
+    outputs = model(inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ/model/mobilenet.py", line 142, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ/model/mobilenet.py", line 103, in forward
+    return x + self.conv(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/LSQ/quan/func.py", line 22, in forward
+    quantized_weight = self.quan_w_fn(self.weight)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+KeyboardInterrupt

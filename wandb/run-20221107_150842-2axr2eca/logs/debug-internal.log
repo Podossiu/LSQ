@@ -1,0 +1,262 @@
+2022-11-07 15:08:42,656 INFO    StreamThr :2821138 [internal.py:wandb_internal():90] W&B internal server running at pid: 2821138, started at: 2022-11-07 15:08:42.656044
+2022-11-07 15:08:42,659 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: status
+2022-11-07 15:08:42,661 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: status
+2022-11-07 15:08:42,664 DEBUG   SenderThread:2821138 [sender.py:send():302] send: header
+2022-11-07 15:08:42,664 INFO    WriterThread:2821138 [datastore.py:open_for_write():75] open: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/run-2axr2eca.wandb
+2022-11-07 15:08:42,678 DEBUG   SenderThread:2821138 [sender.py:send():302] send: run
+2022-11-07 15:08:43,193 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: check_version
+2022-11-07 15:08:43,200 INFO    SenderThread:2821138 [dir_watcher.py:__init__():216] watching files in: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files
+2022-11-07 15:08:43,200 INFO    SenderThread:2821138 [sender.py:_start_run_threads():913] run started: 2axr2eca with start time 1667833722.650766
+2022-11-07 15:08:43,200 DEBUG   SenderThread:2821138 [sender.py:send():302] send: summary
+2022-11-07 15:08:43,201 INFO    SenderThread:2821138 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-07 15:08:43,201 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: check_version
+2022-11-07 15:08:43,279 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: run_start
+2022-11-07 15:08:43,297 DEBUG   HandlerThread:2821138 [meta.py:__init__():35] meta init
+2022-11-07 15:08:43,297 DEBUG   HandlerThread:2821138 [meta.py:__init__():50] meta init done
+2022-11-07 15:08:43,297 DEBUG   HandlerThread:2821138 [meta.py:probe():216] probe
+2022-11-07 15:08:43,304 DEBUG   HandlerThread:2821138 [meta.py:_setup_git():206] setup git
+2022-11-07 15:08:43,328 DEBUG   HandlerThread:2821138 [meta.py:_setup_git():213] setup git done
+2022-11-07 15:08:43,329 DEBUG   HandlerThread:2821138 [meta.py:_save_pip():54] save pip
+2022-11-07 15:08:43,330 DEBUG   HandlerThread:2821138 [meta.py:_save_pip():68] save pip done
+2022-11-07 15:08:43,330 DEBUG   HandlerThread:2821138 [meta.py:probe():254] probe done
+2022-11-07 15:08:43,452 DEBUG   SenderThread:2821138 [sender.py:send():302] send: files
+2022-11-07 15:08:43,453 INFO    SenderThread:2821138 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2022-11-07 15:08:43,464 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:08:43,465 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:08:43,681 DEBUG   SenderThread:2821138 [sender.py:send():302] send: telemetry
+2022-11-07 15:08:44,140 INFO    Thread-16 :2821138 [upload_job.py:push():138] Uploaded file /tmp/tmp50wfsb3pwandb/26kksz76-wandb-metadata.json
+2022-11-07 15:08:44,203 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/requirements.txt
+2022-11-07 15:08:44,204 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-summary.json
+2022-11-07 15:08:44,204 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-metadata.json
+2022-11-07 15:08:44,204 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_created():275] file/dir created: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:46,202 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:48,203 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:49,203 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:50,204 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:52,205 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:53,205 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:08:58,687 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:08:58,688 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:09:06,214 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:08,215 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:10,216 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:12,217 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:13,218 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/config.yaml
+2022-11-07 15:09:13,890 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:09:13,927 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:09:13,928 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:09:14,218 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:16,219 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:18,220 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:20,221 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:22,221 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:24,222 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:26,223 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:28,224 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:29,148 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:09:29,148 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:09:30,225 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:32,226 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:34,228 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:34,762 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-07 15:09:34,768 DEBUG   SenderThread:2821138 [sender.py:send():302] send: history
+2022-11-07 15:09:34,769 DEBUG   SenderThread:2821138 [sender.py:send():302] send: summary
+2022-11-07 15:09:34,771 INFO    SenderThread:2821138 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-07 15:09:35,228 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-summary.json
+2022-11-07 15:09:36,229 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:39,230 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:41,231 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:44,233 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:44,372 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:09:44,373 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:09:46,521 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:09:48,235 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:52,237 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:56,238 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:09:58,239 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:00,559 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:10:00,559 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:10:02,241 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:06,243 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:10,245 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:12,246 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:15,774 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:10:15,774 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:10:16,247 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:18,845 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:10:20,249 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:24,250 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:26,251 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:30,253 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:31,001 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:10:31,001 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:10:34,255 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:38,257 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:40,257 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:44,259 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:46,222 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:10:46,222 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:10:48,261 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:51,035 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:10:52,262 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:54,264 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:10:58,266 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:01,445 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:11:01,445 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:11:02,268 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:04,268 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:08,270 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:12,272 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:16,274 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:16,663 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:11:16,663 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:11:18,275 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:22,277 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:23,707 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:11:26,279 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:30,281 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:31,894 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:11:31,894 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:11:32,282 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:36,283 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:40,285 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:44,287 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:47,122 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:11:47,122 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:11:48,289 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:52,290 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:56,297 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:11:56,626 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:11:58,298 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:02,299 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:02,344 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-07 15:12:02,345 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: stop_status
+2022-11-07 15:12:06,301 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:10,303 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:11,316 DEBUG   SenderThread:2821138 [sender.py:send():302] send: exit
+2022-11-07 15:12:11,317 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:11,317 INFO    SenderThread:2821138 [sender.py:send_exit():438] handling exit code: 255
+2022-11-07 15:12:11,317 INFO    SenderThread:2821138 [sender.py:send_exit():440] handling runtime: 208
+2022-11-07 15:12:11,318 INFO    SenderThread:2821138 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-07 15:12:11,318 INFO    SenderThread:2821138 [sender.py:send_exit():446] send defer
+2022-11-07 15:12:11,318 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:11,319 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,319 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 0
+2022-11-07 15:12:11,319 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,319 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 0
+2022-11-07 15:12:11,319 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 1
+2022-11-07 15:12:11,320 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,320 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 1
+2022-11-07 15:12:11,634 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,634 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 1
+2022-11-07 15:12:11,634 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:11,634 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 2
+2022-11-07 15:12:11,635 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:11,635 DEBUG   SenderThread:2821138 [sender.py:send():302] send: stats
+2022-11-07 15:12:11,636 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,637 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 2
+2022-11-07 15:12:11,638 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,638 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 2
+2022-11-07 15:12:11,638 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 3
+2022-11-07 15:12:11,639 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,639 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 3
+2022-11-07 15:12:11,639 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,639 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 3
+2022-11-07 15:12:11,639 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 4
+2022-11-07 15:12:11,640 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,640 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 4
+2022-11-07 15:12:11,640 DEBUG   SenderThread:2821138 [sender.py:send():302] send: summary
+2022-11-07 15:12:11,641 INFO    SenderThread:2821138 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-07 15:12:11,642 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,642 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 4
+2022-11-07 15:12:11,642 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 5
+2022-11-07 15:12:11,643 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,643 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 5
+2022-11-07 15:12:11,643 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,643 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 5
+2022-11-07 15:12:11,643 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 6
+2022-11-07 15:12:11,644 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:11,644 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 6
+2022-11-07 15:12:11,644 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:11,644 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 6
+2022-11-07 15:12:11,739 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:12,304 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-summary.json
+2022-11-07 15:12:12,304 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:13,094 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 7
+2022-11-07 15:12:13,095 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,095 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:13,096 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 7
+2022-11-07 15:12:13,096 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:13,096 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 7
+2022-11-07 15:12:13,096 INFO    SenderThread:2821138 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-07 15:12:13,197 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,304 INFO    Thread-12 :2821138 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:13,305 INFO    SenderThread:2821138 [dir_watcher.py:finish():392] scan: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files
+2022-11-07 15:12:13,305 INFO    SenderThread:2821138 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-summary.json wandb-summary.json
+2022-11-07 15:12:13,306 INFO    SenderThread:2821138 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/config.yaml config.yaml
+2022-11-07 15:12:13,306 INFO    SenderThread:2821138 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-metadata.json wandb-metadata.json
+2022-11-07 15:12:13,306 INFO    SenderThread:2821138 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/requirements.txt requirements.txt
+2022-11-07 15:12:13,307 INFO    SenderThread:2821138 [dir_watcher.py:finish():406] scan save: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log output.log
+2022-11-07 15:12:13,320 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 8
+2022-11-07 15:12:13,326 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,329 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:13,336 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 8
+2022-11-07 15:12:13,337 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:13,337 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 8
+2022-11-07 15:12:13,338 INFO    SenderThread:2821138 [file_pusher.py:finish():171] shutting down file pusher
+2022-11-07 15:12:13,437 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,437 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,539 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,539 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,641 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,642 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,744 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,744 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,846 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,846 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,948 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:13,948 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:13,988 INFO    Thread-19 :2821138 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/requirements.txt
+2022-11-07 15:12:14,023 INFO    Thread-18 :2821138 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/config.yaml
+2022-11-07 15:12:14,039 INFO    Thread-17 :2821138 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/wandb-summary.json
+2022-11-07 15:12:14,050 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:14,051 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:14,066 INFO    Thread-20 :2821138 [upload_job.py:push():138] Uploaded file /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/files/output.log
+2022-11-07 15:12:14,153 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:14,153 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:14,255 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:14,256 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:14,268 INFO    Thread-11 :2821138 [sender.py:transition_state():459] send defer: 9
+2022-11-07 15:12:14,269 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:14,269 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 9
+2022-11-07 15:12:14,269 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:14,269 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 9
+2022-11-07 15:12:14,357 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:14,925 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 10
+2022-11-07 15:12:14,926 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:14,927 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:14,928 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 10
+2022-11-07 15:12:14,928 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:14,928 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 10
+2022-11-07 15:12:14,929 INFO    SenderThread:2821138 [sender.py:transition_state():459] send defer: 11
+2022-11-07 15:12:14,930 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: defer
+2022-11-07 15:12:14,930 DEBUG   SenderThread:2821138 [sender.py:send():302] send: final
+2022-11-07 15:12:14,930 INFO    HandlerThread:2821138 [handler.py:handle_request_defer():164] handle defer: 11
+2022-11-07 15:12:14,930 DEBUG   SenderThread:2821138 [sender.py:send():302] send: footer
+2022-11-07 15:12:14,930 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: defer
+2022-11-07 15:12:14,930 INFO    SenderThread:2821138 [sender.py:send_request_defer():455] handle sender defer: 11
+2022-11-07 15:12:15,029 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: poll_exit
+2022-11-07 15:12:15,030 DEBUG   SenderThread:2821138 [sender.py:send_request():316] send_request: poll_exit
+2022-11-07 15:12:15,030 INFO    SenderThread:2821138 [file_pusher.py:join():176] waiting for file pusher
+2022-11-07 15:12:15,563 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: sampled_history
+2022-11-07 15:12:15,564 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: get_summary
+2022-11-07 15:12:15,565 INFO    MainThread:2821138 [wandb_run.py:_footer_history_summary_info():3305] rendering history
+2022-11-07 15:12:15,565 INFO    MainThread:2821138 [wandb_run.py:_footer_history_summary_info():3337] rendering summary
+2022-11-07 15:12:15,566 INFO    MainThread:2821138 [wandb_run.py:_footer_sync_info():3261] logging synced files
+2022-11-07 15:12:15,566 DEBUG   HandlerThread:2821138 [handler.py:handle_request():141] handle_request: shutdown
+2022-11-07 15:12:15,566 INFO    HandlerThread:2821138 [handler.py:finish():810] shutting down handler
+2022-11-07 15:12:15,930 INFO    WriterThread:2821138 [datastore.py:close():279] close: /home/ilena7440/LSQ/wandb/run-20221107_150842-2axr2eca/run-2axr2eca.wandb
+2022-11-07 15:12:16,462 INFO    SenderThread:2821138 [sender.py:finish():1312] shutting down sender
+2022-11-07 15:12:16,462 INFO    SenderThread:2821138 [file_pusher.py:finish():171] shutting down file pusher
+2022-11-07 15:12:16,462 INFO    SenderThread:2821138 [file_pusher.py:join():176] waiting for file pusher
+2022-11-07 15:12:16,570 INFO    MainThread:2821138 [internal.py:handle_exit():80] Internal process exited

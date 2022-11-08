@@ -1,0 +1,309 @@
+INFO - Log file for this run: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_epoch80_20221108-065654/MobileNetv2_imagenet_a8w8_5_epoch80_20221108-065654.log
+INFO - TensorBoard data directory: /home/ilena7440/LSQ/out/MobileNetv2_imagenet_a8w8_5_epoch80_20221108-065654/tb_runs
+INFO - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+********************pre-trained*****************
+INFO - Created `MobileNetv2` model for `imagenet` dataset
+          Use pre-trained model = True
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+255
+/home/ilena7440/LSQ/quan/quantizer/lsq.py:137: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (len(x.shape) == 4 and x.shape[1] != 1):
+/home/ilena7440/LSQ/quan/quantizer/lsq.py:94: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+INFO - Inserted quantizers into the original model
+INFO - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.01
+INFO - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+INFO - Validation: 50000 samples (128 per mini-batch)
+Munch({'update_per_batch': True, 'mode': 'multi_step', 'milestones': [20, 40, 60], 'gamma': 0.1})
+multi_step
+INFO - Validation [   20/  391]   Loss 27.485519   Top1 0.000000   Top5 0.117188   BatchTime 1.011477
+INFO - Validation [   40/  391]   Loss 28.446448   Top1 0.000000   Top5 0.058594   BatchTime 0.587116
+INFO - Validation [   60/  391]   Loss 27.422733   Top1 0.000000   Top5 0.364583   BatchTime 0.444928
+INFO - Validation [   80/  391]   Loss 24.828631   Top1 0.000000   Top5 0.312500   BatchTime 0.373219
+INFO - Validation [  100/  391]   Loss 23.232199   Top1 0.000000   Top5 0.250000   BatchTime 0.330453
+INFO - Validation [  120/  391]   Loss 23.382051   Top1 0.312500   Top5 0.553385   BatchTime 0.301397
+INFO - Validation [  140/  391]   Loss 24.094506   Top1 0.267857   Top5 0.474330   BatchTime 0.279481
+INFO - Validation [  160/  391]   Loss 24.120803   Top1 0.234375   Top5 0.415039   BatchTime 0.262217
+INFO - Validation [  180/  391]   Loss 23.956572   Top1 0.208333   Top5 0.368924   BatchTime 0.250085
+INFO - Validation [  200/  391]   Loss 24.034228   Top1 0.187500   Top5 0.332031   BatchTime 0.245029
+INFO - Validation [  220/  391]   Loss 24.151189   Top1 0.174006   Top5 0.479403   BatchTime 0.237494
+INFO - Validation [  240/  391]   Loss 24.172193   Top1 0.159505   Top5 0.439453   BatchTime 0.230248
+INFO - Validation [  260/  391]   Loss 24.181465   Top1 0.147236   Top5 0.405649   BatchTime 0.224138
+INFO - Validation [  280/  391]   Loss 24.243415   Top1 0.136719   Top5 0.463170   BatchTime 0.218533
+INFO - Validation [  300/  391]   Loss 24.185590   Top1 0.127604   Top5 0.601562   BatchTime 0.213537
+INFO - Validation [  320/  391]   Loss 24.232709   Top1 0.119629   Top5 0.563965   BatchTime 0.209696
+INFO - Validation [  340/  391]   Loss 24.111143   Top1 0.112592   Top5 0.567555   BatchTime 0.205493
+INFO - Validation [  360/  391]   Loss 24.018822   Top1 0.106337   Top5 0.536024   BatchTime 0.200705
+INFO - Validation [  380/  391]   Loss 24.202007   Top1 0.100740   Top5 0.507812   BatchTime 0.196429
+INFO - ==> Top1: 0.098    Top5: 0.494    Loss: 24.297
+INFO - Scoreboard best 1 ==> Epoch [-1][Top1: 0.098   Top5: 0.494] Sparsity : 0.060
+INFO - >>>>>>>> Epoch   0
+INFO - Training: 1281167 samples (128 per mini-batch)
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+Parameter containing:
+tensor(0.0418, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0624, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0610, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0296, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0329, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0609, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0207, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0220, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0871, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0175, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0351, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0728, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0206, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0135, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0847, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0161, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0112, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0934, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0163, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0374, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0619, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0165, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0094, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0723, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0106, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0088, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0764, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0083, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0094, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0794, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0148, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0243, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0478, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0082, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0093, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0565, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0065, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0102, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0647, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0065, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0276, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0359, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0108, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0098, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0455, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0084, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0111, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0580, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0036, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0219, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0308, device='cuda:0', requires_grad=True)
+INFO - Training [0][   20/10010]   Loss 5.768092   Top1 6.250000   Top5 16.835938   BatchTime 0.651485   LR 0.010000
+INFO - Training [0][   40/10010]   Loss 5.752822   Top1 6.347656   Top5 17.363281   BatchTime 0.495667   LR 0.010000
+INFO - Training [0][   60/10010]   Loss 5.594511   Top1 7.213542   Top5 18.723958   BatchTime 0.443290   LR 0.010000
+INFO - Training [0][   80/10010]   Loss 5.374965   Top1 8.593750   Top5 21.660156   BatchTime 0.418325   LR 0.010000
+INFO - Training [0][  100/10010]   Loss 5.154158   Top1 10.453125   Top5 25.054688   BatchTime 0.402490   LR 0.010000
+INFO - Training [0][  120/10010]   Loss 4.959696   Top1 12.389323   Top5 28.378906   BatchTime 0.392069   LR 0.010000
+INFO - Training [0][  140/10010]   Loss 4.790533   Top1 13.978795   Top5 31.138393   BatchTime 0.383688   LR 0.010000
+INFO - Training [0][  160/10010]   Loss 4.643311   Top1 15.751953   Top5 33.632812   BatchTime 0.377496   LR 0.010000
+INFO - Training [0][  180/10010]   Loss 4.518860   Top1 17.061632   Top5 35.677083   BatchTime 0.373053   LR 0.010000
+INFO - Training [0][  200/10010]   Loss 4.408037   Top1 18.261719   Top5 37.503906   BatchTime 0.369667   LR 0.010000
+INFO - Training [0][  220/10010]   Loss 4.297241   Top1 19.605824   Top5 39.453125   BatchTime 0.366381   LR 0.010000
+INFO - Training [0][  240/10010]   Loss 4.195697   Top1 20.953776   Top5 41.240234   BatchTime 0.364126   LR 0.010000
+INFO - Training [0][  260/10010]   Loss 4.108014   Top1 22.100361   Top5 42.734375   BatchTime 0.362383   LR 0.010000
+INFO - Training [0][  280/10010]   Loss 4.035829   Top1 23.038504   Top5 43.895089   BatchTime 0.361003   LR 0.010000
+INFO - Training [0][  300/10010]   Loss 3.952874   Top1 24.119792   Top5 45.286458   BatchTime 0.359689   LR 0.010000
+INFO - Training [0][  320/10010]   Loss 3.872832   Top1 25.144043   Top5 46.594238   BatchTime 0.358768   LR 0.010000
+INFO - Training [0][  340/10010]   Loss 3.807263   Top1 26.034007   Top5 47.651654   BatchTime 0.357459   LR 0.010000
+INFO - Training [0][  360/10010]   Loss 3.745429   Top1 26.898872   Top5 48.728299   BatchTime 0.356324   LR 0.010000
+INFO - Training [0][  380/10010]   Loss 3.691665   Top1 27.615132   Top5 49.640214   BatchTime 0.356051   LR 0.010000
+INFO - Training [0][  400/10010]   Loss 3.638276   Top1 28.396484   Top5 50.523438   BatchTime 0.355014   LR 0.010000
+INFO - Training [0][  420/10010]   Loss 3.582394   Top1 29.203869   Top5 51.497396   BatchTime 0.354265   LR 0.010000
+INFO - Training [0][  440/10010]   Loss 3.534581   Top1 29.907670   Top5 52.311790   BatchTime 0.353634   LR 0.010000
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fe4e7a53d30>
+Traceback (most recent call last):
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1510, in __del__
+    self._shutdown_workers()
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1474, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/usr/lib/python3.8/multiprocessing/popen_fork.py", line 44, in wait
+    if not wait([self.sentinel], timeout):
+  File "/usr/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "main.py", line 175, in <module>
+    main()
+  File "main.py", line 123, in main
+    t_top1, t_top5, t_loss, masking_loss = process.train(train_loader, model, criterion, optimizer,
+  File "/home/ilena7440/LSQ/process.py", line 83, in train
+    loss.backward()
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

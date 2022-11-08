@@ -1,0 +1,49 @@
+2022-11-08 07:03:50,120 - INFO  - Log file for this run: /home/ilena7440/LSQ/out/ResNet18_imagenet_a8w8_2_5_epoch80_20221108-070350/ResNet18_imagenet_a8w8_2_5_epoch80_20221108-070350.log
+2022-11-08 07:03:50,140 - INFO  - TensorBoard data directory: /home/ilena7440/LSQ/out/ResNet18_imagenet_a8w8_2_5_epoch80_20221108-070350/tb_runs
+2022-11-08 07:03:54,961 - INFO  - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+2022-11-08 07:03:55,610 - INFO  - Created `resnet18` model for `imagenet` dataset
+          Use pre-trained model = True
+2022-11-08 07:04:25,838 - INFO  - Inserted quantizers into the original model
+2022-11-08 07:04:28,508 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-11-08 07:04:28,508 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.01
+
+2022-11-08 07:04:28,508 - INFO  - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-08 07:04:28,509 - INFO  - Validation: 50000 samples (128 per mini-batch)
+2022-11-08 07:04:45,371 - INFO  - Validation [   20/  391]   Loss 10.426115   Top1 0.000000   Top5 0.000000   BatchTime 0.843098   
+2022-11-08 07:04:47,444 - INFO  - Validation [   40/  391]   Loss 9.851932   Top1 0.058594   Top5 0.390625   BatchTime 0.473377   
+2022-11-08 07:04:49,143 - INFO  - Validation [   60/  391]   Loss 10.078457   Top1 0.039062   Top5 0.299479   BatchTime 0.343891   
+2022-11-08 07:04:52,006 - INFO  - Validation [   80/  391]   Loss 9.897195   Top1 0.029297   Top5 0.234375   BatchTime 0.293699   
+2022-11-08 07:04:56,191 - INFO  - Validation [  100/  391]   Loss 9.835794   Top1 0.023438   Top5 0.234375   BatchTime 0.276810   
+2022-11-08 07:04:58,971 - INFO  - Validation [  120/  391]   Loss 9.867029   Top1 0.019531   Top5 0.208333   BatchTime 0.253849   
+2022-11-08 07:05:00,861 - INFO  - Validation [  140/  391]   Loss 9.910343   Top1 0.033482   Top5 0.251116   BatchTime 0.231076   
+2022-11-08 07:05:02,696 - INFO  - Validation [  160/  391]   Loss 9.933602   Top1 0.219727   Top5 0.517578   BatchTime 0.213661   
+2022-11-08 07:05:04,745 - INFO  - Validation [  180/  391]   Loss 9.767149   Top1 0.199653   Top5 0.594618   BatchTime 0.201309   
+2022-11-08 07:05:06,720 - INFO  - Validation [  200/  391]   Loss 9.629207   Top1 0.261719   Top5 0.882812   BatchTime 0.191052   
+2022-11-08 07:05:08,832 - INFO  - Validation [  220/  391]   Loss 9.559465   Top1 0.255682   Top5 0.948153   BatchTime 0.183284   
+2022-11-08 07:05:10,829 - INFO  - Validation [  240/  391]   Loss 9.480269   Top1 0.341797   Top5 1.103516   BatchTime 0.176331   
+2022-11-08 07:05:12,788 - INFO  - Validation [  260/  391]   Loss 9.385702   Top1 0.357572   Top5 1.259014   BatchTime 0.170299   
+2022-11-08 07:05:14,776 - INFO  - Validation [  280/  391]   Loss 9.332992   Top1 0.357143   Top5 1.283482   BatchTime 0.165234   
+2022-11-08 07:05:16,747 - INFO  - Validation [  300/  391]   Loss 9.263727   Top1 0.390625   Top5 1.419271   BatchTime 0.160789   
+2022-11-08 07:05:18,678 - INFO  - Validation [  320/  391]   Loss 9.216885   Top1 0.427246   Top5 1.542969   BatchTime 0.156773   
+2022-11-08 07:05:20,427 - INFO  - Validation [  340/  391]   Loss 9.160497   Top1 0.418199   Top5 1.592371   BatchTime 0.152695   
+2022-11-08 07:05:21,788 - INFO  - Validation [  360/  391]   Loss 9.129761   Top1 0.444878   Top5 1.740451   BatchTime 0.147994   
+2022-11-08 07:05:23,078 - INFO  - Validation [  380/  391]   Loss 9.136724   Top1 0.425576   Top5 1.679688   BatchTime 0.143598   
+2022-11-08 07:05:24,219 - INFO  - ==> Top1: 0.414    Top5: 1.678    Loss: 9.133
+
+2022-11-08 07:05:24,245 - INFO  - Scoreboard best 1 ==> Epoch [-1][Top1: 0.414   Top5: 1.678] Sparsity : 0.058
+2022-11-08 07:05:24,245 - INFO  - >>>>>>>> Epoch   0
+2022-11-08 07:05:24,246 - INFO  - Training: 1281167 samples (128 per mini-batch)

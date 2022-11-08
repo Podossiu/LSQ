@@ -1,0 +1,32 @@
+2022-11-07 15:11:32,528 - INFO  - Log file for this run: /home/ilena7440/LSQ/out/ResNet18_imagenet_a8w8_30_epoch80_20221107-151132/ResNet18_imagenet_a8w8_30_epoch80_20221107-151132.log
+2022-11-07 15:11:32,542 - INFO  - TensorBoard data directory: /home/ilena7440/LSQ/out/ResNet18_imagenet_a8w8_30_epoch80_20221107-151132/tb_runs
+2022-11-07 15:11:35,413 - INFO  - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+2022-11-07 15:11:35,729 - INFO  - Created `resnet18` model for `imagenet` dataset
+          Use pre-trained model = True
+2022-11-07 15:11:37,569 - INFO  - Inserted quantizers into the original model
+2022-11-07 15:11:39,346 - INFO  - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.01
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 0.0001
+           )
+2022-11-07 15:11:39,346 - INFO  - LR scheduler: `MultiStepLr`
+    Update per batch: True
+             Group 0: 0.01
+
+2022-11-07 15:11:39,346 - INFO  - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+2022-11-07 15:11:39,346 - INFO  - Validation: 50000 samples (128 per mini-batch)
+2022-11-07 15:11:54,493 - INFO  - Validation [   20/  391]   Loss 10.426115   Top1 0.000000   Top5 0.000000   BatchTime 0.757276   
+2022-11-07 15:11:56,330 - INFO  - Validation [   40/  391]   Loss 9.851932   Top1 0.058594   Top5 0.390625   BatchTime 0.424586   
+2022-11-07 15:11:58,172 - INFO  - Validation [   60/  391]   Loss 10.078457   Top1 0.039062   Top5 0.299479   BatchTime 0.313751   
+2022-11-07 15:12:00,135 - INFO  - Validation [   80/  391]   Loss 9.897195   Top1 0.029297   Top5 0.234375   BatchTime 0.259842   
+2022-11-07 15:12:01,912 - INFO  - Validation [  100/  391]   Loss 9.835794   Top1 0.023438   Top5 0.234375   BatchTime 0.225641   
+2022-11-07 15:12:03,898 - INFO  - Validation [  120/  391]   Loss 9.867029   Top1 0.019531   Top5 0.208333   BatchTime 0.204591   
+2022-11-07 15:12:05,786 - INFO  - Validation [  140/  391]   Loss 9.910343   Top1 0.033482   Top5 0.251116   BatchTime 0.188844   
