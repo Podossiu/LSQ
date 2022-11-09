@@ -1,0 +1,124 @@
+INFO - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_20_epoch80_20221109-121357/MobileNetv2_imagenet_a8w8_20_epoch80_20221109-121357.log
+2022-11-09 12:13:57.525675: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-09 12:14:00.722377: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2022-11-09 12:14:04.631357: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-11-09 12:14:04.631470: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-11-09 12:14:04.631482: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+INFO - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_20_epoch80_20221109-121357/tb_runs
+********************pre-trained*****************
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 32 worker processes in total. Our suggested max number of worker in current system is 16, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+INFO - Dataset `imagenet` size:
+          Training Set = 1281167 (10010)
+        Validation Set = 50000 (391)
+              Test Set = 50000 (391)
+INFO - Created `MobileNetv2` model for `imagenet` dataset
+          Use pre-trained model = True
+/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py:139: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (len(x.shape) == 4 and x.shape[1] != 1):
+/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py:94: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+Traceback (most recent call last):
+  File "main.py", line 175, in <module>
+    main()
+  File "main.py", line 78, in main
+    tbmonitor.writer.add_graph(model, input_to_model=train_loader.dataset[0][0].unsqueeze(0))
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 840, in add_graph
+    graph(model, input_to_model, verbose, use_strict_trace)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/utils/tensorboard/_pytorch_graph.py", line 338, in graph
+    trace = torch.jit.trace(model, args, strict=use_strict_trace)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/jit/_trace.py", line 750, in trace
+    return trace_module(
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/jit/_trace.py", line 967, in trace_module
+    module._c._create_method_from_trace(
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/ilena7440/slsq/LSQ/model/mobilenet.py", line 142, in forward
+    x = self.features(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/ilena7440/slsq/LSQ/model/mobilenet.py", line 105, in forward
+    return self.conv(x)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/ilena7440/slsq/LSQ/quan/func.py", line 22, in forward
+    quantized_weight = self.quan_w_fn(self.weight)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py", line 140, in forward
+    mask = self.soft_pruner(x, p_scale)
+  File "/home/ilena7440/slsq/LSQ/quan/quantizer/lsq.py", line 98, in soft_pruner
+    temperature = (score.abs().view(-1).sort()[score.numel()*self.temperature] * 0.5).detach()
+TypeError: only integer tensors of a single element can be converted to an index
