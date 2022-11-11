@@ -1,9 +1,0 @@
-2022-11-04 01:33:35,965 - INFO  - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_25_epoch60_20221104-013335/MobileNetv2_cifar10_a8w8_hard_pruning_25_epoch60_20221104-013335.log
-2022-11-04 01:33:37,073 - INFO  - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_25_epoch60_20221104-013335/tb_runs
-2022-11-04 01:33:38,246 - INFO  - Dataset `cifar10` size:
-          Training Set = 50000 (196)
-        Validation Set = 10000 (40)
-              Test Set = 10000 (40)
-2022-11-04 01:33:38,312 - INFO  - Created `MobileNetv2` model for `cifar10` dataset
-          Use pre-trained model = False
-2022-11-04 01:33:40,457 - INFO  - Inserted quantizers into the original model

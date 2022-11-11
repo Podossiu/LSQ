@@ -1,2 +1,0 @@
-2022-11-04 01:34:08,568 - INFO  - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_25_epoch60_20221104-013408/MobileNetv2_cifar10_a8w8_hard_pruning_25_epoch60_20221104-013408.log
-2022-11-04 01:34:09,592 - INFO  - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_cifar10_a8w8_hard_pruning_25_epoch60_20221104-013408/tb_runs

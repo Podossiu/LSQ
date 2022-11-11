@@ -1,0 +1,26 @@
+{
+    "os": "Linux-4.15.0-167-generic-x86_64-with-glibc2.27",
+    "python": "3.8.0",
+    "heartbeatAt": "2022-11-11T12:19:44.735702",
+    "startedAt": "2022-11-11T12:19:44.153614",
+    "docker": null,
+    "gpu": "TITAN V",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "cuda": "10.0.130",
+    "args": [
+        "examples/lsq/mobilenet/cifar10/soft_pruning/mobilenetv2_a8w8_cifar10_5_epoch70_percentile0_2.yaml"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/Podossiu/LSQ.git",
+        "commit": "42b12840982f92986c2cb83348f42d5bcfefd504"
+    },
+    "email": "ilena7440@naver.com",
+    "root": "/home/ilena7440/slsq_percentile/LSQ",
+    "host": "eslab14",
+    "username": "ilena7440",
+    "executable": "/home/ilena7440/qilbertenv/bin/python3"
+}

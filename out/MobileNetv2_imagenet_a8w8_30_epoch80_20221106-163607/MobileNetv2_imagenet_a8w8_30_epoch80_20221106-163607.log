@@ -1,9 +1,0 @@
-2022-11-06 16:36:07,327 - INFO  - Log file for this run: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_30_epoch80_20221106-163607/MobileNetv2_imagenet_a8w8_30_epoch80_20221106-163607.log
-2022-11-06 16:36:08,277 - INFO  - TensorBoard data directory: /home/ilena7440/slsq/LSQ/out/MobileNetv2_imagenet_a8w8_30_epoch80_20221106-163607/tb_runs
-2022-11-06 16:36:10,467 - INFO  - Dataset `imagenet` size:
-          Training Set = 1281167 (10010)
-        Validation Set = 50000 (391)
-              Test Set = 50000 (391)
-2022-11-06 16:36:11,997 - INFO  - Created `MobileNetv2` model for `imagenet` dataset
-          Use pre-trained model = True
-2022-11-06 16:36:14,221 - INFO  - Inserted quantizers into the original model

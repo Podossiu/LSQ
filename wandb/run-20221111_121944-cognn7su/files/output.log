@@ -1,0 +1,1553 @@
+INFO - Log file for this run: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944.log
+INFO - TensorBoard data directory: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/tb_runs
+Files already downloaded and verified
+Files already downloaded and verified
+hello
+INFO - Dataset `cifar10` size:
+          Training Set = 50000 (391)
+        Validation Set = 10000 (79)
+              Test Set = 10000 (79)
+********************pre-trained*****************
+INFO - Created `MobileNetv2` model for `cifar10` dataset
+          Use pre-trained model = True
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+127
+/home/ilena7440/slsq_percentile/LSQ/quan/quantizer/lsq.py:146: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (len(x.shape) == 4 and x.shape[1] != 1):
+/home/ilena7440/slsq_percentile/LSQ/quan/quantizer/lsq.py:101: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  x_reshape = x.reshape(co // self.block_size, self.block_size, ci, kh, kw)
+/home/ilena7440/slsq_percentile/LSQ/quan/quantizer/lsq.py:105: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  temperature = (score.abs().view(-1).sort()[0][int(score.numel()*self.temperature)] * 0.5).detach()
+/home/ilena7440/qilbertenv/lib/python3.8/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Munch({'update_per_batch': True, 'mode': 'cos_warm_restarts', 'lr_min': 0, 'cycle': 10, 'cycle_scale': 2, 'amp_scale': 0.5})
+cos_warm_restarts
+INFO - Inserted quantizers into the original model
+INFO - Optimizer: SGD (
+           Parameter Group 0
+               dampening: 0
+               foreach: None
+               lr: 0.005
+               maximize: False
+               momentum: 0.9
+               nesterov: False
+               weight_decay: 4e-05
+           )
+INFO - LR scheduler: `CosineWarmRestartsLr`
+    Update per batch: True
+             Group 0: 0.005
+INFO - >>>>>>>> Epoch -1 (pre-trained model evaluation)
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [   20/   79]   Loss 2.545371   Top1 10.429688   Top5 49.101562   BatchTime 0.233267
+INFO - Validation [   40/   79]   Loss 2.549466   Top1 10.175781   Top5 49.941406   BatchTime 0.146503
+tensor(547224., device='cuda:0') 547224.0
+INFO - Validation [   60/   79]   Loss 2.541519   Top1 10.117188   Top5 50.377604   BatchTime 0.117127
+INFO - ==> Top1: 10.000    Top5: 50.000    Loss: 2.546
+INFO - Scoreboard best 1 ==> Epoch [-1][Top1: 10.000   Top5: 50.000] Sparsity : 0.062
+INFO - >>>>>>>> Epoch   0
+INFO - Training: 50000 samples (128 per mini-batch)
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+LsqQuan()
+Parameter containing:
+tensor(0.0881, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1187, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1454, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0657, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0655, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1428, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0437, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0318, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1851, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0351, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0643, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1598, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0349, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0262, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1898, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0254, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0240, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.2177, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0229, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0689, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1314, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0174, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0170, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1454, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0143, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0150, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1579, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0115, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0132, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.1681, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0184, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0293, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0830, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0073, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0087, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0909, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0057, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0071, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0981, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0091, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0218, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0482, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0055, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0046, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0495, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0052, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0045, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0479, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0107, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0134, device='cuda:0', requires_grad=True)
+Parameter containing:
+tensor(0.0257, device='cuda:0', requires_grad=True)
+INFO - Training [0][   20/  391]   Loss 1.706373   Top1 67.617188   Top5 96.210938   BatchTime 0.300185   LR 0.005000
+INFO - Training [0][   40/  391]   Loss 1.391797   Top1 70.273438   Top5 97.050781   BatchTime 0.233484   LR 0.004999
+INFO - Training [0][   60/  391]   Loss 1.238843   Top1 71.796875   Top5 97.539062   BatchTime 0.213987   LR 0.004997
+INFO - Training [0][   80/  391]   Loss 1.113155   Top1 73.212891   Top5 97.822266   BatchTime 0.205789   LR 0.004995
+INFO - Training [0][  100/  391]   Loss 1.018343   Top1 74.507812   Top5 98.015625   BatchTime 0.198427   LR 0.004992
+INFO - Training [0][  120/  391]   Loss 0.943506   Top1 75.494792   Top5 98.235677   BatchTime 0.192875   LR 0.004989
+INFO - Training [0][  140/  391]   Loss 0.888856   Top1 76.344866   Top5 98.364955   BatchTime 0.190101   LR 0.004984
+INFO - Training [0][  160/  391]   Loss 0.842933   Top1 77.006836   Top5 98.481445   BatchTime 0.186288   LR 0.004980
+INFO - Training [0][  180/  391]   Loss 0.803973   Top1 77.738715   Top5 98.580729   BatchTime 0.187565   LR 0.004974
+INFO - Training [0][  200/  391]   Loss 0.775485   Top1 78.085938   Top5 98.656250   BatchTime 0.186116   LR 0.004968
+INFO - Training [0][  220/  391]   Loss 0.750238   Top1 78.469460   Top5 98.728693   BatchTime 0.184636   LR 0.004961
+INFO - Training [0][  240/  391]   Loss 0.725962   Top1 78.942057   Top5 98.792318   BatchTime 0.183921   LR 0.004954
+INFO - Training [0][  260/  391]   Loss 0.704870   Top1 79.447115   Top5 98.840144   BatchTime 0.183530   LR 0.004946
+INFO - Training [0][  280/  391]   Loss 0.687615   Top1 79.701451   Top5 98.861607   BatchTime 0.184248   LR 0.004937
+INFO - Training [0][  300/  391]   Loss 0.672757   Top1 79.973958   Top5 98.893229   BatchTime 0.183236   LR 0.004928
+INFO - Training [0][  320/  391]   Loss 0.657424   Top1 80.297852   Top5 98.940430   BatchTime 0.183765   LR 0.004918
+INFO - Training [0][  340/  391]   Loss 0.643906   Top1 80.572151   Top5 98.970588   BatchTime 0.184277   LR 0.004908
+INFO - Training [0][  360/  391]   Loss 0.630044   Top1 80.881076   Top5 99.008247   BatchTime 0.185979   LR 0.004897
+INFO - Training [0][  380/  391]   Loss 0.619016   Top1 81.130757   Top5 99.029605   BatchTime 0.185392   LR 0.004885
+INFO - ==> Top1: 81.264    Top5: 99.040    Loss: 0.613
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [0][   20/   79]   Loss 0.483282   Top1 83.125000   Top5 99.335938   BatchTime 0.180867
+INFO - Validation [0][   40/   79]   Loss 0.487657   Top1 83.398438   Top5 99.277344   BatchTime 0.122238
+INFO - Validation [0][   60/   79]   Loss 0.494239   Top1 83.320312   Top5 99.205729   BatchTime 0.104679
+INFO - ==> Top1: 83.380    Top5: 99.210    Loss: 0.495
+INFO - Scoreboard best 1 ==> Epoch [0][Top1: 83.380   Top5: 99.210] Sparsity : 0.501
+INFO - Scoreboard best 2 ==> Epoch [-1][Top1: 10.000   Top5: 50.000] Sparsity : 0.062
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch   1
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(303822., device='cuda:0') 547224.0
+tensor(0.5686, device='cuda:0')
+INFO - Training [1][   20/  391]   Loss 0.381151   Top1 87.148438   Top5 99.648438   BatchTime 0.284692   LR 0.004866
+INFO - Training [1][   40/  391]   Loss 0.373014   Top1 87.246094   Top5 99.589844   BatchTime 0.232604   LR 0.004852
+INFO - Training [1][   60/  391]   Loss 0.366683   Top1 87.552083   Top5 99.648438   BatchTime 0.218487   LR 0.004838
+INFO - Training [1][   80/  391]   Loss 0.366702   Top1 87.333984   Top5 99.638672   BatchTime 0.212264   LR 0.004824
+INFO - Training [1][  100/  391]   Loss 0.362713   Top1 87.468750   Top5 99.632812   BatchTime 0.212561   LR 0.004809
+INFO - Training [1][  120/  391]   Loss 0.360540   Top1 87.421875   Top5 99.641927   BatchTime 0.209681   LR 0.004793
+INFO - Training [1][  140/  391]   Loss 0.357226   Top1 87.460938   Top5 99.637277   BatchTime 0.206082   LR 0.004777
+INFO - Training [1][  160/  391]   Loss 0.357300   Top1 87.397461   Top5 99.663086   BatchTime 0.203906   LR 0.004760
+INFO - Training [1][  180/  391]   Loss 0.353760   Top1 87.491319   Top5 99.678819   BatchTime 0.202399   LR 0.004742
+INFO - Training [1][  200/  391]   Loss 0.353151   Top1 87.523438   Top5 99.675781   BatchTime 0.199683   LR 0.004724
+INFO - Training [1][  220/  391]   Loss 0.354372   Top1 87.521307   Top5 99.659091   BatchTime 0.195902   LR 0.004705
+INFO - Training [1][  240/  391]   Loss 0.352928   Top1 87.600911   Top5 99.667969   BatchTime 0.194062   LR 0.004686
+INFO - Training [1][  260/  391]   Loss 0.351293   Top1 87.668269   Top5 99.678486   BatchTime 0.193262   LR 0.004666
+INFO - Training [1][  280/  391]   Loss 0.349268   Top1 87.745536   Top5 99.684710   BatchTime 0.193271   LR 0.004646
+INFO - Training [1][  300/  391]   Loss 0.348013   Top1 87.781250   Top5 99.695312   BatchTime 0.193337   LR 0.004625
+INFO - Training [1][  320/  391]   Loss 0.346456   Top1 87.871094   Top5 99.694824   BatchTime 0.193337   LR 0.004604
+INFO - Training [1][  340/  391]   Loss 0.344899   Top1 87.938879   Top5 99.694393   BatchTime 0.192338   LR 0.004582
+INFO - Training [1][  360/  391]   Loss 0.344045   Top1 87.955729   Top5 99.694010   BatchTime 0.191727   LR 0.004559
+INFO - Training [1][  380/  391]   Loss 0.342174   Top1 87.983141   Top5 99.701891   BatchTime 0.190977   LR 0.004536
+INFO - ==> Top1: 88.028    Top5: 99.706    Loss: 0.340
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [1][   20/   79]   Loss 0.447953   Top1 85.273438   Top5 99.335938   BatchTime 0.198824
+INFO - Validation [1][   40/   79]   Loss 0.453624   Top1 85.312500   Top5 99.335938   BatchTime 0.131825
+INFO - Validation [1][   60/   79]   Loss 0.448932   Top1 85.664062   Top5 99.296875   BatchTime 0.115780
+tensor(213417., device='cuda:0') 547224.0
+INFO - ==> Top1: 85.530    Top5: 99.290    Loss: 0.449
+INFO - Scoreboard best 1 ==> Epoch [1][Top1: 85.530   Top5: 99.290] Sparsity : 0.639
+INFO - Scoreboard best 2 ==> Epoch [0][Top1: 83.380   Top5: 99.210] Sparsity : 0.501
+INFO - Scoreboard best 3 ==> Epoch [-1][Top1: 10.000   Top5: 50.000] Sparsity : 0.062
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch   2
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(0.7012, device='cuda:0')
+INFO - Training [2][   20/  391]   Loss 0.275884   Top1 90.429688   Top5 99.843750   BatchTime 0.286730   LR 0.004500
+INFO - Training [2][   40/  391]   Loss 0.275821   Top1 90.214844   Top5 99.804688   BatchTime 0.236758   LR 0.004475
+INFO - Training [2][   60/  391]   Loss 0.281562   Top1 90.130208   Top5 99.752604   BatchTime 0.225711   LR 0.004451
+INFO - Training [2][   80/  391]   Loss 0.280886   Top1 90.039062   Top5 99.736328   BatchTime 0.216055   LR 0.004425
+INFO - Training [2][  100/  391]   Loss 0.280265   Top1 90.070312   Top5 99.750000   BatchTime 0.210991   LR 0.004399
+INFO - Training [2][  120/  391]   Loss 0.280354   Top1 90.039062   Top5 99.772135   BatchTime 0.209393   LR 0.004373
+INFO - Training [2][  140/  391]   Loss 0.279225   Top1 90.078125   Top5 99.782366   BatchTime 0.204481   LR 0.004346
+INFO - Training [2][  160/  391]   Loss 0.278480   Top1 90.170898   Top5 99.780273   BatchTime 0.201334   LR 0.004319
+INFO - Training [2][  180/  391]   Loss 0.281188   Top1 90.117188   Top5 99.800347   BatchTime 0.200695   LR 0.004291
+INFO - Training [2][  200/  391]   Loss 0.280613   Top1 90.105469   Top5 99.800781   BatchTime 0.198941   LR 0.004263
+INFO - Training [2][  220/  391]   Loss 0.279694   Top1 90.127841   Top5 99.801136   BatchTime 0.197840   LR 0.004234
+INFO - Training [2][  240/  391]   Loss 0.278462   Top1 90.169271   Top5 99.811198   BatchTime 0.195697   LR 0.004205
+INFO - Training [2][  260/  391]   Loss 0.279514   Top1 90.117188   Top5 99.804688   BatchTime 0.193268   LR 0.004175
+INFO - Training [2][  280/  391]   Loss 0.279106   Top1 90.108817   Top5 99.815848   BatchTime 0.192574   LR 0.004145
+INFO - Training [2][  300/  391]   Loss 0.278902   Top1 90.132812   Top5 99.820312   BatchTime 0.190949   LR 0.004114
+INFO - Training [2][  320/  391]   Loss 0.277581   Top1 90.214844   Top5 99.816895   BatchTime 0.189837   LR 0.004083
+INFO - Training [2][  340/  391]   Loss 0.276063   Top1 90.280331   Top5 99.806985   BatchTime 0.190006   LR 0.004052
+INFO - Training [2][  360/  391]   Loss 0.275624   Top1 90.303819   Top5 99.809028   BatchTime 0.189988   LR 0.004020
+INFO - Training [2][  380/  391]   Loss 0.274283   Top1 90.312500   Top5 99.806743   BatchTime 0.189213   LR 0.003988
+INFO - ==> Top1: 90.330    Top5: 99.812    Loss: 0.274
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [2][   20/   79]   Loss 0.428147   Top1 86.367188   Top5 99.335938   BatchTime 0.192346
+INFO - Validation [2][   40/   79]   Loss 0.430859   Top1 86.367188   Top5 99.355469   BatchTime 0.129882
+INFO - Validation [2][   60/   79]   Loss 0.432294   Top1 86.458333   Top5 99.348958   BatchTime 0.107580
+INFO - ==> Top1: 86.500    Top5: 99.440    Loss: 0.431
+INFO - Scoreboard best 1 ==> Epoch [2][Top1: 86.500   Top5: 99.440] Sparsity : 0.703
+INFO - Scoreboard best 2 ==> Epoch [1][Top1: 85.530   Top5: 99.290] Sparsity : 0.639
+INFO - Scoreboard best 3 ==> Epoch [0][Top1: 83.380   Top5: 99.210] Sparsity : 0.501
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch   3
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(168739., device='cuda:0') 547224.0
+tensor(0.7706, device='cuda:0')
+INFO - Training [3][   20/  391]   Loss 0.246435   Top1 91.679688   Top5 99.960938   BatchTime 0.264007   LR 0.003938
+INFO - Training [3][   40/  391]   Loss 0.238494   Top1 91.425781   Top5 99.921875   BatchTime 0.210463   LR 0.003905
+INFO - Training [3][   60/  391]   Loss 0.230797   Top1 91.640625   Top5 99.947917   BatchTime 0.205001   LR 0.003872
+INFO - Training [3][   80/  391]   Loss 0.230181   Top1 91.699219   Top5 99.921875   BatchTime 0.206605   LR 0.003838
+INFO - Training [3][  100/  391]   Loss 0.235575   Top1 91.539062   Top5 99.929688   BatchTime 0.202573   LR 0.003804
+INFO - Training [3][  120/  391]   Loss 0.235315   Top1 91.529948   Top5 99.928385   BatchTime 0.200143   LR 0.003769
+INFO - Training [3][  140/  391]   Loss 0.235768   Top1 91.529018   Top5 99.910714   BatchTime 0.199968   LR 0.003735
+INFO - Training [3][  160/  391]   Loss 0.237819   Top1 91.440430   Top5 99.912109   BatchTime 0.198743   LR 0.003700
+INFO - Training [3][  180/  391]   Loss 0.240658   Top1 91.401910   Top5 99.908854   BatchTime 0.197069   LR 0.003664
+INFO - Training [3][  200/  391]   Loss 0.239847   Top1 91.441406   Top5 99.906250   BatchTime 0.196463   LR 0.003628
+INFO - Training [3][  220/  391]   Loss 0.241590   Top1 91.427557   Top5 99.900568   BatchTime 0.193629   LR 0.003592
+INFO - Training [3][  240/  391]   Loss 0.241353   Top1 91.503906   Top5 99.899089   BatchTime 0.191639   LR 0.003556
+INFO - Training [3][  260/  391]   Loss 0.242699   Top1 91.445312   Top5 99.897837   BatchTime 0.190598   LR 0.003519
+INFO - Training [3][  280/  391]   Loss 0.243354   Top1 91.425781   Top5 99.893973   BatchTime 0.190038   LR 0.003483
+INFO - Training [3][  300/  391]   Loss 0.242262   Top1 91.437500   Top5 99.898438   BatchTime 0.188986   LR 0.003445
+INFO - Training [3][  320/  391]   Loss 0.241840   Top1 91.491699   Top5 99.897461   BatchTime 0.187521   LR 0.003408
+INFO - Training [3][  340/  391]   Loss 0.242654   Top1 91.463695   Top5 99.894301   BatchTime 0.186642   LR 0.003371
+INFO - Training [3][  360/  391]   Loss 0.242568   Top1 91.445312   Top5 99.895833   BatchTime 0.186148   LR 0.003333
+INFO - Training [3][  380/  391]   Loss 0.242159   Top1 91.439145   Top5 99.897204   BatchTime 0.186494   LR 0.003295
+INFO - ==> Top1: 91.454    Top5: 99.896    Loss: 0.242
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [3][   20/   79]   Loss 0.430793   Top1 86.640625   Top5 99.179688   BatchTime 0.176591
+INFO - Validation [3][   40/   79]   Loss 0.429880   Top1 86.894531   Top5 99.179688   BatchTime 0.119787
+INFO - Validation [3][   60/   79]   Loss 0.427523   Top1 87.187500   Top5 99.296875   BatchTime 0.101019
+INFO - ==> Top1: 87.140    Top5: 99.360    Loss: 0.425
+INFO - Scoreboard best 1 ==> Epoch [3][Top1: 87.140   Top5: 99.360] Sparsity : 0.740
+INFO - Scoreboard best 2 ==> Epoch [2][Top1: 86.500   Top5: 99.440] Sparsity : 0.703
+INFO - Scoreboard best 3 ==> Epoch [1][Top1: 85.530   Top5: 99.290] Sparsity : 0.639
+tensor(140025., device='cuda:0') 547224.0
+tensor(0.8099, device='cuda:0')
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch   4
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [4][   20/  391]   Loss 0.243858   Top1 91.445312   Top5 99.882812   BatchTime 0.287305   LR 0.003236
+INFO - Training [4][   40/  391]   Loss 0.242507   Top1 91.347656   Top5 99.941406   BatchTime 0.234450   LR 0.003198
+INFO - Training [4][   60/  391]   Loss 0.238204   Top1 91.510417   Top5 99.895833   BatchTime 0.218335   LR 0.003159
+INFO - Training [4][   80/  391]   Loss 0.235791   Top1 91.669922   Top5 99.892578   BatchTime 0.213538   LR 0.003120
+INFO - Training [4][  100/  391]   Loss 0.236676   Top1 91.703125   Top5 99.875000   BatchTime 0.207289   LR 0.003081
+INFO - Training [4][  120/  391]   Loss 0.232413   Top1 91.940104   Top5 99.895833   BatchTime 0.203163   LR 0.003042
+INFO - Training [4][  140/  391]   Loss 0.232424   Top1 91.958705   Top5 99.899554   BatchTime 0.201364   LR 0.003002
+INFO - Training [4][  160/  391]   Loss 0.230852   Top1 92.026367   Top5 99.887695   BatchTime 0.200511   LR 0.002963
+INFO - Training [4][  180/  391]   Loss 0.232091   Top1 91.987847   Top5 99.882812   BatchTime 0.198848   LR 0.002923
+INFO - Training [4][  200/  391]   Loss 0.232740   Top1 91.976562   Top5 99.882812   BatchTime 0.199543   LR 0.002884
+INFO - Training [4][  220/  391]   Loss 0.230888   Top1 91.956676   Top5 99.882812   BatchTime 0.196543   LR 0.002844
+INFO - Training [4][  240/  391]   Loss 0.230790   Top1 91.985677   Top5 99.886068   BatchTime 0.195343   LR 0.002804
+INFO - Training [4][  260/  391]   Loss 0.230244   Top1 91.989183   Top5 99.888822   BatchTime 0.193961   LR 0.002764
+INFO - Training [4][  280/  391]   Loss 0.231000   Top1 91.914062   Top5 99.888393   BatchTime 0.192430   LR 0.002724
+INFO - Training [4][  300/  391]   Loss 0.228869   Top1 91.966146   Top5 99.890625   BatchTime 0.191062   LR 0.002684
+INFO - Training [4][  320/  391]   Loss 0.227415   Top1 92.001953   Top5 99.897461   BatchTime 0.190771   LR 0.002644
+INFO - Training [4][  340/  391]   Loss 0.226229   Top1 92.047335   Top5 99.903493   BatchTime 0.189956   LR 0.002604
+INFO - Training [4][  360/  391]   Loss 0.225978   Top1 92.031250   Top5 99.900174   BatchTime 0.188807   LR 0.002564
+INFO - Training [4][  380/  391]   Loss 0.225032   Top1 92.055921   Top5 99.899260   BatchTime 0.188188   LR 0.002523
+INFO - ==> Top1: 92.062    Top5: 99.896    Loss: 0.225
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [4][   20/   79]   Loss 0.425152   Top1 86.484375   Top5 99.375000   BatchTime 0.200307
+INFO - Validation [4][   40/   79]   Loss 0.423683   Top1 86.796875   Top5 99.335938   BatchTime 0.131655
+INFO - Validation [4][   60/   79]   Loss 0.418619   Top1 86.901042   Top5 99.440104   BatchTime 0.109243
+INFO - ==> Top1: 86.900    Top5: 99.470    Loss: 0.422
+INFO - Scoreboard best 1 ==> Epoch [3][Top1: 87.140   Top5: 99.360] Sparsity : 0.740
+INFO - Scoreboard best 2 ==> Epoch [4][Top1: 86.900   Top5: 99.470] Sparsity : 0.760
+INFO - Scoreboard best 3 ==> Epoch [2][Top1: 86.500   Top5: 99.440] Sparsity : 0.703
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   5
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(124784., device='cuda:0') 547224.0
+tensor(0.8302, device='cuda:0')
+INFO - Training [5][   20/  391]   Loss 0.219943   Top1 91.992188   Top5 99.882812   BatchTime 0.289573   LR 0.002462
+INFO - Training [5][   40/  391]   Loss 0.211163   Top1 92.187500   Top5 99.921875   BatchTime 0.243387   LR 0.002422
+INFO - Training [5][   60/  391]   Loss 0.218014   Top1 92.018229   Top5 99.934896   BatchTime 0.227147   LR 0.002381
+INFO - Training [5][   80/  391]   Loss 0.208084   Top1 92.441406   Top5 99.941406   BatchTime 0.215937   LR 0.002341
+INFO - Training [5][  100/  391]   Loss 0.205796   Top1 92.648438   Top5 99.945312   BatchTime 0.210192   LR 0.002301
+INFO - Training [5][  120/  391]   Loss 0.204247   Top1 92.708333   Top5 99.954427   BatchTime 0.206004   LR 0.002261
+INFO - Training [5][  140/  391]   Loss 0.204074   Top1 92.689732   Top5 99.949777   BatchTime 0.201539   LR 0.002221
+INFO - Training [5][  160/  391]   Loss 0.204701   Top1 92.670898   Top5 99.946289   BatchTime 0.200119   LR 0.002181
+INFO - Training [5][  180/  391]   Loss 0.205021   Top1 92.634549   Top5 99.947917   BatchTime 0.199108   LR 0.002141
+INFO - Training [5][  200/  391]   Loss 0.206203   Top1 92.656250   Top5 99.941406   BatchTime 0.197064   LR 0.002102
+INFO - Training [5][  220/  391]   Loss 0.208662   Top1 92.585227   Top5 99.943182   BatchTime 0.196191   LR 0.002062
+INFO - Training [5][  240/  391]   Loss 0.206323   Top1 92.675781   Top5 99.947917   BatchTime 0.195464   LR 0.002022
+INFO - Training [5][  260/  391]   Loss 0.206242   Top1 92.668269   Top5 99.948918   BatchTime 0.194622   LR 0.001983
+INFO - Training [5][  280/  391]   Loss 0.207817   Top1 92.639509   Top5 99.941406   BatchTime 0.192347   LR 0.001944
+INFO - Training [5][  300/  391]   Loss 0.206767   Top1 92.661458   Top5 99.942708   BatchTime 0.189858   LR 0.001905
+INFO - Training [5][  320/  391]   Loss 0.206083   Top1 92.700195   Top5 99.936523   BatchTime 0.189203   LR 0.001866
+INFO - Training [5][  340/  391]   Loss 0.206749   Top1 92.681526   Top5 99.933364   BatchTime 0.188329   LR 0.001827
+INFO - Training [5][  360/  391]   Loss 0.206470   Top1 92.660590   Top5 99.932726   BatchTime 0.187372   LR 0.001788
+INFO - Training [5][  380/  391]   Loss 0.206916   Top1 92.650082   Top5 99.932155   BatchTime 0.186739   LR 0.001750
+INFO - ==> Top1: 92.636    Top5: 99.932    Loss: 0.207
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [5][   20/   79]   Loss 0.411877   Top1 87.617188   Top5 99.414062   BatchTime 0.194434
+INFO - Validation [5][   40/   79]   Loss 0.418647   Top1 87.500000   Top5 99.414062   BatchTime 0.133376
+INFO - Validation [5][   60/   79]   Loss 0.410884   Top1 87.656250   Top5 99.479167   BatchTime 0.110031
+INFO - ==> Top1: 87.510    Top5: 99.490    Loss: 0.413
+INFO - Scoreboard best 1 ==> Epoch [5][Top1: 87.510   Top5: 99.490] Sparsity : 0.772
+INFO - Scoreboard best 2 ==> Epoch [3][Top1: 87.140   Top5: 99.360] Sparsity : 0.740
+INFO - Scoreboard best 3 ==> Epoch [4][Top1: 86.900   Top5: 99.470] Sparsity : 0.760
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch   6
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(116644., device='cuda:0') 547224.0
+tensor(0.8413, device='cuda:0')
+INFO - Training [6][   20/  391]   Loss 0.198398   Top1 93.085938   Top5 99.882812   BatchTime 0.279637   LR 0.001691
+INFO - Training [6][   40/  391]   Loss 0.188436   Top1 93.417969   Top5 99.843750   BatchTime 0.231714   LR 0.001653
+INFO - Training [6][   60/  391]   Loss 0.187673   Top1 93.398438   Top5 99.882812   BatchTime 0.218795   LR 0.001616
+INFO - Training [6][   80/  391]   Loss 0.188860   Top1 93.330078   Top5 99.892578   BatchTime 0.212971   LR 0.001578
+INFO - Training [6][  100/  391]   Loss 0.192027   Top1 93.140625   Top5 99.906250   BatchTime 0.206153   LR 0.001541
+INFO - Training [6][  120/  391]   Loss 0.193076   Top1 93.092448   Top5 99.915365   BatchTime 0.202778   LR 0.001504
+INFO - Training [6][  140/  391]   Loss 0.194822   Top1 93.041295   Top5 99.893973   BatchTime 0.198353   LR 0.001467
+INFO - Training [6][  160/  391]   Loss 0.194052   Top1 93.012695   Top5 99.897461   BatchTime 0.195577   LR 0.001431
+INFO - Training [6][  180/  391]   Loss 0.195781   Top1 92.990451   Top5 99.900174   BatchTime 0.192612   LR 0.001394
+INFO - Training [6][  200/  391]   Loss 0.195406   Top1 93.011719   Top5 99.902344   BatchTime 0.192392   LR 0.001358
+INFO - Training [6][  220/  391]   Loss 0.194178   Top1 93.039773   Top5 99.911222   BatchTime 0.194238   LR 0.001323
+INFO - Training [6][  240/  391]   Loss 0.194284   Top1 92.968750   Top5 99.915365   BatchTime 0.195686   LR 0.001287
+INFO - Training [6][  260/  391]   Loss 0.194969   Top1 92.887620   Top5 99.915865   BatchTime 0.196087   LR 0.001252
+INFO - Training [6][  280/  391]   Loss 0.195063   Top1 92.879464   Top5 99.919085   BatchTime 0.194303   LR 0.001218
+INFO - Training [6][  300/  391]   Loss 0.195836   Top1 92.848958   Top5 99.921875   BatchTime 0.194052   LR 0.001183
+INFO - Training [6][  320/  391]   Loss 0.196122   Top1 92.836914   Top5 99.926758   BatchTime 0.192922   LR 0.001149
+INFO - Training [6][  340/  391]   Loss 0.196718   Top1 92.803309   Top5 99.924173   BatchTime 0.192150   LR 0.001116
+INFO - Training [6][  360/  391]   Loss 0.196334   Top1 92.816840   Top5 99.926215   BatchTime 0.191157   LR 0.001082
+INFO - Training [6][  380/  391]   Loss 0.195411   Top1 92.853618   Top5 99.928043   BatchTime 0.190819   LR 0.001050
+INFO - ==> Top1: 92.858    Top5: 99.928    Loss: 0.195
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [6][   20/   79]   Loss 0.407817   Top1 87.421875   Top5 99.570312   BatchTime 0.209902
+INFO - Validation [6][   40/   79]   Loss 0.407564   Top1 87.695312   Top5 99.472656   BatchTime 0.139165
+INFO - Validation [6][   60/   79]   Loss 0.406898   Top1 87.591146   Top5 99.466146   BatchTime 0.114261
+tensor(112410., device='cuda:0') 547224.0
+tensor(0.8473, device='cuda:0')
+INFO - ==> Top1: 87.630    Top5: 99.520    Loss: 0.407
+INFO - Scoreboard best 1 ==> Epoch [6][Top1: 87.630   Top5: 99.520] Sparsity : 0.778
+INFO - Scoreboard best 2 ==> Epoch [5][Top1: 87.510   Top5: 99.490] Sparsity : 0.772
+INFO - Scoreboard best 3 ==> Epoch [3][Top1: 87.140   Top5: 99.360] Sparsity : 0.740
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch   7
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [7][   20/  391]   Loss 0.187313   Top1 93.398438   Top5 99.921875   BatchTime 0.294680   LR 0.001000
+INFO - Training [7][   40/  391]   Loss 0.188099   Top1 93.359375   Top5 99.902344   BatchTime 0.240230   LR 0.000968
+INFO - Training [7][   60/  391]   Loss 0.192085   Top1 93.424479   Top5 99.882812   BatchTime 0.220897   LR 0.000936
+INFO - Training [7][   80/  391]   Loss 0.190209   Top1 93.476562   Top5 99.902344   BatchTime 0.213441   LR 0.000905
+INFO - Training [7][  100/  391]   Loss 0.188031   Top1 93.453125   Top5 99.898438   BatchTime 0.210082   LR 0.000874
+INFO - Training [7][  120/  391]   Loss 0.186691   Top1 93.457031   Top5 99.908854   BatchTime 0.207786   LR 0.000844
+INFO - Training [7][  140/  391]   Loss 0.187422   Top1 93.426339   Top5 99.916295   BatchTime 0.202015   LR 0.000814
+INFO - Training [7][  160/  391]   Loss 0.185341   Top1 93.525391   Top5 99.912109   BatchTime 0.197867   LR 0.000785
+INFO - Training [7][  180/  391]   Loss 0.184497   Top1 93.502604   Top5 99.917535   BatchTime 0.196537   LR 0.000756
+INFO - Training [7][  200/  391]   Loss 0.185428   Top1 93.468750   Top5 99.917969   BatchTime 0.193998   LR 0.000727
+INFO - Training [7][  220/  391]   Loss 0.184489   Top1 93.515625   Top5 99.925426   BatchTime 0.189727   LR 0.000699
+INFO - Training [7][  240/  391]   Loss 0.186047   Top1 93.457031   Top5 99.918620   BatchTime 0.186122   LR 0.000671
+INFO - Training [7][  260/  391]   Loss 0.186038   Top1 93.443510   Top5 99.915865   BatchTime 0.183772   LR 0.000644
+INFO - Training [7][  280/  391]   Loss 0.188083   Top1 93.351004   Top5 99.913504   BatchTime 0.182779   LR 0.000617
+INFO - Training [7][  300/  391]   Loss 0.188103   Top1 93.369792   Top5 99.908854   BatchTime 0.182756   LR 0.000591
+INFO - Training [7][  320/  391]   Loss 0.188996   Top1 93.317871   Top5 99.912109   BatchTime 0.181961   LR 0.000565
+INFO - Training [7][  340/  391]   Loss 0.187920   Top1 93.340993   Top5 99.912684   BatchTime 0.181426   LR 0.000540
+INFO - Training [7][  360/  391]   Loss 0.187623   Top1 93.365885   Top5 99.915365   BatchTime 0.181064   LR 0.000515
+INFO - Training [7][  380/  391]   Loss 0.187739   Top1 93.342928   Top5 99.919819   BatchTime 0.180216   LR 0.000491
+INFO - ==> Top1: 93.316    Top5: 99.922    Loss: 0.188
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [7][   20/   79]   Loss 0.408485   Top1 87.812500   Top5 99.414062   BatchTime 0.196929
+INFO - Validation [7][   40/   79]   Loss 0.414049   Top1 87.578125   Top5 99.277344   BatchTime 0.132369
+INFO - Validation [7][   60/   79]   Loss 0.410184   Top1 87.486979   Top5 99.348958   BatchTime 0.108952
+tensor(110417., device='cuda:0') 547224.0
+INFO - ==> Top1: 87.400    Top5: 99.390    Loss: 0.410
+INFO - Scoreboard best 1 ==> Epoch [6][Top1: 87.630   Top5: 99.520] Sparsity : 0.778
+INFO - Scoreboard best 2 ==> Epoch [5][Top1: 87.510   Top5: 99.490] Sparsity : 0.772
+INFO - Scoreboard best 3 ==> Epoch [7][Top1: 87.400   Top5: 99.390] Sparsity : 0.781
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   8
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(0.8502, device='cuda:0')
+INFO - Training [8][   20/  391]   Loss 0.167658   Top1 93.984375   Top5 99.960938   BatchTime 0.305254   LR 0.000455
+INFO - Training [8][   40/  391]   Loss 0.173003   Top1 93.554688   Top5 99.960938   BatchTime 0.257629   LR 0.000432
+INFO - Training [8][   60/  391]   Loss 0.173345   Top1 93.593750   Top5 99.960938   BatchTime 0.235353   LR 0.000410
+INFO - Training [8][   80/  391]   Loss 0.176246   Top1 93.554688   Top5 99.892578   BatchTime 0.222410   LR 0.000388
+INFO - Training [8][  100/  391]   Loss 0.176843   Top1 93.570312   Top5 99.890625   BatchTime 0.214320   LR 0.000367
+INFO - Training [8][  120/  391]   Loss 0.180129   Top1 93.424479   Top5 99.895833   BatchTime 0.210816   LR 0.000346
+INFO - Training [8][  140/  391]   Loss 0.181503   Top1 93.420759   Top5 99.888393   BatchTime 0.205795   LR 0.000326
+INFO - Training [8][  160/  391]   Loss 0.181283   Top1 93.452148   Top5 99.897461   BatchTime 0.202642   LR 0.000307
+INFO - Training [8][  180/  391]   Loss 0.179472   Top1 93.511285   Top5 99.904514   BatchTime 0.200366   LR 0.000288
+INFO - Training [8][  200/  391]   Loss 0.179760   Top1 93.515625   Top5 99.902344   BatchTime 0.198940   LR 0.000269
+INFO - Training [8][  220/  391]   Loss 0.179770   Top1 93.487216   Top5 99.911222   BatchTime 0.197831   LR 0.000251
+INFO - Training [8][  240/  391]   Loss 0.177917   Top1 93.551432   Top5 99.915365   BatchTime 0.195165   LR 0.000234
+INFO - Training [8][  260/  391]   Loss 0.177468   Top1 93.566707   Top5 99.918870   BatchTime 0.195043   LR 0.000217
+INFO - Training [8][  280/  391]   Loss 0.178081   Top1 93.565848   Top5 99.913504   BatchTime 0.194688   LR 0.000201
+INFO - Training [8][  300/  391]   Loss 0.179321   Top1 93.533854   Top5 99.911458   BatchTime 0.193733   LR 0.000186
+INFO - Training [8][  320/  391]   Loss 0.180880   Top1 93.483887   Top5 99.904785   BatchTime 0.192948   LR 0.000171
+INFO - Training [8][  340/  391]   Loss 0.179817   Top1 93.504136   Top5 99.910386   BatchTime 0.191857   LR 0.000156
+INFO - Training [8][  360/  391]   Loss 0.181623   Top1 93.457031   Top5 99.913194   BatchTime 0.191850   LR 0.000143
+INFO - Training [8][  380/  391]   Loss 0.181718   Top1 93.466283   Top5 99.911595   BatchTime 0.192019   LR 0.000130
+INFO - ==> Top1: 93.472    Top5: 99.912    Loss: 0.182
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [8][   20/   79]   Loss 0.400384   Top1 87.773438   Top5 99.414062   BatchTime 0.199204
+INFO - Validation [8][   40/   79]   Loss 0.406845   Top1 87.656250   Top5 99.238281   BatchTime 0.137147
+INFO - Validation [8][   60/   79]   Loss 0.406345   Top1 87.708333   Top5 99.375000   BatchTime 0.116181
+tensor(109647., device='cuda:0') 547224.0
+INFO - ==> Top1: 87.530    Top5: 99.450    Loss: 0.407
+INFO - Scoreboard best 1 ==> Epoch [6][Top1: 87.630   Top5: 99.520] Sparsity : 0.778
+INFO - Scoreboard best 2 ==> Epoch [8][Top1: 87.530   Top5: 99.450] Sparsity : 0.782
+INFO - Scoreboard best 3 ==> Epoch [5][Top1: 87.510   Top5: 99.490] Sparsity : 0.772
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch   9
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(0.8513, device='cuda:0')
+INFO - Training [9][   20/  391]   Loss 0.188693   Top1 93.632812   Top5 99.960938   BatchTime 0.301537   LR 0.000111
+INFO - Training [9][   40/  391]   Loss 0.191134   Top1 93.339844   Top5 99.921875   BatchTime 0.245597   LR 0.000099
+INFO - Training [9][   60/  391]   Loss 0.183275   Top1 93.463542   Top5 99.947917   BatchTime 0.223829   LR 0.000088
+INFO - Training [9][   80/  391]   Loss 0.184071   Top1 93.466797   Top5 99.921875   BatchTime 0.211342   LR 0.000078
+INFO - Training [9][  100/  391]   Loss 0.181834   Top1 93.578125   Top5 99.921875   BatchTime 0.208514   LR 0.000068
+INFO - Training [9][  120/  391]   Loss 0.180818   Top1 93.626302   Top5 99.928385   BatchTime 0.203999   LR 0.000059
+INFO - Training [9][  140/  391]   Loss 0.177328   Top1 93.694196   Top5 99.933036   BatchTime 0.201131   LR 0.000051
+INFO - Training [9][  160/  391]   Loss 0.176077   Top1 93.798828   Top5 99.931641   BatchTime 0.198688   LR 0.000043
+INFO - Training [9][  180/  391]   Loss 0.176039   Top1 93.802083   Top5 99.921875   BatchTime 0.196546   LR 0.000036
+INFO - Training [9][  200/  391]   Loss 0.176314   Top1 93.808594   Top5 99.925781   BatchTime 0.195714   LR 0.000030
+INFO - Training [9][  220/  391]   Loss 0.176352   Top1 93.824574   Top5 99.932528   BatchTime 0.195088   LR 0.000024
+INFO - Training [9][  240/  391]   Loss 0.174900   Top1 93.847656   Top5 99.938151   BatchTime 0.192749   LR 0.000019
+INFO - Training [9][  260/  391]   Loss 0.175180   Top1 93.831130   Top5 99.939904   BatchTime 0.191991   LR 0.000014
+INFO - Training [9][  280/  391]   Loss 0.175973   Top1 93.789062   Top5 99.941406   BatchTime 0.192054   LR 0.000010
+INFO - Training [9][  300/  391]   Loss 0.175325   Top1 93.791667   Top5 99.942708   BatchTime 0.189994   LR 0.000007
+INFO - Training [9][  320/  391]   Loss 0.176681   Top1 93.732910   Top5 99.943848   BatchTime 0.188298   LR 0.000004
+INFO - Training [9][  340/  391]   Loss 0.177220   Top1 93.717831   Top5 99.944853   BatchTime 0.186960   LR 0.000002
+INFO - Training [9][  360/  391]   Loss 0.177413   Top1 93.734809   Top5 99.941406   BatchTime 0.186484   LR 0.000001
+INFO - Training [9][  380/  391]   Loss 0.178763   Top1 93.694490   Top5 99.938322   BatchTime 0.186281   LR 0.000000
+INFO - ==> Top1: 93.666    Top5: 99.938    Loss: 0.179
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [9][   20/   79]   Loss 0.407252   Top1 87.695312   Top5 99.375000   BatchTime 0.181681
+INFO - Validation [9][   40/   79]   Loss 0.410412   Top1 87.656250   Top5 99.218750   BatchTime 0.124205
+INFO - Validation [9][   60/   79]   Loss 0.411544   Top1 87.708333   Top5 99.335938   BatchTime 0.104964
+INFO - ==> Top1: 87.590    Top5: 99.410    Loss: 0.412
+INFO - Scoreboard best 1 ==> Epoch [6][Top1: 87.630   Top5: 99.520] Sparsity : 0.778
+INFO - Scoreboard best 2 ==> Epoch [9][Top1: 87.590   Top5: 99.410] Sparsity : 0.783
+INFO - Scoreboard best 3 ==> Epoch [8][Top1: 87.530   Top5: 99.450] Sparsity : 0.782
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  10
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(109550., device='cuda:0') 547224.0
+tensor(0.8514, device='cuda:0')
+INFO - Training [10][   20/  391]   Loss 0.179918   Top1 93.359375   Top5 99.882812   BatchTime 0.300355   LR 0.002500
+INFO - Training [10][   40/  391]   Loss 0.174817   Top1 93.574219   Top5 99.902344   BatchTime 0.243483   LR 0.002500
+INFO - Training [10][   60/  391]   Loss 0.174793   Top1 93.697917   Top5 99.934896   BatchTime 0.217729   LR 0.002500
+INFO - Training [10][   80/  391]   Loss 0.172035   Top1 93.759766   Top5 99.951172   BatchTime 0.203453   LR 0.002499
+INFO - Training [10][  100/  391]   Loss 0.174892   Top1 93.671875   Top5 99.960938   BatchTime 0.197007   LR 0.002499
+INFO - Training [10][  120/  391]   Loss 0.176738   Top1 93.613281   Top5 99.960938   BatchTime 0.195689   LR 0.002499
+INFO - Training [10][  140/  391]   Loss 0.179264   Top1 93.498884   Top5 99.966518   BatchTime 0.192877   LR 0.002498
+INFO - Training [10][  160/  391]   Loss 0.181210   Top1 93.491211   Top5 99.965820   BatchTime 0.191631   LR 0.002497
+INFO - Training [10][  180/  391]   Loss 0.180903   Top1 93.506944   Top5 99.952257   BatchTime 0.189646   LR 0.002497
+INFO - Training [10][  200/  391]   Loss 0.180680   Top1 93.488281   Top5 99.957031   BatchTime 0.189700   LR 0.002496
+INFO - Training [10][  220/  391]   Loss 0.183191   Top1 93.384233   Top5 99.960938   BatchTime 0.188777   LR 0.002495
+INFO - Training [10][  240/  391]   Loss 0.184316   Top1 93.343099   Top5 99.947917   BatchTime 0.188817   LR 0.002494
+INFO - Training [10][  260/  391]   Loss 0.185892   Top1 93.293269   Top5 99.948918   BatchTime 0.189396   LR 0.002493
+INFO - Training [10][  280/  391]   Loss 0.187107   Top1 93.222656   Top5 99.946987   BatchTime 0.189333   LR 0.002492
+INFO - Training [10][  300/  391]   Loss 0.187727   Top1 93.190104   Top5 99.947917   BatchTime 0.190338   LR 0.002491
+INFO - Training [10][  320/  391]   Loss 0.188608   Top1 93.171387   Top5 99.946289   BatchTime 0.189462   LR 0.002490
+INFO - Training [10][  340/  391]   Loss 0.189389   Top1 93.129596   Top5 99.947151   BatchTime 0.188649   LR 0.002488
+INFO - Training [10][  360/  391]   Loss 0.189333   Top1 93.140191   Top5 99.947917   BatchTime 0.188283   LR 0.002487
+INFO - Training [10][  380/  391]   Loss 0.190531   Top1 93.112664   Top5 99.946546   BatchTime 0.188331   LR 0.002486
+INFO - ==> Top1: 93.118    Top5: 99.946    Loss: 0.191
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [10][   20/   79]   Loss 0.421378   Top1 87.890625   Top5 99.453125   BatchTime 0.189387
+INFO - Validation [10][   40/   79]   Loss 0.414288   Top1 87.949219   Top5 99.335938   BatchTime 0.132130
+INFO - Validation [10][   60/   79]   Loss 0.409019   Top1 87.903646   Top5 99.440104   BatchTime 0.112437
+tensor(103751., device='cuda:0') 547224.0
+tensor(0.8601, device='cuda:0')
+INFO - ==> Top1: 87.760    Top5: 99.500    Loss: 0.411
+INFO - Scoreboard best 1 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Scoreboard best 2 ==> Epoch [6][Top1: 87.630   Top5: 99.520] Sparsity : 0.778
+INFO - Scoreboard best 3 ==> Epoch [9][Top1: 87.590   Top5: 99.410] Sparsity : 0.783
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch  11
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [11][   20/  391]   Loss 0.166164   Top1 94.531250   Top5 100.000000   BatchTime 0.303371   LR 0.002483
+INFO - Training [11][   40/  391]   Loss 0.179953   Top1 93.691406   Top5 99.980469   BatchTime 0.247526   LR 0.002481
+INFO - Training [11][   60/  391]   Loss 0.181979   Top1 93.554688   Top5 99.960938   BatchTime 0.229361   LR 0.002480
+INFO - Training [11][   80/  391]   Loss 0.185365   Top1 93.496094   Top5 99.921875   BatchTime 0.224807   LR 0.002478
+INFO - Training [11][  100/  391]   Loss 0.183553   Top1 93.468750   Top5 99.906250   BatchTime 0.218651   LR 0.002476
+INFO - Training [11][  120/  391]   Loss 0.185209   Top1 93.398438   Top5 99.921875   BatchTime 0.214224   LR 0.002474
+INFO - Training [11][  140/  391]   Loss 0.184654   Top1 93.404018   Top5 99.933036   BatchTime 0.208849   LR 0.002472
+INFO - Training [11][  160/  391]   Loss 0.188180   Top1 93.281250   Top5 99.926758   BatchTime 0.205539   LR 0.002470
+INFO - Training [11][  180/  391]   Loss 0.188849   Top1 93.268229   Top5 99.926215   BatchTime 0.203189   LR 0.002467
+INFO - Training [11][  200/  391]   Loss 0.188468   Top1 93.281250   Top5 99.925781   BatchTime 0.202603   LR 0.002465
+INFO - Training [11][  220/  391]   Loss 0.188772   Top1 93.316761   Top5 99.921875   BatchTime 0.200774   LR 0.002463
+INFO - Training [11][  240/  391]   Loss 0.190003   Top1 93.277995   Top5 99.921875   BatchTime 0.201672   LR 0.002460
+INFO - Training [11][  260/  391]   Loss 0.189698   Top1 93.317308   Top5 99.927885   BatchTime 0.201809   LR 0.002458
+INFO - Training [11][  280/  391]   Loss 0.189734   Top1 93.331473   Top5 99.933036   BatchTime 0.200866   LR 0.002455
+INFO - Training [11][  300/  391]   Loss 0.189118   Top1 93.361979   Top5 99.932292   BatchTime 0.199412   LR 0.002452
+INFO - Training [11][  320/  391]   Loss 0.188942   Top1 93.356934   Top5 99.931641   BatchTime 0.198079   LR 0.002449
+INFO - Training [11][  340/  391]   Loss 0.188765   Top1 93.363971   Top5 99.933364   BatchTime 0.197136   LR 0.002447
+INFO - Training [11][  360/  391]   Loss 0.188735   Top1 93.385417   Top5 99.934896   BatchTime 0.195817   LR 0.002444
+INFO - Training [11][  380/  391]   Loss 0.190204   Top1 93.307977   Top5 99.932155   BatchTime 0.194118   LR 0.002441
+INFO - ==> Top1: 93.306    Top5: 99.932    Loss: 0.190
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [11][   20/   79]   Loss 0.424378   Top1 87.812500   Top5 99.296875   BatchTime 0.177532
+INFO - Validation [11][   40/   79]   Loss 0.423405   Top1 87.597656   Top5 99.355469   BatchTime 0.119775
+INFO - Validation [11][   60/   79]   Loss 0.409804   Top1 87.812500   Top5 99.466146   BatchTime 0.100212
+INFO - ==> Top1: 87.740    Top5: 99.450    Loss: 0.412
+INFO - Scoreboard best 1 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Scoreboard best 2 ==> Epoch [11][Top1: 87.740   Top5: 99.450] Sparsity : 0.800
+INFO - Scoreboard best 3 ==> Epoch [6][Top1: 87.630   Top5: 99.520] Sparsity : 0.778
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  12
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(98940., device='cuda:0') 547224.0
+tensor(0.8678, device='cuda:0')
+INFO - Training [12][   20/  391]   Loss 0.177065   Top1 93.828125   Top5 99.882812   BatchTime 0.299246   LR 0.002436
+INFO - Training [12][   40/  391]   Loss 0.177516   Top1 93.886719   Top5 99.902344   BatchTime 0.248550   LR 0.002433
+INFO - Training [12][   60/  391]   Loss 0.178322   Top1 93.723958   Top5 99.921875   BatchTime 0.230900   LR 0.002429
+INFO - Training [12][   80/  391]   Loss 0.179767   Top1 93.720703   Top5 99.921875   BatchTime 0.216564   LR 0.002426
+INFO - Training [12][  100/  391]   Loss 0.179603   Top1 93.710938   Top5 99.929688   BatchTime 0.209451   LR 0.002423
+INFO - Training [12][  120/  391]   Loss 0.181011   Top1 93.684896   Top5 99.915365   BatchTime 0.203672   LR 0.002419
+INFO - Training [12][  140/  391]   Loss 0.182133   Top1 93.604911   Top5 99.921875   BatchTime 0.203764   LR 0.002415
+INFO - Training [12][  160/  391]   Loss 0.182449   Top1 93.540039   Top5 99.926758   BatchTime 0.201490   LR 0.002412
+INFO - Training [12][  180/  391]   Loss 0.179301   Top1 93.645833   Top5 99.930556   BatchTime 0.200762   LR 0.002408
+INFO - Training [12][  200/  391]   Loss 0.178072   Top1 93.671875   Top5 99.933594   BatchTime 0.199130   LR 0.002404
+INFO - Training [12][  220/  391]   Loss 0.179119   Top1 93.700284   Top5 99.932528   BatchTime 0.197797   LR 0.002400
+INFO - Training [12][  240/  391]   Loss 0.178278   Top1 93.730469   Top5 99.931641   BatchTime 0.195992   LR 0.002396
+INFO - Training [12][  260/  391]   Loss 0.178607   Top1 93.713942   Top5 99.927885   BatchTime 0.193911   LR 0.002392
+INFO - Training [12][  280/  391]   Loss 0.180387   Top1 93.616071   Top5 99.924665   BatchTime 0.192366   LR 0.002388
+INFO - Training [12][  300/  391]   Loss 0.181854   Top1 93.562500   Top5 99.924479   BatchTime 0.190709   LR 0.002384
+INFO - Training [12][  320/  391]   Loss 0.181263   Top1 93.547363   Top5 99.929199   BatchTime 0.189687   LR 0.002380
+INFO - Training [12][  340/  391]   Loss 0.182299   Top1 93.524816   Top5 99.921875   BatchTime 0.189404   LR 0.002375
+INFO - Training [12][  360/  391]   Loss 0.181784   Top1 93.524306   Top5 99.921875   BatchTime 0.188489   LR 0.002371
+INFO - Training [12][  380/  391]   Loss 0.182003   Top1 93.499178   Top5 99.915707   BatchTime 0.188165   LR 0.002366
+INFO - ==> Top1: 93.504    Top5: 99.918    Loss: 0.182
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [12][   20/   79]   Loss 0.420771   Top1 87.578125   Top5 99.453125   BatchTime 0.178886
+INFO - Validation [12][   40/   79]   Loss 0.422690   Top1 87.812500   Top5 99.335938   BatchTime 0.121153
+INFO - Validation [12][   60/   79]   Loss 0.416292   Top1 87.955729   Top5 99.440104   BatchTime 0.101863
+tensor(93999., device='cuda:0') 547224.0
+INFO - ==> Top1: 87.800    Top5: 99.480    Loss: 0.416
+INFO - Scoreboard best 1 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Scoreboard best 2 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 87.740   Top5: 99.450] Sparsity : 0.800
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch  13
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(0.8752, device='cuda:0')
+INFO - Training [13][   20/  391]   Loss 0.176974   Top1 93.671875   Top5 99.921875   BatchTime 0.297465   LR 0.002359
+INFO - Training [13][   40/  391]   Loss 0.168653   Top1 94.003906   Top5 99.941406   BatchTime 0.251145   LR 0.002355
+INFO - Training [13][   60/  391]   Loss 0.169619   Top1 94.153646   Top5 99.960938   BatchTime 0.229163   LR 0.002350
+INFO - Training [13][   80/  391]   Loss 0.173023   Top1 94.023438   Top5 99.951172   BatchTime 0.219034   LR 0.002345
+INFO - Training [13][  100/  391]   Loss 0.170645   Top1 94.039062   Top5 99.960938   BatchTime 0.214716   LR 0.002340
+INFO - Training [13][  120/  391]   Loss 0.171777   Top1 93.971354   Top5 99.967448   BatchTime 0.211378   LR 0.002335
+INFO - Training [13][  140/  391]   Loss 0.169621   Top1 93.989955   Top5 99.966518   BatchTime 0.206845   LR 0.002330
+INFO - Training [13][  160/  391]   Loss 0.170109   Top1 93.955078   Top5 99.970703   BatchTime 0.202997   LR 0.002325
+INFO - Training [13][  180/  391]   Loss 0.170355   Top1 93.945312   Top5 99.969618   BatchTime 0.202098   LR 0.002320
+INFO - Training [13][  200/  391]   Loss 0.171160   Top1 93.980469   Top5 99.964844   BatchTime 0.199235   LR 0.002315
+INFO - Training [13][  220/  391]   Loss 0.171347   Top1 93.941761   Top5 99.968040   BatchTime 0.197757   LR 0.002310
+INFO - Training [13][  240/  391]   Loss 0.173547   Top1 93.857422   Top5 99.970703   BatchTime 0.194118   LR 0.002304
+INFO - Training [13][  260/  391]   Loss 0.174738   Top1 93.816106   Top5 99.966947   BatchTime 0.191256   LR 0.002299
+INFO - Training [13][  280/  391]   Loss 0.175583   Top1 93.791853   Top5 99.960938   BatchTime 0.189354   LR 0.002293
+INFO - Training [13][  300/  391]   Loss 0.176803   Top1 93.765625   Top5 99.953125   BatchTime 0.188756   LR 0.002288
+INFO - Training [13][  320/  391]   Loss 0.177243   Top1 93.752441   Top5 99.956055   BatchTime 0.188815   LR 0.002282
+INFO - Training [13][  340/  391]   Loss 0.177254   Top1 93.717831   Top5 99.956342   BatchTime 0.187508   LR 0.002276
+INFO - Training [13][  360/  391]   Loss 0.177291   Top1 93.695747   Top5 99.952257   BatchTime 0.186355   LR 0.002271
+INFO - Training [13][  380/  391]   Loss 0.177774   Top1 93.688322   Top5 99.950658   BatchTime 0.185264   LR 0.002265
+INFO - ==> Top1: 93.684    Top5: 99.950    Loss: 0.178
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [13][   20/   79]   Loss 0.415595   Top1 87.226562   Top5 99.335938   BatchTime 0.195031
+INFO - Validation [13][   40/   79]   Loss 0.417652   Top1 87.460938   Top5 99.257812   BatchTime 0.138537
+INFO - Validation [13][   60/   79]   Loss 0.407889   Top1 87.721354   Top5 99.388021   BatchTime 0.117679
+tensor(89179., device='cuda:0') 547224.0
+tensor(0.8822, device='cuda:0')
+INFO - ==> Top1: 87.720    Top5: 99.470    Loss: 0.404
+INFO - Scoreboard best 1 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Scoreboard best 2 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Scoreboard best 3 ==> Epoch [11][Top1: 87.740   Top5: 99.450] Sparsity : 0.800
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  14
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [14][   20/  391]   Loss 0.158643   Top1 94.023438   Top5 99.921875   BatchTime 0.284619   LR 0.002256
+INFO - Training [14][   40/  391]   Loss 0.160350   Top1 94.179688   Top5 99.921875   BatchTime 0.230195   LR 0.002250
+INFO - Training [14][   60/  391]   Loss 0.169054   Top1 93.828125   Top5 99.947917   BatchTime 0.218000   LR 0.002244
+INFO - Training [14][   80/  391]   Loss 0.168748   Top1 93.828125   Top5 99.941406   BatchTime 0.211819   LR 0.002237
+INFO - Training [14][  100/  391]   Loss 0.170894   Top1 93.757812   Top5 99.929688   BatchTime 0.206421   LR 0.002231
+INFO - Training [14][  120/  391]   Loss 0.171898   Top1 93.723958   Top5 99.934896   BatchTime 0.205687   LR 0.002225
+INFO - Training [14][  140/  391]   Loss 0.173042   Top1 93.688616   Top5 99.938616   BatchTime 0.203547   LR 0.002219
+INFO - Training [14][  160/  391]   Loss 0.172994   Top1 93.701172   Top5 99.926758   BatchTime 0.202789   LR 0.002212
+INFO - Training [14][  180/  391]   Loss 0.173512   Top1 93.736979   Top5 99.913194   BatchTime 0.201560   LR 0.002206
+INFO - Training [14][  200/  391]   Loss 0.174326   Top1 93.726562   Top5 99.917969   BatchTime 0.201542   LR 0.002199
+INFO - Training [14][  220/  391]   Loss 0.175279   Top1 93.710938   Top5 99.925426   BatchTime 0.198641   LR 0.002193
+INFO - Training [14][  240/  391]   Loss 0.175993   Top1 93.694661   Top5 99.918620   BatchTime 0.196149   LR 0.002186
+INFO - Training [14][  260/  391]   Loss 0.176332   Top1 93.650841   Top5 99.924880   BatchTime 0.194912   LR 0.002179
+INFO - Training [14][  280/  391]   Loss 0.176109   Top1 93.638393   Top5 99.924665   BatchTime 0.193809   LR 0.002173
+INFO - Training [14][  300/  391]   Loss 0.176724   Top1 93.625000   Top5 99.921875   BatchTime 0.192927   LR 0.002166
+INFO - Training [14][  320/  391]   Loss 0.177449   Top1 93.581543   Top5 99.924316   BatchTime 0.192684   LR 0.002159
+INFO - Training [14][  340/  391]   Loss 0.179017   Top1 93.515625   Top5 99.924173   BatchTime 0.191216   LR 0.002152
+INFO - Training [14][  360/  391]   Loss 0.178861   Top1 93.519965   Top5 99.921875   BatchTime 0.189989   LR 0.002145
+INFO - Training [14][  380/  391]   Loss 0.178508   Top1 93.550576   Top5 99.923931   BatchTime 0.189649   LR 0.002138
+INFO - ==> Top1: 93.544    Top5: 99.926    Loss: 0.179
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [14][   20/   79]   Loss 0.415685   Top1 87.734375   Top5 99.492188   BatchTime 0.182472
+INFO - Validation [14][   40/   79]   Loss 0.425071   Top1 88.027344   Top5 99.335938   BatchTime 0.123751
+INFO - Validation [14][   60/   79]   Loss 0.409633   Top1 88.229167   Top5 99.414062   BatchTime 0.104532
+tensor(84911., device='cuda:0') 547224.0
+tensor(0.8884, device='cuda:0')
+INFO - ==> Top1: 88.090    Top5: 99.460    Loss: 0.411
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Scoreboard best 3 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+                Best: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_best.pth.tar
+INFO - >>>>>>>> Epoch  15
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [15][   20/  391]   Loss 0.177200   Top1 93.320312   Top5 99.960938   BatchTime 0.293502   LR 0.002127
+INFO - Training [15][   40/  391]   Loss 0.170862   Top1 93.535156   Top5 99.960938   BatchTime 0.247280   LR 0.002120
+INFO - Training [15][   60/  391]   Loss 0.170921   Top1 93.658854   Top5 99.934896   BatchTime 0.229507   LR 0.002113
+INFO - Training [15][   80/  391]   Loss 0.176271   Top1 93.466797   Top5 99.951172   BatchTime 0.218109   LR 0.002105
+INFO - Training [15][  100/  391]   Loss 0.177509   Top1 93.406250   Top5 99.960938   BatchTime 0.213070   LR 0.002098
+INFO - Training [15][  120/  391]   Loss 0.173709   Top1 93.567708   Top5 99.967448   BatchTime 0.208985   LR 0.002091
+INFO - Training [15][  140/  391]   Loss 0.176915   Top1 93.498884   Top5 99.955357   BatchTime 0.205778   LR 0.002083
+INFO - Training [15][  160/  391]   Loss 0.177955   Top1 93.530273   Top5 99.941406   BatchTime 0.203246   LR 0.002076
+INFO - Training [15][  180/  391]   Loss 0.178931   Top1 93.546007   Top5 99.934896   BatchTime 0.201977   LR 0.002068
+INFO - Training [15][  200/  391]   Loss 0.176082   Top1 93.632812   Top5 99.941406   BatchTime 0.200978   LR 0.002060
+INFO - Training [15][  220/  391]   Loss 0.177410   Top1 93.618608   Top5 99.943182   BatchTime 0.197543   LR 0.002053
+INFO - Training [15][  240/  391]   Loss 0.176780   Top1 93.665365   Top5 99.931641   BatchTime 0.195593   LR 0.002045
+INFO - Training [15][  260/  391]   Loss 0.175855   Top1 93.719952   Top5 99.933894   BatchTime 0.195642   LR 0.002037
+INFO - Training [15][  280/  391]   Loss 0.177848   Top1 93.616071   Top5 99.933036   BatchTime 0.193943   LR 0.002029
+INFO - Training [15][  300/  391]   Loss 0.177494   Top1 93.640625   Top5 99.932292   BatchTime 0.193101   LR 0.002021
+INFO - Training [15][  320/  391]   Loss 0.178626   Top1 93.625488   Top5 99.929199   BatchTime 0.191457   LR 0.002014
+INFO - Training [15][  340/  391]   Loss 0.178859   Top1 93.644301   Top5 99.924173   BatchTime 0.190300   LR 0.002006
+INFO - Training [15][  360/  391]   Loss 0.178934   Top1 93.626302   Top5 99.926215   BatchTime 0.190023   LR 0.001998
+INFO - Training [15][  380/  391]   Loss 0.178906   Top1 93.612253   Top5 99.930099   BatchTime 0.189312   LR 0.001989
+INFO - ==> Top1: 93.650    Top5: 99.930    Loss: 0.179
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [15][   20/   79]   Loss 0.420950   Top1 87.421875   Top5 99.414062   BatchTime 0.176121
+INFO - Validation [15][   40/   79]   Loss 0.425315   Top1 87.695312   Top5 99.355469   BatchTime 0.120553
+INFO - Validation [15][   60/   79]   Loss 0.416991   Top1 87.708333   Top5 99.453125   BatchTime 0.101851
+tensor(81089., device='cuda:0') 547224.0
+tensor(0.8937, device='cuda:0')
+INFO - ==> Top1: 87.680    Top5: 99.500    Loss: 0.413
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Scoreboard best 3 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  16
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [16][   20/  391]   Loss 0.172698   Top1 93.750000   Top5 99.921875   BatchTime 0.307312   LR 0.001977
+INFO - Training [16][   40/  391]   Loss 0.164312   Top1 94.042969   Top5 99.960938   BatchTime 0.253464   LR 0.001969
+INFO - Training [16][   60/  391]   Loss 0.169719   Top1 93.906250   Top5 99.921875   BatchTime 0.233740   LR 0.001961
+INFO - Training [16][   80/  391]   Loss 0.172326   Top1 93.945312   Top5 99.902344   BatchTime 0.225498   LR 0.001952
+INFO - Training [16][  100/  391]   Loss 0.170701   Top1 93.937500   Top5 99.906250   BatchTime 0.222332   LR 0.001944
+INFO - Training [16][  120/  391]   Loss 0.174973   Top1 93.795573   Top5 99.908854   BatchTime 0.218379   LR 0.001936
+INFO - Training [16][  140/  391]   Loss 0.174490   Top1 93.761161   Top5 99.905134   BatchTime 0.216751   LR 0.001927
+INFO - Training [16][  160/  391]   Loss 0.174154   Top1 93.808594   Top5 99.912109   BatchTime 0.213723   LR 0.001919
+INFO - Training [16][  180/  391]   Loss 0.175706   Top1 93.771701   Top5 99.904514   BatchTime 0.210766   LR 0.001910
+INFO - Training [16][  200/  391]   Loss 0.174865   Top1 93.824219   Top5 99.910156   BatchTime 0.208585   LR 0.001902
+INFO - Training [16][  220/  391]   Loss 0.176329   Top1 93.750000   Top5 99.918324   BatchTime 0.208376   LR 0.001893
+INFO - Training [16][  240/  391]   Loss 0.175965   Top1 93.782552   Top5 99.925130   BatchTime 0.206649   LR 0.001884
+INFO - Training [16][  260/  391]   Loss 0.175594   Top1 93.780048   Top5 99.921875   BatchTime 0.203673   LR 0.001876
+INFO - Training [16][  280/  391]   Loss 0.176846   Top1 93.750000   Top5 99.919085   BatchTime 0.202308   LR 0.001867
+INFO - Training [16][  300/  391]   Loss 0.176621   Top1 93.757812   Top5 99.916667   BatchTime 0.200955   LR 0.001858
+INFO - Training [16][  320/  391]   Loss 0.176944   Top1 93.752441   Top5 99.919434   BatchTime 0.199761   LR 0.001849
+INFO - Training [16][  340/  391]   Loss 0.178053   Top1 93.729320   Top5 99.914982   BatchTime 0.198532   LR 0.001840
+INFO - Training [16][  360/  391]   Loss 0.178967   Top1 93.697917   Top5 99.915365   BatchTime 0.196781   LR 0.001832
+INFO - Training [16][  380/  391]   Loss 0.177969   Top1 93.735609   Top5 99.913651   BatchTime 0.196091   LR 0.001823
+INFO - ==> Top1: 93.700    Top5: 99.914    Loss: 0.179
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [16][   20/   79]   Loss 0.413623   Top1 87.304688   Top5 99.453125   BatchTime 0.190360
+INFO - Validation [16][   40/   79]   Loss 0.428266   Top1 87.382812   Top5 99.277344   BatchTime 0.134531
+INFO - Validation [16][   60/   79]   Loss 0.413564   Top1 87.773438   Top5 99.348958   BatchTime 0.120263
+INFO - ==> Top1: 87.730    Top5: 99.400    Loss: 0.412
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Scoreboard best 3 ==> Epoch [10][Top1: 87.760   Top5: 99.500] Sparsity : 0.792
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+tensor(77513., device='cuda:0') 547224.0
+tensor(0.8985, device='cuda:0')
+INFO - >>>>>>>> Epoch  17
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [17][   20/  391]   Loss 0.156929   Top1 94.257812   Top5 99.921875   BatchTime 0.296076   LR 0.001809
+INFO - Training [17][   40/  391]   Loss 0.171180   Top1 93.632812   Top5 99.921875   BatchTime 0.239664   LR 0.001800
+INFO - Training [17][   60/  391]   Loss 0.168631   Top1 93.763021   Top5 99.908854   BatchTime 0.224419   LR 0.001791
+INFO - Training [17][   80/  391]   Loss 0.164877   Top1 93.886719   Top5 99.931641   BatchTime 0.211521   LR 0.001782
+INFO - Training [17][  100/  391]   Loss 0.163613   Top1 93.960938   Top5 99.937500   BatchTime 0.204113   LR 0.001773
+INFO - Training [17][  120/  391]   Loss 0.166876   Top1 94.003906   Top5 99.947917   BatchTime 0.201079   LR 0.001764
+INFO - Training [17][  140/  391]   Loss 0.168179   Top1 93.984375   Top5 99.944196   BatchTime 0.200324   LR 0.001754
+INFO - Training [17][  160/  391]   Loss 0.168972   Top1 93.989258   Top5 99.946289   BatchTime 0.200334   LR 0.001745
+INFO - Training [17][  180/  391]   Loss 0.168504   Top1 93.975694   Top5 99.943576   BatchTime 0.199317   LR 0.001736
+INFO - Training [17][  200/  391]   Loss 0.169485   Top1 93.992188   Top5 99.945312   BatchTime 0.199418   LR 0.001727
+INFO - Training [17][  220/  391]   Loss 0.169671   Top1 94.030540   Top5 99.943182   BatchTime 0.197748   LR 0.001717
+INFO - Training [17][  240/  391]   Loss 0.171390   Top1 93.935547   Top5 99.941406   BatchTime 0.197216   LR 0.001708
+INFO - Training [17][  260/  391]   Loss 0.171550   Top1 93.915264   Top5 99.945913   BatchTime 0.196450   LR 0.001699
+INFO - Training [17][  280/  391]   Loss 0.173002   Top1 93.856027   Top5 99.941406   BatchTime 0.194586   LR 0.001689
+INFO - Training [17][  300/  391]   Loss 0.173741   Top1 93.843750   Top5 99.940104   BatchTime 0.193124   LR 0.001680
+INFO - Training [17][  320/  391]   Loss 0.174861   Top1 93.842773   Top5 99.943848   BatchTime 0.191777   LR 0.001670
+INFO - Training [17][  340/  391]   Loss 0.175652   Top1 93.795956   Top5 99.940257   BatchTime 0.191634   LR 0.001661
+INFO - Training [17][  360/  391]   Loss 0.177215   Top1 93.758681   Top5 99.941406   BatchTime 0.192319   LR 0.001651
+INFO - Training [17][  380/  391]   Loss 0.177766   Top1 93.717105   Top5 99.942434   BatchTime 0.192549   LR 0.001642
+INFO - ==> Top1: 93.728    Top5: 99.942    Loss: 0.177
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [17][   20/   79]   Loss 0.410619   Top1 87.226562   Top5 99.453125   BatchTime 0.186571
+INFO - Validation [17][   40/   79]   Loss 0.417170   Top1 87.519531   Top5 99.433594   BatchTime 0.126121
+INFO - Validation [17][   60/   79]   Loss 0.409671   Top1 87.760417   Top5 99.505208   BatchTime 0.104864
+INFO - ==> Top1: 87.770    Top5: 99.550    Loss: 0.404
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Scoreboard best 3 ==> Epoch [17][Top1: 87.770   Top5: 99.550] Sparsity : 0.833
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  18
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(74364., device='cuda:0') 547224.0
+tensor(0.9025, device='cuda:0')
+INFO - Training [18][   20/  391]   Loss 0.154708   Top1 94.648438   Top5 99.921875   BatchTime 0.308797   LR 0.001627
+INFO - Training [18][   40/  391]   Loss 0.174410   Top1 93.847656   Top5 99.941406   BatchTime 0.252842   LR 0.001618
+INFO - Training [18][   60/  391]   Loss 0.168005   Top1 93.867188   Top5 99.960938   BatchTime 0.236526   LR 0.001608
+INFO - Training [18][   80/  391]   Loss 0.166852   Top1 93.935547   Top5 99.970703   BatchTime 0.228655   LR 0.001598
+INFO - Training [18][  100/  391]   Loss 0.167585   Top1 93.906250   Top5 99.960938   BatchTime 0.219437   LR 0.001589
+INFO - Training [18][  120/  391]   Loss 0.169034   Top1 93.867188   Top5 99.941406   BatchTime 0.214440   LR 0.001579
+INFO - Training [18][  140/  391]   Loss 0.171046   Top1 93.867188   Top5 99.944196   BatchTime 0.208301   LR 0.001569
+INFO - Training [18][  160/  391]   Loss 0.171568   Top1 93.813477   Top5 99.946289   BatchTime 0.204669   LR 0.001560
+INFO - Training [18][  180/  391]   Loss 0.168723   Top1 93.940972   Top5 99.952257   BatchTime 0.202443   LR 0.001550
+INFO - Training [18][  200/  391]   Loss 0.168605   Top1 93.945312   Top5 99.953125   BatchTime 0.199497   LR 0.001540
+INFO - Training [18][  220/  391]   Loss 0.170360   Top1 93.881392   Top5 99.953835   BatchTime 0.196493   LR 0.001530
+INFO - Training [18][  240/  391]   Loss 0.171867   Top1 93.811849   Top5 99.944661   BatchTime 0.194865   LR 0.001520
+INFO - Training [18][  260/  391]   Loss 0.172711   Top1 93.819111   Top5 99.942909   BatchTime 0.193425   LR 0.001511
+INFO - Training [18][  280/  391]   Loss 0.173417   Top1 93.800223   Top5 99.946987   BatchTime 0.192156   LR 0.001501
+INFO - Training [18][  300/  391]   Loss 0.173011   Top1 93.820312   Top5 99.947917   BatchTime 0.190975   LR 0.001491
+INFO - Training [18][  320/  391]   Loss 0.174054   Top1 93.771973   Top5 99.946289   BatchTime 0.190360   LR 0.001481
+INFO - Training [18][  340/  391]   Loss 0.175487   Top1 93.722426   Top5 99.944853   BatchTime 0.189694   LR 0.001471
+INFO - Training [18][  360/  391]   Loss 0.175875   Top1 93.728299   Top5 99.945747   BatchTime 0.188338   LR 0.001461
+INFO - Training [18][  380/  391]   Loss 0.175632   Top1 93.725329   Top5 99.948602   BatchTime 0.187753   LR 0.001451
+INFO - ==> Top1: 93.712    Top5: 99.950    Loss: 0.176
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [18][   20/   79]   Loss 0.416927   Top1 87.382812   Top5 99.335938   BatchTime 0.194603
+INFO - Validation [18][   40/   79]   Loss 0.420855   Top1 87.597656   Top5 99.257812   BatchTime 0.135148
+INFO - Validation [18][   60/   79]   Loss 0.408159   Top1 87.994792   Top5 99.348958   BatchTime 0.114730
+INFO - ==> Top1: 87.900    Top5: 99.440    Loss: 0.403
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [12][Top1: 87.800   Top5: 99.480] Sparsity : 0.807
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  19
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(71703., device='cuda:0') 547224.0
+tensor(0.9059, device='cuda:0')
+INFO - Training [19][   20/  391]   Loss 0.179617   Top1 93.867188   Top5 99.882812   BatchTime 0.307540   LR 0.001436
+INFO - Training [19][   40/  391]   Loss 0.172332   Top1 93.867188   Top5 99.902344   BatchTime 0.246579   LR 0.001426
+INFO - Training [19][   60/  391]   Loss 0.176220   Top1 93.919271   Top5 99.908854   BatchTime 0.233085   LR 0.001416
+INFO - Training [19][   80/  391]   Loss 0.179257   Top1 93.710938   Top5 99.921875   BatchTime 0.222490   LR 0.001406
+INFO - Training [19][  100/  391]   Loss 0.177219   Top1 93.781250   Top5 99.921875   BatchTime 0.216770   LR 0.001396
+INFO - Training [19][  120/  391]   Loss 0.177783   Top1 93.789062   Top5 99.921875   BatchTime 0.213138   LR 0.001386
+INFO - Training [19][  140/  391]   Loss 0.178225   Top1 93.716518   Top5 99.921875   BatchTime 0.207222   LR 0.001376
+INFO - Training [19][  160/  391]   Loss 0.177265   Top1 93.720703   Top5 99.921875   BatchTime 0.203643   LR 0.001366
+INFO - Training [19][  180/  391]   Loss 0.177936   Top1 93.697917   Top5 99.917535   BatchTime 0.200645   LR 0.001356
+INFO - Training [19][  200/  391]   Loss 0.175916   Top1 93.761719   Top5 99.917969   BatchTime 0.200130   LR 0.001346
+INFO - Training [19][  220/  391]   Loss 0.176196   Top1 93.753551   Top5 99.918324   BatchTime 0.197923   LR 0.001336
+INFO - Training [19][  240/  391]   Loss 0.175266   Top1 93.789062   Top5 99.908854   BatchTime 0.196955   LR 0.001326
+INFO - Training [19][  260/  391]   Loss 0.174546   Top1 93.819111   Top5 99.912861   BatchTime 0.195633   LR 0.001316
+INFO - Training [19][  280/  391]   Loss 0.173930   Top1 93.842076   Top5 99.916295   BatchTime 0.195651   LR 0.001306
+INFO - Training [19][  300/  391]   Loss 0.173529   Top1 93.854167   Top5 99.921875   BatchTime 0.193935   LR 0.001296
+INFO - Training [19][  320/  391]   Loss 0.174588   Top1 93.820801   Top5 99.924316   BatchTime 0.192352   LR 0.001286
+INFO - Training [19][  340/  391]   Loss 0.175018   Top1 93.825827   Top5 99.921875   BatchTime 0.191598   LR 0.001276
+INFO - Training [19][  360/  391]   Loss 0.176731   Top1 93.750000   Top5 99.924045   BatchTime 0.191165   LR 0.001266
+INFO - Training [19][  380/  391]   Loss 0.176519   Top1 93.741776   Top5 99.925987   BatchTime 0.190161   LR 0.001256
+INFO - ==> Top1: 93.706    Top5: 99.924    Loss: 0.177
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [19][   20/   79]   Loss 0.420040   Top1 87.695312   Top5 99.492188   BatchTime 0.195764
+INFO - Validation [19][   40/   79]   Loss 0.431865   Top1 87.812500   Top5 99.316406   BatchTime 0.132533
+INFO - Validation [19][   60/   79]   Loss 0.420949   Top1 87.812500   Top5 99.414062   BatchTime 0.112994
+tensor(69647., device='cuda:0') 547224.0
+tensor(0.9086, device='cuda:0')
+INFO - ==> Top1: 87.810    Top5: 99.460    Loss: 0.415
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [19][Top1: 87.810   Top5: 99.460] Sparsity : 0.838
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  20
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [20][   20/  391]   Loss 0.164526   Top1 93.750000   Top5 99.921875   BatchTime 0.290781   LR 0.001240
+INFO - Training [20][   40/  391]   Loss 0.165500   Top1 93.808594   Top5 99.941406   BatchTime 0.241263   LR 0.001230
+INFO - Training [20][   60/  391]   Loss 0.162109   Top1 94.127604   Top5 99.960938   BatchTime 0.225196   LR 0.001220
+INFO - Training [20][   80/  391]   Loss 0.168741   Top1 94.042969   Top5 99.941406   BatchTime 0.217530   LR 0.001210
+INFO - Training [20][  100/  391]   Loss 0.173390   Top1 93.851562   Top5 99.953125   BatchTime 0.213699   LR 0.001200
+INFO - Training [20][  120/  391]   Loss 0.173204   Top1 93.867188   Top5 99.947917   BatchTime 0.210017   LR 0.001190
+INFO - Training [20][  140/  391]   Loss 0.174537   Top1 93.844866   Top5 99.949777   BatchTime 0.204169   LR 0.001180
+INFO - Training [20][  160/  391]   Loss 0.174513   Top1 93.798828   Top5 99.956055   BatchTime 0.201553   LR 0.001170
+INFO - Training [20][  180/  391]   Loss 0.175127   Top1 93.702257   Top5 99.960938   BatchTime 0.198485   LR 0.001160
+INFO - Training [20][  200/  391]   Loss 0.174735   Top1 93.734375   Top5 99.957031   BatchTime 0.197771   LR 0.001150
+INFO - Training [20][  220/  391]   Loss 0.175623   Top1 93.675426   Top5 99.957386   BatchTime 0.198853   LR 0.001140
+INFO - Training [20][  240/  391]   Loss 0.175920   Top1 93.652344   Top5 99.951172   BatchTime 0.197595   LR 0.001130
+INFO - Training [20][  260/  391]   Loss 0.176484   Top1 93.623798   Top5 99.945913   BatchTime 0.196101   LR 0.001120
+INFO - Training [20][  280/  391]   Loss 0.176333   Top1 93.604911   Top5 99.944196   BatchTime 0.193747   LR 0.001110
+INFO - Training [20][  300/  391]   Loss 0.175636   Top1 93.635417   Top5 99.945312   BatchTime 0.191918   LR 0.001100
+INFO - Training [20][  320/  391]   Loss 0.176767   Top1 93.608398   Top5 99.946289   BatchTime 0.190634   LR 0.001090
+INFO - Training [20][  340/  391]   Loss 0.178281   Top1 93.577665   Top5 99.947151   BatchTime 0.190029   LR 0.001080
+INFO - Training [20][  360/  391]   Loss 0.178227   Top1 93.582899   Top5 99.945747   BatchTime 0.189790   LR 0.001070
+INFO - Training [20][  380/  391]   Loss 0.178221   Top1 93.569079   Top5 99.946546   BatchTime 0.189795   LR 0.001060
+INFO - ==> Top1: 93.586    Top5: 99.948    Loss: 0.178
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [20][   20/   79]   Loss 0.420897   Top1 87.695312   Top5 99.375000   BatchTime 0.196406
+INFO - Validation [20][   40/   79]   Loss 0.432367   Top1 87.480469   Top5 99.296875   BatchTime 0.129981
+INFO - Validation [20][   60/   79]   Loss 0.418690   Top1 87.760417   Top5 99.414062   BatchTime 0.107794
+tensor(67852., device='cuda:0') 547224.0
+INFO - ==> Top1: 87.830    Top5: 99.470    Loss: 0.411
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  21
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(0.9108, device='cuda:0')
+INFO - Training [21][   20/  391]   Loss 0.161041   Top1 94.531250   Top5 100.000000   BatchTime 0.297119   LR 0.001045
+INFO - Training [21][   40/  391]   Loss 0.163588   Top1 94.316406   Top5 99.980469   BatchTime 0.229432   LR 0.001035
+INFO - Training [21][   60/  391]   Loss 0.166391   Top1 94.088542   Top5 99.960938   BatchTime 0.207629   LR 0.001025
+INFO - Training [21][   80/  391]   Loss 0.171069   Top1 93.759766   Top5 99.951172   BatchTime 0.203902   LR 0.001015
+INFO - Training [21][  100/  391]   Loss 0.170126   Top1 93.867188   Top5 99.953125   BatchTime 0.201252   LR 0.001005
+INFO - Training [21][  120/  391]   Loss 0.171350   Top1 93.880208   Top5 99.960938   BatchTime 0.200053   LR 0.000996
+INFO - Training [21][  140/  391]   Loss 0.172727   Top1 93.878348   Top5 99.960938   BatchTime 0.199665   LR 0.000986
+INFO - Training [21][  160/  391]   Loss 0.173684   Top1 93.833008   Top5 99.960938   BatchTime 0.200563   LR 0.000976
+INFO - Training [21][  180/  391]   Loss 0.172304   Top1 93.871528   Top5 99.965278   BatchTime 0.198660   LR 0.000966
+INFO - Training [21][  200/  391]   Loss 0.172144   Top1 93.917969   Top5 99.968750   BatchTime 0.196064   LR 0.000956
+INFO - Training [21][  220/  391]   Loss 0.173758   Top1 93.813920   Top5 99.964489   BatchTime 0.192818   LR 0.000947
+INFO - Training [21][  240/  391]   Loss 0.173707   Top1 93.785807   Top5 99.960938   BatchTime 0.191492   LR 0.000937
+INFO - Training [21][  260/  391]   Loss 0.171804   Top1 93.858173   Top5 99.960938   BatchTime 0.191087   LR 0.000927
+INFO - Training [21][  280/  391]   Loss 0.173100   Top1 93.794643   Top5 99.963728   BatchTime 0.191425   LR 0.000917
+INFO - Training [21][  300/  391]   Loss 0.173642   Top1 93.804688   Top5 99.958333   BatchTime 0.192190   LR 0.000908
+INFO - Training [21][  320/  391]   Loss 0.173361   Top1 93.801270   Top5 99.951172   BatchTime 0.191083   LR 0.000898
+INFO - Training [21][  340/  391]   Loss 0.173005   Top1 93.823529   Top5 99.944853   BatchTime 0.188773   LR 0.000888
+INFO - Training [21][  360/  391]   Loss 0.173172   Top1 93.823785   Top5 99.947917   BatchTime 0.188242   LR 0.000879
+INFO - Training [21][  380/  391]   Loss 0.173438   Top1 93.821957   Top5 99.946546   BatchTime 0.188398   LR 0.000869
+INFO - ==> Top1: 93.818    Top5: 99.948    Loss: 0.173
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [21][   20/   79]   Loss 0.428664   Top1 87.460938   Top5 99.492188   BatchTime 0.178717
+INFO - Validation [21][   40/   79]   Loss 0.433317   Top1 87.343750   Top5 99.335938   BatchTime 0.120994
+INFO - Validation [21][   60/   79]   Loss 0.421473   Top1 87.447917   Top5 99.388021   BatchTime 0.101350
+INFO - ==> Top1: 87.510    Top5: 99.470    Loss: 0.417
+tensor(66340., device='cuda:0') 547224.0
+tensor(0.9127, device='cuda:0')
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  22
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [22][   20/  391]   Loss 0.181662   Top1 93.476562   Top5 99.921875   BatchTime 0.282406   LR 0.000855
+INFO - Training [22][   40/  391]   Loss 0.183120   Top1 93.496094   Top5 99.921875   BatchTime 0.230507   LR 0.000845
+INFO - Training [22][   60/  391]   Loss 0.174080   Top1 93.710938   Top5 99.895833   BatchTime 0.214659   LR 0.000836
+INFO - Training [22][   80/  391]   Loss 0.176438   Top1 93.662109   Top5 99.921875   BatchTime 0.207781   LR 0.000826
+INFO - Training [22][  100/  391]   Loss 0.180973   Top1 93.609375   Top5 99.921875   BatchTime 0.204423   LR 0.000817
+INFO - Training [22][  120/  391]   Loss 0.180764   Top1 93.626302   Top5 99.928385   BatchTime 0.201560   LR 0.000807
+INFO - Training [22][  140/  391]   Loss 0.182073   Top1 93.532366   Top5 99.927455   BatchTime 0.200490   LR 0.000798
+INFO - Training [22][  160/  391]   Loss 0.182505   Top1 93.505859   Top5 99.936523   BatchTime 0.199559   LR 0.000789
+INFO - Training [22][  180/  391]   Loss 0.181513   Top1 93.541667   Top5 99.943576   BatchTime 0.198024   LR 0.000779
+INFO - Training [22][  200/  391]   Loss 0.182402   Top1 93.562500   Top5 99.933594   BatchTime 0.196965   LR 0.000770
+INFO - Training [22][  220/  391]   Loss 0.181733   Top1 93.586648   Top5 99.928977   BatchTime 0.197561   LR 0.000761
+INFO - Training [22][  240/  391]   Loss 0.181400   Top1 93.600260   Top5 99.925130   BatchTime 0.195721   LR 0.000751
+INFO - Training [22][  260/  391]   Loss 0.180678   Top1 93.626803   Top5 99.924880   BatchTime 0.193234   LR 0.000742
+INFO - Training [22][  280/  391]   Loss 0.179124   Top1 93.655134   Top5 99.924665   BatchTime 0.191707   LR 0.000733
+INFO - Training [22][  300/  391]   Loss 0.179079   Top1 93.656250   Top5 99.927083   BatchTime 0.190860   LR 0.000724
+INFO - Training [22][  320/  391]   Loss 0.178041   Top1 93.679199   Top5 99.929199   BatchTime 0.188836   LR 0.000715
+INFO - Training [22][  340/  391]   Loss 0.177808   Top1 93.717831   Top5 99.931066   BatchTime 0.187886   LR 0.000706
+INFO - Training [22][  360/  391]   Loss 0.176871   Top1 93.754340   Top5 99.934896   BatchTime 0.187441   LR 0.000697
+INFO - Training [22][  380/  391]   Loss 0.177146   Top1 93.745888   Top5 99.938322   BatchTime 0.187384   LR 0.000688
+INFO - ==> Top1: 93.750    Top5: 99.936    Loss: 0.177
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [22][   20/   79]   Loss 0.415812   Top1 87.421875   Top5 99.531250   BatchTime 0.182749
+INFO - Validation [22][   40/   79]   Loss 0.422470   Top1 87.421875   Top5 99.472656   BatchTime 0.128788
+INFO - Validation [22][   60/   79]   Loss 0.412073   Top1 87.617188   Top5 99.557292   BatchTime 0.107784
+INFO - ==> Top1: 87.670    Top5: 99.610    Loss: 0.407
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  23
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(65220., device='cuda:0') 547224.0
+tensor(0.9140, device='cuda:0')
+INFO - Training [23][   20/  391]   Loss 0.178194   Top1 93.750000   Top5 99.921875   BatchTime 0.285508   LR 0.000674
+INFO - Training [23][   40/  391]   Loss 0.169893   Top1 94.042969   Top5 99.941406   BatchTime 0.241214   LR 0.000665
+INFO - Training [23][   60/  391]   Loss 0.175534   Top1 93.710938   Top5 99.947917   BatchTime 0.222050   LR 0.000656
+INFO - Training [23][   80/  391]   Loss 0.173629   Top1 93.779297   Top5 99.941406   BatchTime 0.212914   LR 0.000647
+INFO - Training [23][  100/  391]   Loss 0.171414   Top1 93.843750   Top5 99.953125   BatchTime 0.205226   LR 0.000639
+INFO - Training [23][  120/  391]   Loss 0.171954   Top1 93.828125   Top5 99.954427   BatchTime 0.200787   LR 0.000630
+INFO - Training [23][  140/  391]   Loss 0.170166   Top1 93.922991   Top5 99.955357   BatchTime 0.198512   LR 0.000621
+INFO - Training [23][  160/  391]   Loss 0.171409   Top1 93.886719   Top5 99.941406   BatchTime 0.198130   LR 0.000613
+INFO - Training [23][  180/  391]   Loss 0.170482   Top1 93.927951   Top5 99.947917   BatchTime 0.196725   LR 0.000604
+INFO - Training [23][  200/  391]   Loss 0.172219   Top1 93.828125   Top5 99.937500   BatchTime 0.197118   LR 0.000595
+INFO - Training [23][  220/  391]   Loss 0.171550   Top1 93.877841   Top5 99.939631   BatchTime 0.196696   LR 0.000587
+INFO - Training [23][  240/  391]   Loss 0.172907   Top1 93.857422   Top5 99.934896   BatchTime 0.195323   LR 0.000578
+INFO - Training [23][  260/  391]   Loss 0.173849   Top1 93.816106   Top5 99.930889   BatchTime 0.194733   LR 0.000570
+INFO - Training [23][  280/  391]   Loss 0.175170   Top1 93.758371   Top5 99.933036   BatchTime 0.192989   LR 0.000561
+INFO - Training [23][  300/  391]   Loss 0.175823   Top1 93.729167   Top5 99.937500   BatchTime 0.191560   LR 0.000553
+INFO - Training [23][  320/  391]   Loss 0.175635   Top1 93.759766   Top5 99.941406   BatchTime 0.189939   LR 0.000545
+INFO - Training [23][  340/  391]   Loss 0.174952   Top1 93.779871   Top5 99.935662   BatchTime 0.189344   LR 0.000536
+INFO - Training [23][  360/  391]   Loss 0.175501   Top1 93.730469   Top5 99.934896   BatchTime 0.188370   LR 0.000528
+INFO - Training [23][  380/  391]   Loss 0.175221   Top1 93.750000   Top5 99.938322   BatchTime 0.187665   LR 0.000520
+INFO - ==> Top1: 93.752    Top5: 99.940    Loss: 0.175
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [23][   20/   79]   Loss 0.410967   Top1 87.500000   Top5 99.492188   BatchTime 0.186136
+INFO - Validation [23][   40/   79]   Loss 0.424196   Top1 87.343750   Top5 99.375000   BatchTime 0.128164
+INFO - Validation [23][   60/   79]   Loss 0.414775   Top1 87.604167   Top5 99.453125   BatchTime 0.106346
+INFO - ==> Top1: 87.610    Top5: 99.530    Loss: 0.409
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  24
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(64411., device='cuda:0') 547224.0
+tensor(0.9150, device='cuda:0')
+INFO - Training [24][   20/  391]   Loss 0.171104   Top1 93.984375   Top5 99.960938   BatchTime 0.310885   LR 0.000508
+INFO - Training [24][   40/  391]   Loss 0.167915   Top1 93.867188   Top5 99.960938   BatchTime 0.248126   LR 0.000499
+INFO - Training [24][   60/  391]   Loss 0.166345   Top1 93.997396   Top5 99.947917   BatchTime 0.230650   LR 0.000491
+INFO - Training [24][   80/  391]   Loss 0.163264   Top1 94.072266   Top5 99.951172   BatchTime 0.222170   LR 0.000484
+INFO - Training [24][  100/  391]   Loss 0.165033   Top1 93.992188   Top5 99.945312   BatchTime 0.217360   LR 0.000476
+INFO - Training [24][  120/  391]   Loss 0.162199   Top1 94.075521   Top5 99.954427   BatchTime 0.213364   LR 0.000468
+INFO - Training [24][  140/  391]   Loss 0.161527   Top1 94.090402   Top5 99.949777   BatchTime 0.209681   LR 0.000460
+INFO - Training [24][  160/  391]   Loss 0.164208   Top1 94.052734   Top5 99.946289   BatchTime 0.204951   LR 0.000452
+INFO - Training [24][  180/  391]   Loss 0.165477   Top1 93.984375   Top5 99.952257   BatchTime 0.202209   LR 0.000444
+INFO - Training [24][  200/  391]   Loss 0.167732   Top1 93.941406   Top5 99.953125   BatchTime 0.198540   LR 0.000437
+INFO - Training [24][  220/  391]   Loss 0.168235   Top1 93.916903   Top5 99.957386   BatchTime 0.195911   LR 0.000429
+INFO - Training [24][  240/  391]   Loss 0.167197   Top1 93.951823   Top5 99.954427   BatchTime 0.197257   LR 0.000422
+INFO - Training [24][  260/  391]   Loss 0.165885   Top1 94.011418   Top5 99.954928   BatchTime 0.197666   LR 0.000414
+INFO - Training [24][  280/  391]   Loss 0.165681   Top1 94.023438   Top5 99.952567   BatchTime 0.196132   LR 0.000407
+INFO - Training [24][  300/  391]   Loss 0.167474   Top1 93.950521   Top5 99.950521   BatchTime 0.195391   LR 0.000399
+INFO - Training [24][  320/  391]   Loss 0.167928   Top1 93.945312   Top5 99.948730   BatchTime 0.194695   LR 0.000392
+INFO - Training [24][  340/  391]   Loss 0.169358   Top1 93.883272   Top5 99.951746   BatchTime 0.193488   LR 0.000385
+INFO - Training [24][  360/  391]   Loss 0.169627   Top1 93.880208   Top5 99.950087   BatchTime 0.192763   LR 0.000377
+INFO - Training [24][  380/  391]   Loss 0.170120   Top1 93.871299   Top5 99.950658   BatchTime 0.192452   LR 0.000370
+INFO - ==> Top1: 93.896    Top5: 99.946    Loss: 0.170
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [24][   20/   79]   Loss 0.423388   Top1 87.617188   Top5 99.375000   BatchTime 0.182479
+INFO - Validation [24][   40/   79]   Loss 0.434552   Top1 87.480469   Top5 99.257812   BatchTime 0.124423
+INFO - Validation [24][   60/   79]   Loss 0.422885   Top1 87.786458   Top5 99.335938   BatchTime 0.103700
+INFO - ==> Top1: 87.830    Top5: 99.410    Loss: 0.416
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+tensor(63860., device='cuda:0') 547224.0
+tensor(0.9157, device='cuda:0')
+INFO - >>>>>>>> Epoch  25
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [25][   20/  391]   Loss 0.143351   Top1 94.414062   Top5 99.921875   BatchTime 0.313734   LR 0.000359
+INFO - Training [25][   40/  391]   Loss 0.155543   Top1 94.023438   Top5 99.921875   BatchTime 0.248149   LR 0.000352
+INFO - Training [25][   60/  391]   Loss 0.163698   Top1 93.906250   Top5 99.934896   BatchTime 0.223730   LR 0.000345
+INFO - Training [25][   80/  391]   Loss 0.170423   Top1 93.769531   Top5 99.931641   BatchTime 0.211690   LR 0.000338
+INFO - Training [25][  100/  391]   Loss 0.172947   Top1 93.695312   Top5 99.937500   BatchTime 0.205099   LR 0.000332
+INFO - Training [25][  120/  391]   Loss 0.171826   Top1 93.743490   Top5 99.934896   BatchTime 0.202341   LR 0.000325
+INFO - Training [25][  140/  391]   Loss 0.169339   Top1 93.867188   Top5 99.944196   BatchTime 0.203360   LR 0.000318
+INFO - Training [25][  160/  391]   Loss 0.171208   Top1 93.798828   Top5 99.941406   BatchTime 0.201490   LR 0.000311
+INFO - Training [25][  180/  391]   Loss 0.172093   Top1 93.745660   Top5 99.943576   BatchTime 0.198565   LR 0.000305
+INFO - Training [25][  200/  391]   Loss 0.172616   Top1 93.718750   Top5 99.945312   BatchTime 0.196115   LR 0.000298
+INFO - Training [25][  220/  391]   Loss 0.173943   Top1 93.647017   Top5 99.946733   BatchTime 0.195000   LR 0.000292
+INFO - Training [25][  240/  391]   Loss 0.174147   Top1 93.626302   Top5 99.944661   BatchTime 0.195354   LR 0.000285
+INFO - Training [25][  260/  391]   Loss 0.172868   Top1 93.671875   Top5 99.942909   BatchTime 0.193620   LR 0.000279
+INFO - Training [25][  280/  391]   Loss 0.172617   Top1 93.666295   Top5 99.946987   BatchTime 0.191787   LR 0.000273
+INFO - Training [25][  300/  391]   Loss 0.173183   Top1 93.677083   Top5 99.947917   BatchTime 0.190119   LR 0.000266
+INFO - Training [25][  320/  391]   Loss 0.173344   Top1 93.676758   Top5 99.946289   BatchTime 0.188469   LR 0.000260
+INFO - Training [25][  340/  391]   Loss 0.171601   Top1 93.754596   Top5 99.947151   BatchTime 0.187387   LR 0.000254
+INFO - Training [25][  360/  391]   Loss 0.172059   Top1 93.743490   Top5 99.943576   BatchTime 0.186761   LR 0.000248
+INFO - Training [25][  380/  391]   Loss 0.172389   Top1 93.741776   Top5 99.946546   BatchTime 0.186477   LR 0.000242
+INFO - ==> Top1: 93.756    Top5: 99.948    Loss: 0.172
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [25][   20/   79]   Loss 0.422743   Top1 87.148438   Top5 99.492188   BatchTime 0.181386
+INFO - Validation [25][   40/   79]   Loss 0.433907   Top1 87.226562   Top5 99.375000   BatchTime 0.125281
+INFO - Validation [25][   60/   79]   Loss 0.421970   Top1 87.617188   Top5 99.427083   BatchTime 0.107400
+INFO - ==> Top1: 87.700    Top5: 99.490    Loss: 0.415
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  26
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(63400., device='cuda:0') 547224.0
+tensor(0.9162, device='cuda:0')
+INFO - Training [26][   20/  391]   Loss 0.193266   Top1 92.929688   Top5 99.960938   BatchTime 0.289546   LR 0.000233
+INFO - Training [26][   40/  391]   Loss 0.183648   Top1 93.164062   Top5 99.960938   BatchTime 0.238152   LR 0.000227
+INFO - Training [26][   60/  391]   Loss 0.179313   Top1 93.411458   Top5 99.960938   BatchTime 0.223035   LR 0.000222
+INFO - Training [26][   80/  391]   Loss 0.170839   Top1 93.769531   Top5 99.960938   BatchTime 0.216507   LR 0.000216
+INFO - Training [26][  100/  391]   Loss 0.170196   Top1 93.828125   Top5 99.960938   BatchTime 0.212421   LR 0.000210
+INFO - Training [26][  120/  391]   Loss 0.167064   Top1 93.912760   Top5 99.967448   BatchTime 0.207638   LR 0.000205
+INFO - Training [26][  140/  391]   Loss 0.165878   Top1 93.973214   Top5 99.972098   BatchTime 0.205567   LR 0.000199
+INFO - Training [26][  160/  391]   Loss 0.168176   Top1 93.906250   Top5 99.960938   BatchTime 0.203491   LR 0.000194
+INFO - Training [26][  180/  391]   Loss 0.166941   Top1 94.006076   Top5 99.965278   BatchTime 0.203036   LR 0.000189
+INFO - Training [26][  200/  391]   Loss 0.165378   Top1 94.105469   Top5 99.960938   BatchTime 0.202271   LR 0.000183
+INFO - Training [26][  220/  391]   Loss 0.164817   Top1 94.147727   Top5 99.957386   BatchTime 0.201171   LR 0.000178
+INFO - Training [26][  240/  391]   Loss 0.165690   Top1 94.104818   Top5 99.957682   BatchTime 0.200500   LR 0.000173
+INFO - Training [26][  260/  391]   Loss 0.165532   Top1 94.116587   Top5 99.960938   BatchTime 0.198203   LR 0.000168
+INFO - Training [26][  280/  391]   Loss 0.165645   Top1 94.123884   Top5 99.958147   BatchTime 0.196990   LR 0.000163
+INFO - Training [26][  300/  391]   Loss 0.164953   Top1 94.130208   Top5 99.958333   BatchTime 0.194830   LR 0.000158
+INFO - Training [26][  320/  391]   Loss 0.166367   Top1 94.050293   Top5 99.956055   BatchTime 0.192672   LR 0.000153
+INFO - Training [26][  340/  391]   Loss 0.165552   Top1 94.073989   Top5 99.958640   BatchTime 0.191477   LR 0.000148
+INFO - Training [26][  360/  391]   Loss 0.166911   Top1 94.027778   Top5 99.956597   BatchTime 0.190684   LR 0.000144
+INFO - Training [26][  380/  391]   Loss 0.167334   Top1 93.996711   Top5 99.952714   BatchTime 0.190949   LR 0.000139
+INFO - ==> Top1: 93.972    Top5: 99.954    Loss: 0.168
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [26][   20/   79]   Loss 0.420135   Top1 87.539062   Top5 99.296875   BatchTime 0.184465
+INFO - Validation [26][   40/   79]   Loss 0.434430   Top1 87.382812   Top5 99.199219   BatchTime 0.126024
+INFO - Validation [26][   60/   79]   Loss 0.422583   Top1 87.604167   Top5 99.375000   BatchTime 0.106996
+INFO - ==> Top1: 87.580    Top5: 99.470    Loss: 0.415
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  27
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(63163., device='cuda:0') 547224.0
+tensor(0.9165, device='cuda:0')
+INFO - Training [27][   20/  391]   Loss 0.173135   Top1 93.984375   Top5 100.000000   BatchTime 0.290065   LR 0.000132
+INFO - Training [27][   40/  391]   Loss 0.180996   Top1 93.613281   Top5 99.980469   BatchTime 0.242722   LR 0.000127
+INFO - Training [27][   60/  391]   Loss 0.181579   Top1 93.723958   Top5 99.960938   BatchTime 0.228621   LR 0.000123
+INFO - Training [27][   80/  391]   Loss 0.173271   Top1 93.984375   Top5 99.970703   BatchTime 0.225240   LR 0.000119
+INFO - Training [27][  100/  391]   Loss 0.172224   Top1 93.984375   Top5 99.976562   BatchTime 0.216825   LR 0.000115
+INFO - Training [27][  120/  391]   Loss 0.169986   Top1 94.069010   Top5 99.980469   BatchTime 0.214197   LR 0.000110
+INFO - Training [27][  140/  391]   Loss 0.167456   Top1 94.118304   Top5 99.966518   BatchTime 0.210838   LR 0.000106
+INFO - Training [27][  160/  391]   Loss 0.166837   Top1 94.150391   Top5 99.951172   BatchTime 0.208122   LR 0.000102
+INFO - Training [27][  180/  391]   Loss 0.165821   Top1 94.201389   Top5 99.947917   BatchTime 0.206250   LR 0.000098
+INFO - Training [27][  200/  391]   Loss 0.167043   Top1 94.171875   Top5 99.941406   BatchTime 0.207527   LR 0.000094
+INFO - Training [27][  220/  391]   Loss 0.167606   Top1 94.144176   Top5 99.946733   BatchTime 0.206111   LR 0.000091
+INFO - Training [27][  240/  391]   Loss 0.166690   Top1 94.215495   Top5 99.951172   BatchTime 0.205103   LR 0.000087
+INFO - Training [27][  260/  391]   Loss 0.165892   Top1 94.236779   Top5 99.951923   BatchTime 0.202865   LR 0.000083
+INFO - Training [27][  280/  391]   Loss 0.166028   Top1 94.224330   Top5 99.955357   BatchTime 0.201589   LR 0.000080
+INFO - Training [27][  300/  391]   Loss 0.167322   Top1 94.153646   Top5 99.953125   BatchTime 0.200283   LR 0.000076
+INFO - Training [27][  320/  391]   Loss 0.167687   Top1 94.123535   Top5 99.951172   BatchTime 0.199996   LR 0.000073
+INFO - Training [27][  340/  391]   Loss 0.165951   Top1 94.181985   Top5 99.954044   BatchTime 0.198314   LR 0.000069
+INFO - Training [27][  360/  391]   Loss 0.166169   Top1 94.173177   Top5 99.954427   BatchTime 0.197528   LR 0.000066
+INFO - Training [27][  380/  391]   Loss 0.166569   Top1 94.157072   Top5 99.954770   BatchTime 0.197231   LR 0.000063
+INFO - ==> Top1: 94.160    Top5: 99.954    Loss: 0.167
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [27][   20/   79]   Loss 0.406849   Top1 87.617188   Top5 99.453125   BatchTime 0.206874
+INFO - Validation [27][   40/   79]   Loss 0.426620   Top1 87.402344   Top5 99.335938   BatchTime 0.142643
+INFO - Validation [27][   60/   79]   Loss 0.418287   Top1 87.591146   Top5 99.453125   BatchTime 0.119923
+INFO - ==> Top1: 87.650    Top5: 99.490    Loss: 0.413
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+tensor(63051., device='cuda:0') 547224.0
+tensor(0.9167, device='cuda:0')
+INFO - >>>>>>>> Epoch  28
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [28][   20/  391]   Loss 0.182683   Top1 93.476562   Top5 100.000000   BatchTime 0.295661   LR 0.000058
+INFO - Training [28][   40/  391]   Loss 0.179687   Top1 93.671875   Top5 100.000000   BatchTime 0.236842   LR 0.000055
+INFO - Training [28][   60/  391]   Loss 0.180666   Top1 93.632812   Top5 99.973958   BatchTime 0.222421   LR 0.000052
+INFO - Training [28][   80/  391]   Loss 0.177087   Top1 93.671875   Top5 99.980469   BatchTime 0.215408   LR 0.000050
+INFO - Training [28][  100/  391]   Loss 0.177109   Top1 93.695312   Top5 99.976562   BatchTime 0.208634   LR 0.000047
+INFO - Training [28][  120/  391]   Loss 0.177137   Top1 93.684896   Top5 99.967448   BatchTime 0.207532   LR 0.000044
+INFO - Training [28][  140/  391]   Loss 0.172419   Top1 93.883929   Top5 99.972098   BatchTime 0.203931   LR 0.000041
+INFO - Training [28][  160/  391]   Loss 0.171622   Top1 93.896484   Top5 99.970703   BatchTime 0.201793   LR 0.000039
+INFO - Training [28][  180/  391]   Loss 0.170940   Top1 93.858507   Top5 99.969618   BatchTime 0.199875   LR 0.000036
+INFO - Training [28][  200/  391]   Loss 0.171001   Top1 93.847656   Top5 99.972656   BatchTime 0.198107   LR 0.000034
+INFO - Training [28][  220/  391]   Loss 0.170294   Top1 93.845881   Top5 99.971591   BatchTime 0.196870   LR 0.000032
+INFO - Training [28][  240/  391]   Loss 0.169705   Top1 93.880208   Top5 99.964193   BatchTime 0.194828   LR 0.000030
+INFO - Training [28][  260/  391]   Loss 0.169663   Top1 93.888221   Top5 99.963942   BatchTime 0.194025   LR 0.000027
+INFO - Training [28][  280/  391]   Loss 0.170029   Top1 93.875558   Top5 99.960938   BatchTime 0.193768   LR 0.000025
+INFO - Training [28][  300/  391]   Loss 0.169785   Top1 93.877604   Top5 99.958333   BatchTime 0.193884   LR 0.000023
+INFO - Training [28][  320/  391]   Loss 0.169341   Top1 93.920898   Top5 99.951172   BatchTime 0.193696   LR 0.000022
+INFO - Training [28][  340/  391]   Loss 0.169515   Top1 93.906250   Top5 99.947151   BatchTime 0.193260   LR 0.000020
+INFO - Training [28][  360/  391]   Loss 0.170070   Top1 93.910590   Top5 99.943576   BatchTime 0.192544   LR 0.000018
+INFO - Training [28][  380/  391]   Loss 0.170856   Top1 93.869243   Top5 99.942434   BatchTime 0.192226   LR 0.000016
+INFO - ==> Top1: 93.888    Top5: 99.944    Loss: 0.170
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [28][   20/   79]   Loss 0.413136   Top1 87.539062   Top5 99.492188   BatchTime 0.202001
+INFO - Validation [28][   40/   79]   Loss 0.425496   Top1 87.363281   Top5 99.335938   BatchTime 0.143191
+INFO - Validation [28][   60/   79]   Loss 0.413373   Top1 87.565104   Top5 99.427083   BatchTime 0.120940
+tensor(63004., device='cuda:0') 547224.0
+tensor(0.9167, device='cuda:0')
+INFO - ==> Top1: 87.490    Top5: 99.490    Loss: 0.407
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  29
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [29][   20/  391]   Loss 0.167156   Top1 93.906250   Top5 99.882812   BatchTime 0.315766   LR 0.000014
+INFO - Training [29][   40/  391]   Loss 0.173394   Top1 93.808594   Top5 99.863281   BatchTime 0.261349   LR 0.000012
+INFO - Training [29][   60/  391]   Loss 0.172837   Top1 93.750000   Top5 99.908854   BatchTime 0.238614   LR 0.000011
+INFO - Training [29][   80/  391]   Loss 0.174849   Top1 93.652344   Top5 99.921875   BatchTime 0.230734   LR 0.000010
+INFO - Training [29][  100/  391]   Loss 0.169258   Top1 93.921875   Top5 99.929688   BatchTime 0.219182   LR 0.000009
+INFO - Training [29][  120/  391]   Loss 0.169301   Top1 93.984375   Top5 99.941406   BatchTime 0.212750   LR 0.000007
+INFO - Training [29][  140/  391]   Loss 0.168350   Top1 94.045759   Top5 99.938616   BatchTime 0.211203   LR 0.000006
+INFO - Training [29][  160/  391]   Loss 0.166457   Top1 94.096680   Top5 99.941406   BatchTime 0.209672   LR 0.000005
+INFO - Training [29][  180/  391]   Loss 0.168166   Top1 94.088542   Top5 99.939236   BatchTime 0.207082   LR 0.000005
+INFO - Training [29][  200/  391]   Loss 0.170248   Top1 94.035156   Top5 99.929688   BatchTime 0.206262   LR 0.000004
+INFO - Training [29][  220/  391]   Loss 0.169708   Top1 94.012784   Top5 99.928977   BatchTime 0.204492   LR 0.000003
+INFO - Training [29][  240/  391]   Loss 0.168453   Top1 94.072266   Top5 99.931641   BatchTime 0.201173   LR 0.000002
+INFO - Training [29][  260/  391]   Loss 0.167704   Top1 94.062500   Top5 99.933894   BatchTime 0.198448   LR 0.000002
+INFO - Training [29][  280/  391]   Loss 0.168972   Top1 94.026228   Top5 99.930246   BatchTime 0.196998   LR 0.000001
+INFO - Training [29][  300/  391]   Loss 0.168137   Top1 94.039062   Top5 99.934896   BatchTime 0.195240   LR 0.000001
+INFO - Training [29][  320/  391]   Loss 0.167556   Top1 94.069824   Top5 99.938965   BatchTime 0.193808   LR 0.000001
+INFO - Training [29][  340/  391]   Loss 0.167793   Top1 94.034926   Top5 99.940257   BatchTime 0.192441   LR 0.000000
+INFO - Training [29][  360/  391]   Loss 0.167322   Top1 94.034288   Top5 99.941406   BatchTime 0.191691   LR 0.000000
+INFO - Training [29][  380/  391]   Loss 0.167702   Top1 94.006990   Top5 99.942434   BatchTime 0.190660   LR 0.000000
+INFO - ==> Top1: 94.002    Top5: 99.940    Loss: 0.168
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [29][   20/   79]   Loss 0.415416   Top1 87.031250   Top5 99.453125   BatchTime 0.178983
+INFO - Validation [29][   40/   79]   Loss 0.429101   Top1 87.089844   Top5 99.316406   BatchTime 0.124822
+INFO - Validation [29][   60/   79]   Loss 0.416984   Top1 87.434896   Top5 99.440104   BatchTime 0.104300
+INFO - ==> Top1: 87.800    Top5: 99.490    Loss: 0.409
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  30
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(62992., device='cuda:0') 547224.0
+tensor(0.9167, device='cuda:0')
+INFO - Training [30][   20/  391]   Loss 0.170505   Top1 94.218750   Top5 100.000000   BatchTime 0.293739   LR 0.001250
+INFO - Training [30][   40/  391]   Loss 0.171476   Top1 93.945312   Top5 99.960938   BatchTime 0.234306   LR 0.001250
+INFO - Training [30][   60/  391]   Loss 0.167146   Top1 94.049479   Top5 99.947917   BatchTime 0.220873   LR 0.001250
+INFO - Training [30][   80/  391]   Loss 0.168407   Top1 94.003906   Top5 99.941406   BatchTime 0.210623   LR 0.001250
+INFO - Training [30][  100/  391]   Loss 0.172580   Top1 93.882812   Top5 99.945312   BatchTime 0.208603   LR 0.001250
+INFO - Training [30][  120/  391]   Loss 0.174160   Top1 93.665365   Top5 99.941406   BatchTime 0.208019   LR 0.001250
+INFO - Training [30][  140/  391]   Loss 0.174235   Top1 93.683036   Top5 99.938616   BatchTime 0.202664   LR 0.001250
+INFO - Training [30][  160/  391]   Loss 0.175705   Top1 93.701172   Top5 99.941406   BatchTime 0.197490   LR 0.001250
+INFO - Training [30][  180/  391]   Loss 0.174783   Top1 93.719618   Top5 99.939236   BatchTime 0.194550   LR 0.001250
+INFO - Training [30][  200/  391]   Loss 0.177302   Top1 93.644531   Top5 99.933594   BatchTime 0.193065   LR 0.001249
+INFO - Training [30][  220/  391]   Loss 0.179813   Top1 93.547585   Top5 99.925426   BatchTime 0.191398   LR 0.001249
+INFO - Training [30][  240/  391]   Loss 0.179501   Top1 93.548177   Top5 99.928385   BatchTime 0.188397   LR 0.001249
+INFO - Training [30][  260/  391]   Loss 0.181118   Top1 93.479567   Top5 99.915865   BatchTime 0.185385   LR 0.001249
+INFO - Training [30][  280/  391]   Loss 0.181328   Top1 93.459821   Top5 99.916295   BatchTime 0.184931   LR 0.001249
+INFO - Training [30][  300/  391]   Loss 0.182322   Top1 93.427083   Top5 99.911458   BatchTime 0.185490   LR 0.001249
+INFO - Training [30][  320/  391]   Loss 0.182918   Top1 93.369141   Top5 99.916992   BatchTime 0.185819   LR 0.001249
+INFO - Training [30][  340/  391]   Loss 0.182034   Top1 93.407629   Top5 99.921875   BatchTime 0.185553   LR 0.001249
+INFO - Training [30][  360/  391]   Loss 0.181771   Top1 93.402778   Top5 99.924045   BatchTime 0.184581   LR 0.001248
+INFO - Training [30][  380/  391]   Loss 0.182370   Top1 93.381990   Top5 99.925987   BatchTime 0.184525   LR 0.001248
+INFO - ==> Top1: 93.390    Top5: 99.924    Loss: 0.183
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [30][   20/   79]   Loss 0.409540   Top1 87.656250   Top5 99.453125   BatchTime 0.183981
+INFO - Validation [30][   40/   79]   Loss 0.424415   Top1 87.324219   Top5 99.277344   BatchTime 0.123555
+INFO - Validation [30][   60/   79]   Loss 0.416691   Top1 87.500000   Top5 99.361979   BatchTime 0.103380
+INFO - ==> Top1: 87.490    Top5: 99.430    Loss: 0.412
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  31
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(61608., device='cuda:0') 547224.0
+tensor(0.9185, device='cuda:0')
+INFO - Training [31][   20/  391]   Loss 0.184445   Top1 93.281250   Top5 99.960938   BatchTime 0.298401   LR 0.001248
+INFO - Training [31][   40/  391]   Loss 0.176031   Top1 93.691406   Top5 99.980469   BatchTime 0.247196   LR 0.001248
+INFO - Training [31][   60/  391]   Loss 0.178324   Top1 93.567708   Top5 99.986979   BatchTime 0.224334   LR 0.001247
+INFO - Training [31][   80/  391]   Loss 0.182222   Top1 93.457031   Top5 99.970703   BatchTime 0.220029   LR 0.001247
+INFO - Training [31][  100/  391]   Loss 0.186102   Top1 93.250000   Top5 99.976562   BatchTime 0.214148   LR 0.001247
+INFO - Training [31][  120/  391]   Loss 0.184363   Top1 93.359375   Top5 99.967448   BatchTime 0.209518   LR 0.001247
+INFO - Training [31][  140/  391]   Loss 0.183388   Top1 93.437500   Top5 99.966518   BatchTime 0.205237   LR 0.001246
+INFO - Training [31][  160/  391]   Loss 0.182675   Top1 93.510742   Top5 99.960938   BatchTime 0.204127   LR 0.001246
+INFO - Training [31][  180/  391]   Loss 0.183947   Top1 93.428819   Top5 99.960938   BatchTime 0.199905   LR 0.001246
+INFO - Training [31][  200/  391]   Loss 0.183546   Top1 93.414062   Top5 99.953125   BatchTime 0.197788   LR 0.001246
+INFO - Training [31][  220/  391]   Loss 0.183902   Top1 93.405540   Top5 99.943182   BatchTime 0.196817   LR 0.001245
+INFO - Training [31][  240/  391]   Loss 0.183989   Top1 93.388672   Top5 99.944661   BatchTime 0.197317   LR 0.001245
+INFO - Training [31][  260/  391]   Loss 0.184021   Top1 93.365385   Top5 99.942909   BatchTime 0.195547   LR 0.001245
+INFO - Training [31][  280/  391]   Loss 0.183525   Top1 93.426339   Top5 99.944196   BatchTime 0.194441   LR 0.001244
+INFO - Training [31][  300/  391]   Loss 0.184664   Top1 93.382812   Top5 99.942708   BatchTime 0.193702   LR 0.001244
+INFO - Training [31][  320/  391]   Loss 0.184414   Top1 93.371582   Top5 99.938965   BatchTime 0.192860   LR 0.001244
+INFO - Training [31][  340/  391]   Loss 0.185665   Top1 93.318015   Top5 99.937960   BatchTime 0.192176   LR 0.001243
+INFO - Training [31][  360/  391]   Loss 0.184900   Top1 93.331163   Top5 99.939236   BatchTime 0.192097   LR 0.001243
+INFO - Training [31][  380/  391]   Loss 0.185801   Top1 93.295641   Top5 99.940378   BatchTime 0.190868   LR 0.001243
+INFO - ==> Top1: 93.286    Top5: 99.940    Loss: 0.186
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [31][   20/   79]   Loss 0.419911   Top1 87.304688   Top5 99.414062   BatchTime 0.208218
+INFO - Validation [31][   40/   79]   Loss 0.426414   Top1 87.265625   Top5 99.355469   BatchTime 0.140251
+INFO - Validation [31][   60/   79]   Loss 0.420987   Top1 87.382812   Top5 99.414062   BatchTime 0.114257
+INFO - ==> Top1: 87.360    Top5: 99.430    Loss: 0.418
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  32
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(60374., device='cuda:0') 547224.0
+tensor(0.9200, device='cuda:0')
+INFO - Training [32][   20/  391]   Loss 0.178157   Top1 93.867188   Top5 99.921875   BatchTime 0.306693   LR 0.001242
+INFO - Training [32][   40/  391]   Loss 0.181122   Top1 93.339844   Top5 99.941406   BatchTime 0.245656   LR 0.001242
+INFO - Training [32][   60/  391]   Loss 0.179533   Top1 93.528646   Top5 99.908854   BatchTime 0.234936   LR 0.001241
+INFO - Training [32][   80/  391]   Loss 0.177360   Top1 93.642578   Top5 99.902344   BatchTime 0.227222   LR 0.001241
+INFO - Training [32][  100/  391]   Loss 0.182719   Top1 93.445312   Top5 99.890625   BatchTime 0.218755   LR 0.001240
+INFO - Training [32][  120/  391]   Loss 0.182902   Top1 93.470052   Top5 99.902344   BatchTime 0.214588   LR 0.001240
+INFO - Training [32][  140/  391]   Loss 0.180465   Top1 93.582589   Top5 99.910714   BatchTime 0.215305   LR 0.001239
+INFO - Training [32][  160/  391]   Loss 0.180331   Top1 93.515625   Top5 99.916992   BatchTime 0.212110   LR 0.001239
+INFO - Training [32][  180/  391]   Loss 0.179675   Top1 93.528646   Top5 99.926215   BatchTime 0.211042   LR 0.001238
+INFO - Training [32][  200/  391]   Loss 0.180682   Top1 93.492188   Top5 99.933594   BatchTime 0.211061   LR 0.001238
+INFO - Training [32][  220/  391]   Loss 0.180883   Top1 93.487216   Top5 99.936080   BatchTime 0.210539   LR 0.001237
+INFO - Training [32][  240/  391]   Loss 0.181259   Top1 93.496094   Top5 99.938151   BatchTime 0.209052   LR 0.001237
+INFO - Training [32][  260/  391]   Loss 0.181378   Top1 93.503606   Top5 99.936899   BatchTime 0.206724   LR 0.001236
+INFO - Training [32][  280/  391]   Loss 0.181367   Top1 93.510045   Top5 99.935826   BatchTime 0.206710   LR 0.001236
+INFO - Training [32][  300/  391]   Loss 0.182967   Top1 93.466146   Top5 99.932292   BatchTime 0.206035   LR 0.001235
+INFO - Training [32][  320/  391]   Loss 0.182948   Top1 93.449707   Top5 99.936523   BatchTime 0.206292   LR 0.001235
+INFO - Training [32][  340/  391]   Loss 0.184329   Top1 93.416820   Top5 99.935662   BatchTime 0.205244   LR 0.001234
+INFO - Training [32][  360/  391]   Loss 0.185263   Top1 93.376736   Top5 99.937066   BatchTime 0.204015   LR 0.001234
+INFO - Training [32][  380/  391]   Loss 0.186303   Top1 93.355263   Top5 99.936266   BatchTime 0.203651   LR 0.001233
+INFO - ==> Top1: 93.348    Top5: 99.936    Loss: 0.186
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [32][   20/   79]   Loss 0.421741   Top1 87.304688   Top5 99.492188   BatchTime 0.251070
+INFO - Validation [32][   40/   79]   Loss 0.426093   Top1 87.539062   Top5 99.453125   BatchTime 0.157623
+INFO - Validation [32][   60/   79]   Loss 0.421301   Top1 87.539062   Top5 99.544271   BatchTime 0.127231
+tensor(59180., device='cuda:0') 547224.0
+tensor(0.9215, device='cuda:0')
+INFO - ==> Top1: 87.560    Top5: 99.550    Loss: 0.416
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  33
+INFO - Training: 50000 samples (128 per mini-batch)
+INFO - Training [33][   20/  391]   Loss 0.197538   Top1 93.046875   Top5 100.000000   BatchTime 0.301171   LR 0.001232
+INFO - Training [33][   40/  391]   Loss 0.191861   Top1 93.066406   Top5 99.960938   BatchTime 0.245337   LR 0.001232
+INFO - Training [33][   60/  391]   Loss 0.182305   Top1 93.463542   Top5 99.973958   BatchTime 0.226712   LR 0.001231
+INFO - Training [33][   80/  391]   Loss 0.177464   Top1 93.564453   Top5 99.980469   BatchTime 0.218108   LR 0.001230
+INFO - Training [33][  100/  391]   Loss 0.181291   Top1 93.460938   Top5 99.960938   BatchTime 0.212418   LR 0.001230
+INFO - Training [33][  120/  391]   Loss 0.183151   Top1 93.333333   Top5 99.954427   BatchTime 0.210429   LR 0.001229
+INFO - Training [33][  140/  391]   Loss 0.182681   Top1 93.364955   Top5 99.955357   BatchTime 0.206517   LR 0.001228
+INFO - Training [33][  160/  391]   Loss 0.185785   Top1 93.300781   Top5 99.951172   BatchTime 0.206235   LR 0.001228
+INFO - Training [33][  180/  391]   Loss 0.186161   Top1 93.320312   Top5 99.952257   BatchTime 0.203341   LR 0.001227
+INFO - Training [33][  200/  391]   Loss 0.187537   Top1 93.234375   Top5 99.949219   BatchTime 0.202698   LR 0.001226
+INFO - Training [33][  220/  391]   Loss 0.186586   Top1 93.288352   Top5 99.953835   BatchTime 0.199851   LR 0.001226
+INFO - Training [33][  240/  391]   Loss 0.184975   Top1 93.398438   Top5 99.954427   BatchTime 0.197315   LR 0.001225
+INFO - Training [33][  260/  391]   Loss 0.182589   Top1 93.500601   Top5 99.954928   BatchTime 0.194571   LR 0.001224
+INFO - Training [33][  280/  391]   Loss 0.184488   Top1 93.423549   Top5 99.955357   BatchTime 0.192985   LR 0.001224
+INFO - Training [33][  300/  391]   Loss 0.184947   Top1 93.414062   Top5 99.955729   BatchTime 0.194119   LR 0.001223
+INFO - Training [33][  320/  391]   Loss 0.183872   Top1 93.459473   Top5 99.956055   BatchTime 0.193657   LR 0.001222
+INFO - Training [33][  340/  391]   Loss 0.184757   Top1 93.428309   Top5 99.954044   BatchTime 0.193191   LR 0.001221
+INFO - Training [33][  360/  391]   Loss 0.185964   Top1 93.409288   Top5 99.950087   BatchTime 0.192595   LR 0.001221
+INFO - Training [33][  380/  391]   Loss 0.186946   Top1 93.363487   Top5 99.952714   BatchTime 0.192218   LR 0.001220
+INFO - ==> Top1: 93.356    Top5: 99.952    Loss: 0.187
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [33][   20/   79]   Loss 0.409549   Top1 87.109375   Top5 99.648438   BatchTime 0.212530
+INFO - Validation [33][   40/   79]   Loss 0.419351   Top1 87.207031   Top5 99.492188   BatchTime 0.142206
+INFO - Validation [33][   60/   79]   Loss 0.409320   Top1 87.539062   Top5 99.492188   BatchTime 0.116889
+tensor(58041., device='cuda:0') 547224.0
+INFO - ==> Top1: 87.570    Top5: 99.520    Loss: 0.405
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  34
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(0.9230, device='cuda:0')
+INFO - Training [34][   20/  391]   Loss 0.179496   Top1 93.437500   Top5 99.960938   BatchTime 0.313147   LR 0.001219
+INFO - Training [34][   40/  391]   Loss 0.174321   Top1 93.925781   Top5 99.921875   BatchTime 0.250885   LR 0.001218
+INFO - Training [34][   60/  391]   Loss 0.172786   Top1 93.789062   Top5 99.895833   BatchTime 0.224939   LR 0.001217
+INFO - Training [34][   80/  391]   Loss 0.174606   Top1 93.720703   Top5 99.902344   BatchTime 0.210551   LR 0.001216
+INFO - Training [34][  100/  391]   Loss 0.175768   Top1 93.765625   Top5 99.921875   BatchTime 0.206357   LR 0.001215
+INFO - Training [34][  120/  391]   Loss 0.179426   Top1 93.619792   Top5 99.908854   BatchTime 0.202835   LR 0.001215
+INFO - Training [34][  140/  391]   Loss 0.179636   Top1 93.660714   Top5 99.921875   BatchTime 0.201422   LR 0.001214
+INFO - Training [34][  160/  391]   Loss 0.182094   Top1 93.554688   Top5 99.931641   BatchTime 0.199308   LR 0.001213
+INFO - Training [34][  180/  391]   Loss 0.182935   Top1 93.511285   Top5 99.939236   BatchTime 0.199994   LR 0.001212
+INFO - Training [34][  200/  391]   Loss 0.183803   Top1 93.472656   Top5 99.941406   BatchTime 0.200390   LR 0.001211
+INFO - Training [34][  220/  391]   Loss 0.184770   Top1 93.409091   Top5 99.946733   BatchTime 0.199339   LR 0.001210
+INFO - Training [34][  240/  391]   Loss 0.184038   Top1 93.440755   Top5 99.951172   BatchTime 0.196818   LR 0.001209
+INFO - Training [34][  260/  391]   Loss 0.184398   Top1 93.386418   Top5 99.945913   BatchTime 0.195010   LR 0.001209
+INFO - Training [34][  280/  391]   Loss 0.183860   Top1 93.370536   Top5 99.949777   BatchTime 0.193954   LR 0.001208
+INFO - Training [34][  300/  391]   Loss 0.184700   Top1 93.367188   Top5 99.947917   BatchTime 0.193558   LR 0.001207
+INFO - Training [34][  320/  391]   Loss 0.186376   Top1 93.342285   Top5 99.946289   BatchTime 0.192379   LR 0.001206
+INFO - Training [34][  340/  391]   Loss 0.185495   Top1 93.375460   Top5 99.947151   BatchTime 0.191734   LR 0.001205
+INFO - Training [34][  360/  391]   Loss 0.186409   Top1 93.355035   Top5 99.950087   BatchTime 0.191600   LR 0.001204
+INFO - Training [34][  380/  391]   Loss 0.186461   Top1 93.342928   Top5 99.948602   BatchTime 0.191291   LR 0.001203
+INFO - ==> Top1: 93.322    Top5: 99.950    Loss: 0.187
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [34][   20/   79]   Loss 0.416634   Top1 87.539062   Top5 99.570312   BatchTime 0.174859
+INFO - Validation [34][   40/   79]   Loss 0.433089   Top1 87.265625   Top5 99.355469   BatchTime 0.119331
+INFO - Validation [34][   60/   79]   Loss 0.423399   Top1 87.473958   Top5 99.466146   BatchTime 0.101550
+INFO - ==> Top1: 87.460    Top5: 99.520    Loss: 0.415
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  35
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(57009., device='cuda:0') 547224.0
+tensor(0.9243, device='cuda:0')
+INFO - Training [35][   20/  391]   Loss 0.177608   Top1 93.750000   Top5 100.000000   BatchTime 0.287904   LR 0.001202
+INFO - Training [35][   40/  391]   Loss 0.176544   Top1 93.652344   Top5 99.980469   BatchTime 0.238310   LR 0.001201
+INFO - Training [35][   60/  391]   Loss 0.178599   Top1 93.658854   Top5 99.960938   BatchTime 0.223974   LR 0.001200
+INFO - Training [35][   80/  391]   Loss 0.178486   Top1 93.652344   Top5 99.970703   BatchTime 0.214658   LR 0.001199
+INFO - Training [35][  100/  391]   Loss 0.177885   Top1 93.703125   Top5 99.968750   BatchTime 0.206866   LR 0.001198
+INFO - Training [35][  120/  391]   Loss 0.181312   Top1 93.626302   Top5 99.973958   BatchTime 0.202698   LR 0.001197
+INFO - Training [35][  140/  391]   Loss 0.176540   Top1 93.783482   Top5 99.977679   BatchTime 0.201065   LR 0.001196
+INFO - Training [35][  160/  391]   Loss 0.177294   Top1 93.735352   Top5 99.975586   BatchTime 0.197652   LR 0.001194
+INFO - Training [35][  180/  391]   Loss 0.177952   Top1 93.684896   Top5 99.973958   BatchTime 0.195604   LR 0.001193
+INFO - Training [35][  200/  391]   Loss 0.179587   Top1 93.625000   Top5 99.972656   BatchTime 0.193840   LR 0.001192
+INFO - Training [35][  220/  391]   Loss 0.179232   Top1 93.618608   Top5 99.975142   BatchTime 0.192091   LR 0.001191
+INFO - Training [35][  240/  391]   Loss 0.179229   Top1 93.632812   Top5 99.970703   BatchTime 0.191365   LR 0.001190
+INFO - Training [35][  260/  391]   Loss 0.179470   Top1 93.638822   Top5 99.966947   BatchTime 0.190163   LR 0.001189
+INFO - Training [35][  280/  391]   Loss 0.182003   Top1 93.551897   Top5 99.963728   BatchTime 0.189426   LR 0.001188
+INFO - Training [35][  300/  391]   Loss 0.182597   Top1 93.531250   Top5 99.963542   BatchTime 0.189006   LR 0.001187
+INFO - Training [35][  320/  391]   Loss 0.183272   Top1 93.486328   Top5 99.956055   BatchTime 0.188133   LR 0.001186
+INFO - Training [35][  340/  391]   Loss 0.184053   Top1 93.453585   Top5 99.951746   BatchTime 0.188459   LR 0.001185
+INFO - Training [35][  360/  391]   Loss 0.184873   Top1 93.420139   Top5 99.952257   BatchTime 0.188651   LR 0.001184
+INFO - Training [35][  380/  391]   Loss 0.185972   Top1 93.365543   Top5 99.950658   BatchTime 0.188679   LR 0.001183
+INFO - ==> Top1: 93.382    Top5: 99.950    Loss: 0.186
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [35][   20/   79]   Loss 0.415890   Top1 87.148438   Top5 99.648438   BatchTime 0.197376
+INFO - Validation [35][   40/   79]   Loss 0.429845   Top1 86.816406   Top5 99.492188   BatchTime 0.129572
+INFO - Validation [35][   60/   79]   Loss 0.420400   Top1 87.213542   Top5 99.544271   BatchTime 0.106823
+INFO - ==> Top1: 87.330    Top5: 99.610    Loss: 0.411
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  36
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(56124., device='cuda:0') 547224.0
+tensor(0.9254, device='cuda:0')
+INFO - Training [36][   20/  391]   Loss 0.189111   Top1 93.164062   Top5 99.882812   BatchTime 0.281884   LR 0.001181
+INFO - Training [36][   40/  391]   Loss 0.189022   Top1 93.339844   Top5 99.882812   BatchTime 0.230222   LR 0.001180
+INFO - Training [36][   60/  391]   Loss 0.183083   Top1 93.528646   Top5 99.908854   BatchTime 0.213013   LR 0.001178
+INFO - Training [36][   80/  391]   Loss 0.180125   Top1 93.583984   Top5 99.921875   BatchTime 0.206446   LR 0.001177
+INFO - Training [36][  100/  391]   Loss 0.177845   Top1 93.664062   Top5 99.929688   BatchTime 0.204742   LR 0.001176
+INFO - Training [36][  120/  391]   Loss 0.176417   Top1 93.652344   Top5 99.934896   BatchTime 0.200862   LR 0.001175
+INFO - Training [36][  140/  391]   Loss 0.178403   Top1 93.582589   Top5 99.927455   BatchTime 0.197204   LR 0.001174
+INFO - Training [36][  160/  391]   Loss 0.180506   Top1 93.608398   Top5 99.931641   BatchTime 0.196147   LR 0.001173
+INFO - Training [36][  180/  391]   Loss 0.182489   Top1 93.519965   Top5 99.930556   BatchTime 0.194011   LR 0.001171
+INFO - Training [36][  200/  391]   Loss 0.183624   Top1 93.449219   Top5 99.937500   BatchTime 0.192773   LR 0.001170
+INFO - Training [36][  220/  391]   Loss 0.181855   Top1 93.490767   Top5 99.939631   BatchTime 0.191953   LR 0.001169
+INFO - Training [36][  240/  391]   Loss 0.182650   Top1 93.483073   Top5 99.931641   BatchTime 0.190600   LR 0.001168
+INFO - Training [36][  260/  391]   Loss 0.183675   Top1 93.461538   Top5 99.930889   BatchTime 0.189890   LR 0.001166
+INFO - Training [36][  280/  391]   Loss 0.182712   Top1 93.473772   Top5 99.935826   BatchTime 0.188553   LR 0.001165
+INFO - Training [36][  300/  391]   Loss 0.183010   Top1 93.502604   Top5 99.932292   BatchTime 0.186576   LR 0.001164
+INFO - Training [36][  320/  391]   Loss 0.183593   Top1 93.471680   Top5 99.936523   BatchTime 0.186395   LR 0.001163
+INFO - Training [36][  340/  391]   Loss 0.183871   Top1 93.458180   Top5 99.937960   BatchTime 0.185894   LR 0.001161
+INFO - Training [36][  360/  391]   Loss 0.184424   Top1 93.413628   Top5 99.934896   BatchTime 0.185579   LR 0.001160
+INFO - Training [36][  380/  391]   Loss 0.183625   Top1 93.435444   Top5 99.934211   BatchTime 0.184602   LR 0.001159
+INFO - ==> Top1: 93.408    Top5: 99.934    Loss: 0.184
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [36][   20/   79]   Loss 0.426984   Top1 86.679688   Top5 99.648438   BatchTime 0.221199
+INFO - Validation [36][   40/   79]   Loss 0.445301   Top1 86.503906   Top5 99.433594   BatchTime 0.147814
+INFO - Validation [36][   60/   79]   Loss 0.435255   Top1 86.940104   Top5 99.466146   BatchTime 0.123096
+INFO - ==> Top1: 87.060    Top5: 99.520    Loss: 0.427
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  37
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(55152., device='cuda:0') 547224.0
+tensor(0.9265, device='cuda:0')
+INFO - Training [37][   20/  391]   Loss 0.192757   Top1 93.085938   Top5 99.882812   BatchTime 0.319423   LR 0.001157
+INFO - Training [37][   40/  391]   Loss 0.185128   Top1 93.222656   Top5 99.863281   BatchTime 0.254890   LR 0.001155
+INFO - Training [37][   60/  391]   Loss 0.181252   Top1 93.450521   Top5 99.908854   BatchTime 0.245590   LR 0.001154
+INFO - Training [37][   80/  391]   Loss 0.180588   Top1 93.496094   Top5 99.931641   BatchTime 0.228072   LR 0.001153
+INFO - Training [37][  100/  391]   Loss 0.181419   Top1 93.578125   Top5 99.929688   BatchTime 0.217149   LR 0.001151
+INFO - Training [37][  120/  391]   Loss 0.178184   Top1 93.684896   Top5 99.941406   BatchTime 0.212936   LR 0.001150
+INFO - Training [37][  140/  391]   Loss 0.178222   Top1 93.638393   Top5 99.938616   BatchTime 0.208191   LR 0.001149
+INFO - Training [37][  160/  391]   Loss 0.180400   Top1 93.574219   Top5 99.936523   BatchTime 0.203017   LR 0.001147
+INFO - Training [37][  180/  391]   Loss 0.181955   Top1 93.489583   Top5 99.934896   BatchTime 0.200415   LR 0.001146
+INFO - Training [37][  200/  391]   Loss 0.182138   Top1 93.390625   Top5 99.929688   BatchTime 0.197726   LR 0.001144
+INFO - Training [37][  220/  391]   Loss 0.184486   Top1 93.309659   Top5 99.918324   BatchTime 0.194945   LR 0.001143
+INFO - Training [37][  240/  391]   Loss 0.184828   Top1 93.317057   Top5 99.921875   BatchTime 0.194637   LR 0.001142
+INFO - Training [37][  260/  391]   Loss 0.185192   Top1 93.296274   Top5 99.924880   BatchTime 0.193077   LR 0.001140
+INFO - Training [37][  280/  391]   Loss 0.186435   Top1 93.250558   Top5 99.927455   BatchTime 0.193140   LR 0.001139
+INFO - Training [37][  300/  391]   Loss 0.187661   Top1 93.210938   Top5 99.927083   BatchTime 0.193202   LR 0.001137
+INFO - Training [37][  320/  391]   Loss 0.188104   Top1 93.188477   Top5 99.929199   BatchTime 0.192882   LR 0.001136
+INFO - Training [37][  340/  391]   Loss 0.187817   Top1 93.200827   Top5 99.931066   BatchTime 0.192790   LR 0.001134
+INFO - Training [37][  360/  391]   Loss 0.187879   Top1 93.211806   Top5 99.930556   BatchTime 0.193799   LR 0.001133
+INFO - Training [37][  380/  391]   Loss 0.189803   Top1 93.141447   Top5 99.930099   BatchTime 0.192584   LR 0.001131
+INFO - ==> Top1: 93.120    Top5: 99.928    Loss: 0.190
+INFO - Validation: 10000 samples (128 per mini-batch)
+INFO - Validation [37][   20/   79]   Loss 0.402936   Top1 87.929688   Top5 99.531250   BatchTime 0.190992
+INFO - Validation [37][   40/   79]   Loss 0.422329   Top1 87.480469   Top5 99.433594   BatchTime 0.128723
+INFO - Validation [37][   60/   79]   Loss 0.420429   Top1 87.369792   Top5 99.492188   BatchTime 0.106538
+INFO - ==> Top1: 87.540    Top5: 99.560    Loss: 0.411
+INFO - Scoreboard best 1 ==> Epoch [14][Top1: 88.090   Top5: 99.460] Sparsity : 0.820
+INFO - Scoreboard best 2 ==> Epoch [18][Top1: 87.900   Top5: 99.440] Sparsity : 0.836
+INFO - Scoreboard best 3 ==> Epoch [20][Top1: 87.830   Top5: 99.470] Sparsity : 0.840
+INFO - Saving checkpoint to:
+             Current: /home/ilena7440/slsq_percentile/LSQ/out/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_20221111-121944/MobileNetv2_cifar10_a8w8_5_epoch70_percentile_0_2_checkpoint.pth.tar
+INFO - >>>>>>>> Epoch  38
+INFO - Training: 50000 samples (128 per mini-batch)
+tensor(54234., device='cuda:0') 547224.0
+tensor(0.9276, device='cuda:0')
+INFO - Training [38][   20/  391]   Loss 0.184742   Top1 92.734375   Top5 99.960938   BatchTime 0.293352   LR 0.001129
+INFO - Training [38][   40/  391]   Loss 0.175136   Top1 93.378906   Top5 99.980469   BatchTime 0.235431   LR 0.001128
+INFO - Training [38][   60/  391]   Loss 0.173718   Top1 93.632812   Top5 99.960938   BatchTime 0.216047   LR 0.001126
