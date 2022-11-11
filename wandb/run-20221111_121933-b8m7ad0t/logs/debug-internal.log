@@ -2020,3 +2020,116 @@
 2022-11-11 13:12:36,766 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
 2022-11-11 13:12:40,128 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
 2022-11-11 13:12:44,130 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:12:46,194 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:12:46,194 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:12:48,132 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:12:52,133 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:12:54,134 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:12:58,135 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:01,413 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:13:01,413 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:13:02,137 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:06,139 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:07,679 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
+2022-11-11 13:13:10,141 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:14,142 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:16,624 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:13:16,624 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:13:18,144 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:22,145 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:26,147 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:30,149 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:31,834 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:13:31,835 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:13:34,150 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:36,151 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:38,580 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
+2022-11-11 13:13:42,153 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:44,154 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:45,115 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:13:45,119 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:13:45,120 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:13:45,122 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:13:45,126 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:13:45,130 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:13:45,131 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:13:45,132 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:13:45,133 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:13:45,134 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:13:45,135 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:13:45,136 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:13:45,154 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/wandb-summary.json
+2022-11-11 13:13:45,268 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:13:45,271 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:13:45,272 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:13:45,274 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:13:46,155 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/wandb-summary.json
+2022-11-11 13:13:46,155 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:47,145 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:13:47,145 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:13:48,155 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:54,158 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:13:58,160 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:02,161 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:02,360 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:14:02,361 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:14:06,163 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:09,459 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
+2022-11-11 13:14:10,165 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:14,166 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:17,577 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:14:17,577 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:14:18,168 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:22,170 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:26,171 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:30,173 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:32,790 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:14:32,790 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:14:34,175 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:38,176 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:40,329 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
+2022-11-11 13:14:42,178 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:46,179 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:48,036 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:14:48,037 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:14:50,181 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:54,183 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:14:58,184 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:02,186 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:03,255 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:15:03,255 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:15:06,188 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:08,188 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:11,273 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
+2022-11-11 13:15:12,192 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:14,192 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:16,193 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:16,416 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:15:16,420 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:15:16,422 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:15:16,423 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:15:16,426 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:15:16,429 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:15:16,430 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:15:16,431 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:15:16,433 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:15:16,433 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:15:16,434 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:15:16,435 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:15:16,579 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: partial_history
+2022-11-11 13:15:16,582 DEBUG   SenderThread:6964 [sender.py:send():302] send: history
+2022-11-11 13:15:16,582 DEBUG   SenderThread:6964 [sender.py:send():302] send: summary
+2022-11-11 13:15:16,584 INFO    SenderThread:6964 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-11-11 13:15:17,193 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/wandb-summary.json
+2022-11-11 13:15:18,194 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:18,499 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:15:18,499 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:15:26,197 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:30,198 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:33,718 DEBUG   HandlerThread:6964 [handler.py:handle_request():141] handle_request: stop_status
+2022-11-11 13:15:33,719 DEBUG   SenderThread:6964 [sender.py:send_request():316] send_request: stop_status
+2022-11-11 13:15:34,200 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:38,202 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:42,203 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
+2022-11-11 13:15:42,206 DEBUG   SenderThread:6964 [sender.py:send():302] send: stats
+2022-11-11 13:15:46,205 INFO    Thread-12 :6964 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/ilena7440/slsq_percentile/LSQ/wandb/run-20221111_121933-b8m7ad0t/files/output.log
